@@ -179,4 +179,7 @@ padding-top: 30px;
     .contenedor-fedeyaye {
         flex-direction: column;
     }
+    .contendor-img-estatico{
+        background-image: url(imagenes/Diseño\ sin\ título\ \(3\).jpg);
+    }
 }
