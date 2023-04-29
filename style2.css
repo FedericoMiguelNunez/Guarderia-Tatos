@@ -1,0 +1,166 @@
+body {
+    background-color: #cbf3f0;
+margin: 0px;
+padding: 0px;
+}
+
+.cont-saludo {
+    position: relative;
+    text-align: center;
+    display: flex;
+    font-family: 'Libre Baskerville', serif;
+    margin: 0px;
+    padding: 20px 0px 50px ;
+    justify-content: center;
+    align-items: center;
+background-color: #ff9f1c;
+
+}
+
+.ondas {
+    position: absolute;
+    width: 100vw;
+    left: 0px;
+    bottom: 0px;
+    z-index: 1000;
+}
+
+.cambiar {
+    padding: 0px;
+    margin: 0px;
+z-index: 2000;
+}
+.ondas2{
+    position: absolute;
+    width: 100vw;
+    left: 0px;
+    top: 0px;
+    z-index: 1000;  
+    height: 50px;
+}
+.contenedor {
+    width: 90vw;
+    height: auto;
+    margin: 0px auto 0px;
+    overflow: hidden;
+    padding: 0px;
+
+    border-radius: 25px;
+
+}
+
+.contenedor ul {
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+    width: 300%;
+    animation: slide;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+
+
+}
+
+.contenedor li {
+    list-style: none;
+    width: 100%;
+    margin: 0px;
+
+}
+
+.contenedor img {
+    width: 100%;
+    margin: 0px;
+    height: 100%;
+}
+
+.contenedor-quienes-somos {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 10px 0px 0px 0px 0px  ;
+background-color: #ff9f1c;
+position: relative;
+padding-top: 30px;
+}
+
+.contenedor-quienes-somos h1 {
+    font-family: 'Libre Baskerville', serif;
+    letter-spacing: 1px;
+    font-size: 25px;
+
+}
+
+.contenedor-quienes-somos p {
+    padding: 5px 20px;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.somos {
+    text-align: center;
+    width: 100vw;
+}
+
+.contenedor-fedeyaye {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.cont-f,
+.cont-h2-p {
+    width: 100%;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(-33.33%);
+    }
+
+    30% {
+        transform: translateX(-66.66%);
+    }
+
+    50% {
+        transform: translateX(-33.33%);
+    }
+
+
+    100% {
+        transform: translateX(0);
+    }
+
+
+}
+
+@media screen and (min-width: 900px) {
+    .contenedor {
+        height: 400px;
+    }
+
+}
+
+@media screen and (max-width : 700px) {
+    .contenedor-fedeyaye {
+        flex-direction: column;
+    }
+}

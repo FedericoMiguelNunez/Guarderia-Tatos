@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="icon" href="imagenes/logo.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@1,300&display=swap"
+        rel="stylesheet">
+    <title>GuarderiaTatos</title>
+</head>
+
+<body>
+    <div class="cont-saludo">
+        <h1 class="cambiar" id="cambiar"> hola</h1>
+        <svg  class="ondas" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#cbf3f0" fill-opacity="1" d="M0,160L40,170.7C80,181,160,203,240,229.3C320,256,400,288,480,293.3C560,299,640,277,720,272C800,267,880,277,960,282.7C1040,288,1120,288,1200,256C1280,224,1360,160,1400,128L1440,96L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
+    </div>
+    <div class="contenedor">
+        <ul>
+            <li><img src="imagenes/foto1.jpg" alt=""></li>
+            <li><img src="imagenes/foto2.jpg" alt=""></li>
+            <li><img src="imagenes/foto3.jpg" alt=""></li>
+            <li><img src="imagenes/foto4.jpg" alt=""></li>
+        </ul>
+    </div>
+   
+    <div class="contenedor-quienes-somos">
+        <svg preserveAspectRatio="none" class="ondas2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#cbf3f0" fill-opacity="1" d="M0,160L40,165.3C80,171,160,181,240,197.3C320,213,400,235,480,234.7C560,235,640,213,720,186.7C800,160,880,128,960,149.3C1040,171,1120,245,1200,256C1280,267,1360,213,1400,186.7L1440,160L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path>
+          </svg>
+        <h1 class="Tit-QS">
+            Guardería Tatos <br> donde tu gato es parte de nuestra familia.
+        </h1>
+        <p class="historia">
+            Guardería Tatos, nuestro hogar, donde cuidamos a tu peludito como si fuera parte de nuestra familia. Nos
+            dedicamos a jugar y mimar a los michis las 24 horas del día. En Guardería Tatos, cada michi es importante
+            para nosotros y lo tratamos con amor y atención, como se lo merecen. Si buscas un lugar donde tu michi se
+            sienta como en casa <br> ¡Te esperamos con las puertas abiertas!
+        </p>
+    </div>
+    <div class="somos"><h2>¿Quienes somos?</h2></div>
+<div class="contenedor-fedeyaye">
+    <div class="cont-h2-p">
+        <h2>
+        Fede y Aye 
+        </h2>
+        <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quae assumenda reiciendis soluta quibusdam ad, ut deserunt rerum esse ducimus, atque ex debitis facere cupiditate possimus nobis consequatur, nulla nam.
+        </p>
+            </div>
+    <div class="cont-f">
+        <img src="imagenes/Ayeyfede.webp" alt="" class="fotosaye-fede">
+    </div>
+    
+
+</div>
+
+
+
+    <script>
+        const cambio = document.getElementById("cambiar");
+        const params = new URLSearchParams(window.location.search);
+        const nombre = params.get('nombre');
+        const gato = params.get('gato');
+        cambio.innerHTML = `¡Bienvenidos <br> ${nombre} y ${gato}!`;
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,1 @@
+const cambio = document.getElementById("cambiar");
