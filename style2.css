@@ -13,7 +13,7 @@ padding: 0px;
     padding: 20px 0px 50px ;
     justify-content: center;
     align-items: center;
-background-color: #ff9f1c;
+background-color: #cbf3f0;
 
 }
 
@@ -37,6 +37,22 @@ z-index: 2000;
     top: 0px;
     z-index: 1000;  
     height: 50px;
+}
+.contendor-img-estatico{
+    width: 100vw;
+    height: 500px;
+    background-image: url(imagenes/Diseño\ sin\ título\ \(2\).jpg);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
 }
 .contenedor {
     width: 90vw;
