@@ -40,8 +40,9 @@ z-index: 2000;
 }
 .contendor-img-estatico{
     width: 100vw;
+   
     height: 500px;
-    background-image: url(imagenes/Diseño\ sin\ título\ \(2\).jpg);
+    background-image: url(imagenes/luqifondo.jpeg);
     position: relative;
     display: flex;
     flex-direction: column;
@@ -49,8 +50,8 @@ z-index: 2000;
     align-items: center;
     justify-content: center;
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-size:cover;
+  background-position: center;
     background-attachment: fixed;
 
 }
@@ -175,7 +176,7 @@ padding-top: 30px;
 
 }
 
-@media screen and (max-width : 700px) {
+/*@media screen and (max-width : 700px) {
     .contenedor-fedeyaye {
         flex-direction: column;
     }
