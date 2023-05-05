@@ -190,7 +190,7 @@ body {
         flex-direction: column;
     }
     .img-estatico{
-        height: 400px;
+        flex: 2;
     }
     .Onda-movile{
         display: block;
