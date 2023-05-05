@@ -1,7 +1,9 @@
 body {
     background-color: #cbf3f0;
-margin: 0px;
-padding: 0px;
+    margin: 0px;
+    padding: 0px;
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 .cont-saludo {
@@ -10,52 +12,101 @@ padding: 0px;
     display: flex;
     font-family: 'Libre Baskerville', serif;
     margin: 0px;
-    padding: 20px 0px 50px ;
+    padding: 20px 0px 50px;
     justify-content: center;
     align-items: center;
-background-color: #cbf3f0;
+    background: linear-gradient(to right, #cbf3f0 35%, #2ec4b6 );
+    ;
 
 }
 
-.ondas {
-    position: absolute;
-    width: 100vw;
-    left: 0px;
-    bottom: 0px;
-    z-index: 1000;
-}
+
+
 
 .cambiar {
     padding: 0px;
     margin: 0px;
-z-index: 2000;
+
 }
-.ondas2{
-    position: absolute;
+
+
+
+.contendor-img-estatico {
     width: 100vw;
-    left: 0px;
-    top: 0px;
-    z-index: 1000;  
-    height: 50px;
-}
-.contendor-img-estatico{
-    width: 100vw;
-   
     height: 500px;
-    background-image: url(imagenes/luqifondo.jpeg);
-    position: relative;
+
     display: flex;
-    flex-direction: column;
     text-align: center;
     align-items: center;
     justify-content: center;
-    background-repeat: no-repeat;
-    background-size:cover;
-  background-position: center;
-    background-attachment: fixed;
+    background-color: #ffb769;
 
 }
-.contenedor {
+
+.Texto-H {
+    flex: 1;
+    
+}
+
+.img-estatico {
+    width: 100%;
+    background-image: url(imagenes/mity2.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
+    height: 100%;
+    flex: 1;
+    position: relative;
+    background-position: right 80%;
+}
+#primer-btn-contacto{
+   
+    width: 150px;
+    height: 35px;
+    background-color: #007bff;
+    border-radius: 25px;
+    
+
+}
+#primer-btn-contacto a{
+    text-decoration: none;
+}
+.onda_de_IMG-Est {
+    position: absolute;
+
+
+}
+.Onda-movile{
+    display: none;
+}
+.fundadores {
+    text-align: center;
+    width: 100vw;
+    background: linear-gradient(to right, #cbf3f0 35%, #2ec4b6 );
+    margin: 0px;
+    padding: 20px;
+}
+
+.contenedor-fundadores {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    align-items: center;
+    margin: 10px;
+}
+
+
+.contenedor-fundadores-text {
+    flex: 1;
+   
+
+}
+.contenedor_imagen_Fundadores{
+    flex: 1;
+}
+.contenedor-carrusel {
     width: 90vw;
     height: auto;
     margin: 0px auto 0px;
@@ -66,7 +117,7 @@ z-index: 2000;
 
 }
 
-.contenedor ul {
+.contenedor-carrusel ul {
     display: flex;
     padding: 0px;
     margin: 0px;
@@ -78,61 +129,19 @@ z-index: 2000;
 
 }
 
-.contenedor li {
+.contenedor-carrusel li {
     list-style: none;
     width: 100%;
     margin: 0px;
 
 }
 
-.contenedor img {
+.contenedor-carrusel img {
     width: 100%;
     margin: 0px;
     height: 100%;
 }
 
-.contenedor-quienes-somos {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin: 10px 0px 0px 0px 0px  ;
-background-color: #ff9f1c;
-position: relative;
-padding-top: 30px;
-}
-
-.contenedor-quienes-somos h1 {
-    font-family: 'Libre Baskerville', serif;
-    letter-spacing: 1px;
-    font-size: 25px;
-
-}
-
-.contenedor-quienes-somos p {
-    padding: 5px 20px;
-    font-family: 'Libre Baskerville', serif;
-}
-
-.somos {
-    text-align: center;
-    width: 100vw;
-}
-
-.contenedor-fedeyaye {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
-    align-items: center;
-    margin: 10px;
-}
-
-.cont-f,
-.cont-h2-p {
-    width: 100%;
-
-}
 
 
 
@@ -170,17 +179,23 @@ padding-top: 30px;
 }
 
 @media screen and (min-width: 900px) {
-    .contenedor {
+    .contenedor-carrusel {
         height: 400px;
     }
 
 }
 
-/*@media screen and (max-width : 700px) {
-    .contenedor-fedeyaye {
+@media screen and (max-width : 700px) {
+    .contendor-img-estatico{
         flex-direction: column;
     }
-    .contendor-img-estatico{
-        background-image: url(imagenes/luqifondo.jpeg);
+    .Onda-movile{
+        display: block;
+    }
+    .onda-computadora{
+        display: none;
+    }
+    .contenedor-fundadores{
+        flex-direction: column;
     }
 }
