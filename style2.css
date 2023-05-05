@@ -189,6 +189,9 @@ body {
     .contendor-img-estatico{
         flex-direction: column;
     }
+    .img-estatico{
+        height: 400px;
+    }
     .Onda-movile{
         display: block;
     }
