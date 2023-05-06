@@ -7,7 +7,7 @@ body {
 }
 
 .cont-saludo {
-    width: 100%;
+    width: 100vw;
     position: relative;
     text-align: center;
     display: flex;
@@ -33,7 +33,7 @@ body {
 
 
 .contendor-img-estatico {
-    width: 100%;
+    width: 100vw;
     height: 500px;
     display: flex;
     text-align: center;
