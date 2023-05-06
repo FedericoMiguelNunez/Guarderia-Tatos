@@ -7,6 +7,7 @@ body {
 }
 
 .cont-saludo {
+    width: 100%;
     position: relative;
     text-align: center;
     display: flex;
@@ -16,7 +17,7 @@ body {
     justify-content: center;
     align-items: center;
     background: linear-gradient(to right, #cbf3f0 35%, #2ec4b6 );
-    ;
+    
 
 }
 
@@ -32,6 +33,7 @@ body {
 
 
 .contendor-img-estatico {
+    width: 100%;
     height: 500px;
     display: flex;
     text-align: center;
