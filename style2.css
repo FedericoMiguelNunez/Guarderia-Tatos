@@ -210,5 +210,8 @@ body {
    .contendor-img-estatico{
     height: 700px;
    }
-        
+   .contenedor_imagen_Fundadores img{
+    width: 300px;
+    height: 300px;
+   }
 }
