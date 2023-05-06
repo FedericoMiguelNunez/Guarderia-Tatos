@@ -32,9 +32,7 @@ body {
 
 
 .contendor-img-estatico {
-    width: 100vw;
     height: 500px;
-
     display: flex;
     text-align: center;
     align-items: center;
@@ -49,12 +47,11 @@ body {
 }
 
 .img-estatico {
-    width: 100%;
+    
     background-image: url(imagenes/mity2.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: contain;
-    height: 100%;
     flex: 1;
     position: relative;
     background-position: right 80%;
@@ -190,7 +187,7 @@ body {
         flex-direction: column;
     }
     .img-estatico{
-        flex: 2;
+        flex: 1;
     }
     .Onda-movile{
         display: block;
@@ -200,5 +197,8 @@ body {
     }
     .contenedor-fundadores{
         flex-direction: column;
+        background-position: top 0px;
+        flex:auto;
+        min-height: 500px;
     }
 }
