@@ -38,7 +38,7 @@ body {
     align-items: center;
     justify-content: center;
     background-color: #ffb769;
-
+z-index: 100;
 }
 
 .Texto-H {
@@ -47,7 +47,8 @@ body {
 }
 
 .img-estatico {
-    
+    width: 100%;
+    height: 100%;
     background-image: url(imagenes/mity2.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -82,6 +83,8 @@ body {
     background: linear-gradient(to right, #cbf3f0 35%, #2ec4b6 );
     margin: 0px;
     padding: 20px;
+    z-index: 200;
+    position: relative;
 }
 
 .contenedor-fundadores {
@@ -187,7 +190,8 @@ body {
         flex-direction: column;
     }
     .img-estatico{
-        flex: 1;
+        flex: 2;
+        min-height: 400px;
     }
     .Onda-movile{
         display: block;
@@ -197,8 +201,7 @@ body {
     }
     .contenedor-fundadores{
         flex-direction: column;
-        background-position: top 0px;
-        flex:auto;
-        min-height: 500px;
     }
+   
+        
 }
