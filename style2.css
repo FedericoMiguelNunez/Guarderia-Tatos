@@ -4,6 +4,7 @@ body {
     padding: 0px;
     width: 100vw;
     max-width: 100% !important;
+    overflow-x: hidden;
 }
 
 .cont-saludo {
