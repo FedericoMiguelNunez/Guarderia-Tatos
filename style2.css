@@ -1,16 +1,21 @@
+*{
+    box-sizing: border-box;
+    max-width: 100vw;
+    margin: 0px;
+    padding: 0px;
+}
 body {
     background-color: #cbf3f0;
     margin: 0px;
     padding: 0px;
-    width: 100vw !important;
-    box-sizing: border-box;
+   
+   
     
 }
-header{
-    width: 100%;
-}
+
+
 .cont-saludo {
-    width: 100%;
+    
     position: relative;
     text-align: center;
     display: flex;
@@ -36,7 +41,7 @@ header{
 
 
 .contendor-img-estatico {
-    width: 100%;
+    
     height: 500px;
     display: flex;
     text-align: center;
@@ -47,8 +52,13 @@ header{
 }
 
 .Texto-H {
-    flex: 1;
-    
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    flex:1;
+    justify-content: space-evenly;
+    margin: 0px 20px ;
+    align-items: center;
 }
 
 .img-estatico {
@@ -58,7 +68,7 @@ header{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: contain;
-    flex: 1;
+    flex: 1 ;
     position: relative;
     background-position: right 80%;
 }
@@ -68,7 +78,7 @@ header{
     height: 35px;
     background-color: #007bff;
     border-radius: 25px;
-    
+    margin-bottom: 5px;
 
 }
 #primer-btn-contacto a{
@@ -109,41 +119,6 @@ header{
 .contenedor_imagen_Fundadores{
     flex: 1;
 }
-.contenedor-carrusel {
-    width: 90%;
-    height: auto;
-    margin: 0px auto 0px;
-    overflow: hidden;
-    padding: 0px;
-
-    border-radius: 25px;
-
-}
-
-.contenedor-carrusel ul {
-    display: flex;
-    padding: 0px;
-    margin: 0px;
-    width: 300%;
-    animation: slide;
-    animation-duration: 15s;
-    animation-iteration-count: infinite;
-
-
-}
-
-.contenedor-carrusel li {
-    list-style: none;
-    width: 100%;
-    margin: 0px;
-
-}
-
-.contenedor-carrusel img {
-    width: 100%;
-    margin: 0px;
-    height: 100%;
-}
 
 
 
@@ -156,30 +131,8 @@ header{
 
 
 
-@keyframes slide {
-    0% {
-        transform: translateX(0);
-    }
-
-    20% {
-        transform: translateX(-33.33%);
-    }
-
-    30% {
-        transform: translateX(-66.66%);
-    }
-
-    50% {
-        transform: translateX(-33.33%);
-    }
 
 
-    100% {
-        transform: translateX(0);
-    }
-
-
-}
 
 @media screen and (min-width: 900px) {
     .contenedor-carrusel {
@@ -191,6 +144,9 @@ header{
 @media screen and (max-width : 700px) {
     .contendor-img-estatico{
         flex-direction: column;
+    }
+    .historia{
+        text-align: start;
     }
     .img-estatico{
         flex: 1;
