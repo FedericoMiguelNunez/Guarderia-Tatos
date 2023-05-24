@@ -79,12 +79,7 @@ header{
 
 
 }
-.Onda-movile{
-    display: none;
-    position: sticky;
-    top: 0px;
-    
-}
+
 .fundadores {
     text-align: center;
   
@@ -198,14 +193,11 @@ header{
         flex-direction: column;
     }
     .img-estatico{
-        flex: 2;
+        flex: 1;
+        background-size: cover;
         
     }
-    .Onda-movile{
-        display: block;
-        position: absolute;
-        
-    }
+  
     .onda-computadora{
         display: none;
     }
