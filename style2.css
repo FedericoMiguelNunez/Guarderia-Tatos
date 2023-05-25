@@ -90,7 +90,10 @@ body {
 
 
 }
-
+.onda-movile{
+    display: none;
+    position: absolute;
+}
 .fundadores {
     text-align: center;
   
@@ -157,6 +160,10 @@ body {
   
     .onda-computadora{
         display: none;
+    }
+    .onda-movile{
+        display: block;
+        top: 0px;
     }
     .contenedor-fundadores{
         flex-direction: column;
