@@ -136,7 +136,9 @@ body {
 
 
 }
-
+.contenedor-fundadores-text-solo-para-flexcol h2 , #p-recibimos{
+    margin-bottom: 10px;
+}
 .contenedor-fundadores-text-solo-para-flex-row-aye-fede {
     display: flex;
     flex-direction: row;
@@ -152,6 +154,10 @@ body {
     border-style: double;
     border-radius: 25px;
     border-color: #ff9f1c;
+}
+.ayelen p , .federico p , .apolo p , .galo p{
+    text-align: center;
+    padding: 7px;
 }
 .apolo,
 .galo {
@@ -209,13 +215,17 @@ body {
     }
 
     .contenedor-fundadores {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
     .contendor-img-estatico {
         height: 700px;
     }
-
+.ayelen , .federico , .apolo , .galo{
+    height: 200px;
+    overflow-y: scroll;
+    margin: 3px;
+}
     .contenedor_imagen_Fundadores img {
         width: 300px;
         height: 300px;
