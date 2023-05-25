@@ -56,9 +56,10 @@ body {
     text-align: center;
     flex-direction: column;
     flex:1;
-    justify-content: space-evenly;
+    justify-content: space-around;
     margin: 0px 20px ;
     align-items: center;
+    height: 60%;
 }
 
 .img-estatico {
