@@ -164,6 +164,7 @@ body {
     .onda-movile{
         display: block;
         top: 0px;
+        width: 100%;
     }
     .contenedor-fundadores{
         flex-direction: column;
