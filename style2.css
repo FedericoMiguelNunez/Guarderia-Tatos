@@ -1,21 +1,22 @@
-*{
+* {
     box-sizing: border-box;
     max-width: 100vw;
     margin: 0px;
     padding: 0px;
 }
+
 body {
     background-color: #cbf3f0;
     margin: 0px;
     padding: 0px;
-   
-   
-    
+
+
+
 }
 
 
 .cont-saludo {
-    
+
     position: relative;
     text-align: center;
     display: flex;
@@ -24,8 +25,8 @@ body {
     padding: 20px 0px 50px;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to right, #cbf3f0 35%, #2ec4b6 );
-    
+    background: linear-gradient(to right, #cbf3f0 35%, #2ec4b6);
+
 
 }
 
@@ -41,7 +42,7 @@ body {
 
 
 .contendor-img-estatico {
-    
+
     height: 500px;
     display: flex;
     text-align: center;
@@ -55,9 +56,9 @@ body {
     display: flex;
     text-align: center;
     flex-direction: column;
-    flex:1;
+    flex: 1;
     justify-content: space-around;
-    margin: 0px 20px ;
+    margin: 0px 20px;
     align-items: center;
     height: 60%;
 }
@@ -69,35 +70,50 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: contain;
-    flex: 1 ;
+    flex: 1;
     position: relative;
     background-position: right 80%;
 }
-#primer-btn-contacto{
-   
+
+#primer-btn-contacto {
+
     width: 150px;
     height: 35px;
     background-color: #007bff;
     border-radius: 25px;
     margin-bottom: 5px;
 
+
 }
-#primer-btn-contacto a{
+
+#primer-btn-contacto:hover {
+    background-color: #00a9ee;
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 1s;
+
+}
+
+#primer-btn-contacto a {
     text-decoration: none;
+    color: #000;
 }
+
 .onda_de_IMG-Est {
     position: absolute;
 
 
 }
-.onda-movile{
+
+.onda-movile {
     display: none;
     position: absolute;
 }
+
 .fundadores {
     text-align: center;
-  
-    background: linear-gradient(to right, #cbf3f0 35%, #2ec4b6 );
+
+    background: linear-gradient(to right, #cbf3f0 35%, #2ec4b6);
     margin: 0px;
     padding: 20px;
     z-index: 200;
@@ -117,10 +133,32 @@ body {
 
 .contenedor-fundadores-text {
     flex: 1;
-   
+
 
 }
-.contenedor_imagen_Fundadores{
+
+.contenedor-fundadores-text-solo-para-flex-row-aye-fede {
+    display: flex;
+    flex-direction: row;
+}
+
+.contenedor-fundadores-text-solo-para-flex-row-apolo-galo {
+    display: flex;
+    flex-direction: row;
+
+}
+.ayelen, .federico, .apolo , .galo{
+    margin: 10px;
+    border-style: double;
+    border-radius: 25px;
+    border-color: #ff9f1c;
+}
+.apolo,
+.galo {
+    flex: 1
+}
+
+.contenedor_imagen_Fundadores {
     flex: 1;
 }
 
@@ -146,34 +184,40 @@ body {
 }
 
 @media screen and (max-width : 700px) {
-    .contendor-img-estatico{
+    .contendor-img-estatico {
         flex-direction: column;
     }
-    .historia{
+
+    .historia {
         text-align: start;
     }
-    .img-estatico{
+
+    .img-estatico {
         flex: 1;
         background-size: cover;
-        
+
     }
-  
-    .onda-computadora{
+
+    .onda-computadora {
         display: none;
     }
-    .onda-movile{
+
+    .onda-movile {
         display: block;
-        top: 0px;
+        top: -1px;
         width: 100%;
     }
-    .contenedor-fundadores{
+
+    .contenedor-fundadores {
         flex-direction: column;
     }
-   .contendor-img-estatico{
-    height: 700px;
-   }
-   .contenedor_imagen_Fundadores img{
-    width: 300px;
-    height: 300px;
-   }
+
+    .contendor-img-estatico {
+        height: 700px;
+    }
+
+    .contenedor_imagen_Fundadores img {
+        width: 300px;
+        height: 300px;
+    }
 }
