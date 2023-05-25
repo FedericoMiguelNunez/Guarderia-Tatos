@@ -48,7 +48,7 @@ body {
     text-align: center;
     align-items: center;
     justify-content: center;
-    background-color: #ffb769;
+    background-color: #ff9f1c;
 
 }
 
@@ -154,6 +154,8 @@ body {
     border-style: double;
     border-radius: 25px;
     border-color: #ff9f1c;
+    background: linear-gradient(to top,rgba(255, 183, 105, 0.8) 50%, rgba(255, 159, 28, 0.8));
+    
 }
 .ayelen p , .federico p , .apolo p , .galo p{
     text-align: center;
