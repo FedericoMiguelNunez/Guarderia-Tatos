@@ -136,9 +136,12 @@ body {
 
 
 }
-.contenedor-fundadores-text-solo-para-flexcol h2 , #p-recibimos{
+
+.contenedor-fundadores-text-solo-para-flexcol h2,
+#p-recibimos {
     margin-bottom: 10px;
 }
+
 .contenedor-fundadores-text-solo-para-flex-row-aye-fede {
     display: flex;
     flex-direction: row;
@@ -149,18 +152,27 @@ body {
     flex-direction: row;
 
 }
-.ayelen, .federico, .apolo , .galo{
+
+.ayelen,
+.federico,
+.apolo,
+.galo {
     margin: 10px;
     border-style: double;
     border-radius: 25px;
     border-color: #ff9f1c;
-    background: linear-gradient(to top,rgba(255, 183, 105, 0.8) 50%, rgba(255, 159, 28, 0.8));
-    
+    background: linear-gradient(to top, rgba(255, 183, 105, 0.8) 50%, rgba(255, 159, 28, 0.8));
+
 }
-.ayelen p , .federico p , .apolo p , .galo p{
+
+.ayelen p,
+.federico p,
+.apolo p,
+.galo p {
     text-align: center;
     padding: 7px;
 }
+
 .apolo,
 .galo {
     flex: 1
@@ -170,7 +182,58 @@ body {
     flex: 1;
 }
 
+footer {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 30px;
+}
 
+.container-footer {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+.footer-ubicacion,
+.footer-contacto {
+    flex: 1;
+}
+
+footer .copy {
+    text-align: center;
+    border-top: 2px solid #ffffff;
+
+}
+
+.footer-ubicacion {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.footer-ubicacion h4 {
+    font-size: 20px;
+}
+
+.footer-ubicacion p {
+    font-size: 15px;
+    font-weight: 100;
+
+}
+
+.footer-contacto h4 {
+    font-size: 23px;
+    margin-bottom: 15px;
+
+}
+
+.footer-contacto a {
+    margin: 20px;
+    font-size: 25px;
+
+}
 
 
 
@@ -223,13 +286,38 @@ body {
     .contendor-img-estatico {
         height: 700px;
     }
-.ayelen , .federico , .apolo , .galo{
-    height: 200px;
-    overflow-y: scroll;
-    margin: 3px;
-}
+
+    .ayelen,
+    .federico,
+    .apolo,
+    .galo {
+        height: 200px;
+        overflow-y: scroll;
+        margin: 3px;
+    }
+
     .contenedor_imagen_Fundadores img {
         width: 300px;
         height: 300px;
     }
+.footer-ubicacion , .footer-contacto{
+    margin: 0px;
+    
+}
+.footer-ubicacion h4{
+    font-size: 15px;
+}
+.footer-ubicacion p{
+    font-size: 13px;
+}
+.footer-contacto h4 {
+    font-size: 18px;
+}
+.footer-contacto a{
+    margin: 5px;
+    font-size: 20px;
+}
+.copy{
+    font-size: 10px;
+}
 }
