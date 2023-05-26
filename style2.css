@@ -317,6 +317,13 @@ footer .copy {
         display: flex;
         flex-direction: column;
     }
+    .beneficios-1 div ,.beneficios-2 div , .beneficios-3 div , .beneficios-4 div{
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 20px 30px ;
+    }
     .contenedor-fundadores {
         flex-direction: column-reverse;
     }
