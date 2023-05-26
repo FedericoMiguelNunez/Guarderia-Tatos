@@ -130,19 +130,13 @@ body {
     display: flex;
     flex-direction: row;
 }
-.beneficios-1 div{
+
+.beneficios-1 div ,.beneficios-2 div , .beneficios-3 div , .beneficios-4 div{
     flex: 1;
     justify-content: center;
     align-items: center;
     text-align: center;
     margin: 10px;
-}
- .beneficios-2 div , .beneficios-3 div , .beneficios-4 div{
-    flex: 1;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: 30px;
 }
 .fundadores {
     text-align: center;
