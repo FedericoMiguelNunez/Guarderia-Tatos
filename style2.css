@@ -109,7 +109,41 @@ body {
     display: none;
     position: absolute;
 }
-
+.contenedor-beneficios{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.beneficios-titulo{
+    background: linear-gradient(to left, #cbf3f0 35%, #2ec4b6);
+    padding: 30px;
+    margin: 0px 0px 15px 0px;
+}
+.servicios{
+    text-align: center;
+    
+}
+.apuntamos{
+    text-align: center;
+}
+.beneficios-1 , .beneficios-2,  .beneficios-3 , .beneficios-4{
+    display: flex;
+    flex-direction: row;
+}
+.beneficios-1 div{
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+}
+ .beneficios-2 div , .beneficios-3 div , .beneficios-4 div{
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 30px;
+}
 .fundadores {
     text-align: center;
 
@@ -232,9 +266,16 @@ footer .copy {
 .footer-contacto a {
     margin: 20px;
     font-size: 25px;
+   
 
 }
+.footer-contacto a:hover{
+    border-top: 3px solid #ff0000;
+    transition: 1s;
+    
+    border-bottom: 3px solid #ff0000;
 
+}
 
 
 
@@ -278,7 +319,10 @@ footer .copy {
         top: -1px;
         width: 100%;
     }
-
+    .beneficios-1 , .beneficios-2,  .beneficios-3 , .beneficios-4{
+        display: flex;
+        flex-direction: column;
+    }
     .contenedor-fundadores {
         flex-direction: column-reverse;
     }
