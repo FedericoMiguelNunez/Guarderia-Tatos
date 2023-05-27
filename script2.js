@@ -14,6 +14,6 @@ pRecibimos.innerHTML = `Recibir a ${gato} en nuestro hogar requiere de trabajo e
 AyelenText.innerHTML = `Es la persona encargada de ser tu punto de contacto principal. Ella te mantendrá informado/a sobre cómo está pasando los días ${gato}, proporcionándote informacion detallada y actualizada. Ademas es creadora de contenido y quien se encarga de administra nuestras redes sociales, compartiendo fotos y videos adorables y divertidas de los michis pensionados.`
 
 navBar.addEventListener('click',()=>{
-    navBar.classList.toggle('rotate-icon-bar')
+ 
     nav.classList.toggle('active-nav')
 })
