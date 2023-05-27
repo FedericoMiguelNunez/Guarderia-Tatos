@@ -7,7 +7,7 @@
 
 body {
     background-color: #cbf3f0;
-    margin: 0px;
+    margin-top: 100px;
     padding: 0px;
 
 
@@ -16,21 +16,66 @@ body {
 
 
 .cont-saludo {
+    position: fixed;
+    width: 100%;
 
-    position: relative;
-    text-align: center;
+    top: 0px;
     display: flex;
+    flex-direction: row;
+    height: 100px;
+    text-align: center;
+
     font-family: 'Libre Baskerville', serif;
-    margin: 0px;
-    padding: 20px 0px 50px;
+
     justify-content: center;
     align-items: center;
     background: linear-gradient(to right, #cbf3f0 35%, #2ec4b6);
+    z-index: 7000;
+
+}
+
+.saludo_img {
+    flex: 1
+}
+
+.cambiar {
+    display: flex;
+    flex: 2;
+    justify-content: end;
+
+}
+
+.cont-saludo nav {
+    display: flex;
+    justify-content: end;
+    flex: 2;
+}
+
+.saludo_img img {
+
+    width: 100px;
 
 
 }
 
+nav ul {
+    list-style: none;
+}
 
+nav ul li {
+    display: inline-block;
+    margin: 0px 5px;
+    font-size: 15px;
+}
+
+.nav_ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.icon {
+    font-size: 20px;
+}
 
 
 .cambiar {
@@ -39,7 +84,17 @@ body {
 
 }
 
+.icon-bar {
+    font-size: 40px;
+    margin-right: 30px;
+    color: #ff9f1c;
+    cursor: pointer;
+    display: none;
+}
 
+.rotate-icon-bar {
+    transform: rotate(90deg);
+}
 
 .contendor-img-estatico {
 
@@ -109,35 +164,47 @@ body {
     display: none;
     position: absolute;
 }
-.contenedor-beneficios{
+
+.contenedor-beneficios {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
-.beneficios-titulo{
+
+.beneficios-titulo {
     background: linear-gradient(to left, #cbf3f0 35%, #2ec4b6);
     padding: 30px;
     margin: 0px 0px 15px 0px;
 }
-.servicios{
+
+.servicios {
     text-align: center;
-    
+
 }
-.apuntamos{
+
+.apuntamos {
     text-align: center;
 }
-.beneficios-1 , .beneficios-2,  .beneficios-3 , .beneficios-4{
+
+.beneficios-1,
+.beneficios-2,
+.beneficios-3,
+.beneficios-4 {
     display: flex;
     flex-direction: row;
 }
 
-.beneficios-1 div ,.beneficios-2 div , .beneficios-3 div , .beneficios-4 div{
+.beneficios-1 div,
+.beneficios-2 div,
+.beneficios-3 div,
+.beneficios-4 div {
     flex: 1;
     justify-content: center;
     align-items: center;
     text-align: center;
     margin: 10px;
 }
+
 .fundadores {
     text-align: center;
 
@@ -260,13 +327,14 @@ footer .copy {
 .footer-contacto a {
     margin: 20px;
     font-size: 25px;
-   
+
 
 }
-.footer-contacto a:hover{
+
+.footer-contacto a:hover {
     border-top: 3px solid #ff0000;
     transition: 1s;
-    
+
     border-bottom: 3px solid #ff0000;
 
 }
@@ -290,6 +358,44 @@ footer .copy {
 }
 
 @media screen and (max-width : 700px) {
+    .icon-bar {
+        display: inline-block;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: center;
+       
+        background: linear-gradient(to right, #cbf3f0 35%, #2ec4b6);
+        flex-direction: column;
+        width: 100vw;
+        position: absolute;
+        height: calc(80vh - 300px);
+        top: -100vh;
+        z-index: -1;
+    }
+.active-nav{
+    top:0px;
+}
+    .cont-saludo nav ul {
+        flex: 1;
+        justify-content: end;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    nav ul li{
+        margin: 3px;
+        font-size: 18px;
+    }
+    nav ul li:hover{
+        background: #cbf3f0;
+        width: 100%;
+    }
+.icon-bar{
+    display: inline-block;
+}
     .contendor-img-estatico {
         flex-direction: column;
     }
@@ -313,17 +419,26 @@ footer .copy {
         top: -1px;
         width: 100%;
     }
-    .beneficios-1 , .beneficios-2,  .beneficios-3 , .beneficios-4{
+
+    .beneficios-1,
+    .beneficios-2,
+    .beneficios-3,
+    .beneficios-4 {
         display: flex;
         flex-direction: column;
     }
-    .beneficios-1 div ,.beneficios-2 div , .beneficios-3 div , .beneficios-4 div{
+
+    .beneficios-1 div,
+    .beneficios-2 div,
+    .beneficios-3 div,
+    .beneficios-4 div {
         flex: 1;
         justify-content: center;
         align-items: center;
         text-align: center;
-        margin: 20px 30px ;
+        margin: 20px 30px;
     }
+
     .contenedor-fundadores {
         flex-direction: column-reverse;
     }
@@ -345,24 +460,31 @@ footer .copy {
         width: 300px;
         height: 300px;
     }
-.footer-ubicacion , .footer-contacto{
-    margin: 0px;
-    
-}
-.footer-ubicacion h4{
-    font-size: 15px;
-}
-.footer-ubicacion p{
-    font-size: 13px;
-}
-.footer-contacto h4 {
-    font-size: 18px;
-}
-.footer-contacto a{
-    margin: 5px;
-    font-size: 20px;
-}
-.copy{
-    font-size: 10px;
-}
+
+    .footer-ubicacion,
+    .footer-contacto {
+        margin: 0px;
+
+    }
+
+    .footer-ubicacion h4 {
+        font-size: 15px;
+    }
+
+    .footer-ubicacion p {
+        font-size: 13px;
+    }
+
+    .footer-contacto h4 {
+        font-size: 18px;
+    }
+
+    .footer-contacto a {
+        margin: 5px;
+        font-size: 20px;
+    }
+
+    .copy {
+        font-size: 10px;
+    }
 }
