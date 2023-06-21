@@ -123,8 +123,11 @@ nav ul li {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: 30px;
+    margin: 30px 0px;
 
+}
+.beneficios-1 div img{
+    width: 200px;
 }
 footer {
     background-color: #2ec4b6;
@@ -236,23 +239,18 @@ footer .copy {
     .icon-bar {
         display: inline-block;
     }
-    .beneficios-1,
-    .beneficios-2,
-    .beneficios-3,
-    .beneficios-4 {
+    .beneficios-1{
         display: flex;
         flex-direction: column;
     }
 
-    .beneficios-1 div,
-    .beneficios-2 div,
-    .beneficios-3 div,
-    .beneficios-4 div {
+    .beneficios-1 div
+  {
         flex: 1;
         justify-content: center;
         align-items: center;
         text-align: center;
-        margin: 20px 30px;
+        margin: 30px 0px;
     }
     .footer-ubicacion,
     .footer-contacto {
