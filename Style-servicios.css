@@ -7,14 +7,15 @@
 
 body {
     background-color: #cbf3f0;
-    
+
     padding: 0px;
 
 
 
 }
+
 .cont-saludo {
-    
+
     width: 100%;
 
     top: 0px;
@@ -24,7 +25,7 @@ body {
     text-align: center;
 
     font-family: 'Libre Baskerville', serif;
-position: relative;
+    position: relative;
     justify-content: center;
     align-items: center;
     background: linear-gradient(to right, #cbf3f0 35%, #2ec4b6);
@@ -90,6 +91,7 @@ nav ul li {
     cursor: pointer;
     display: none;
 }
+
 .contenedor-beneficios {
     display: flex;
     flex-direction: column;
@@ -118,7 +120,7 @@ nav ul li {
     margin: 0px 0px 100px;
 }
 
-.beneficios-1 div{
+.beneficios-1 div {
     flex: 1;
     justify-content: center;
     align-items: center;
@@ -126,9 +128,11 @@ nav ul li {
     margin: 30px 0px;
 
 }
-.beneficios-1 div img{
+
+.beneficios-1 div img {
     width: 200px;
 }
+
 footer {
     background-color: #2ec4b6;
     color: #000;
@@ -190,17 +194,16 @@ footer .copy {
     border-bottom: 3px solid #ff0000;
 
 }
+
 @media screen and (max-width: 1050px) {
-.saludo_img img{
-    width: 55px;
-}
-    .icon-bar {
-        display: inline-block;
-       
+    .saludo_img img {
+        width: 55px;
     }
-    .icon-bar i{
+
+    .icon-bar i {
         font-size: 30px;
     }
+
     .nav {
         display: flex;
         justify-content: center;
@@ -217,12 +220,14 @@ footer .copy {
     .active-nav {
         top: 0px;
     }
-    .cambiar{
-        font-size: 20px;
-        justify-content: start;
+
+    .cambiar {
+        font-size: 30px;
+        justify-content: center;
     }
+
     .cont-saludo nav ul {
-        flex: 1;
+
         justify-content: end;
         align-items: center;
         display: flex;
@@ -241,21 +246,32 @@ footer .copy {
     }
 
     .icon-bar {
-        display: inline-block;
+        display: flex;
+
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+
     }
-    .beneficios-1{
+
+    .icon-bar i {
+        text-align: center;
+        margin: 0px auto;
+    }
+
+    .beneficios-1 {
         display: flex;
         flex-direction: column;
     }
 
-    .beneficios-1 div
-  {
-        flex: 1;
+    .beneficios-1 div {
+
         justify-content: center;
         align-items: center;
         text-align: center;
         margin: 30px 0px;
     }
+
     .footer-ubicacion,
     .footer-contacto {
         margin: 0px;
