@@ -150,7 +150,7 @@ footer {
 
 footer .copy {
     text-align: center;
-    border-top: 2px solid #ffffff;
+    border-top: 2px solid #000;
 
 }
 
@@ -191,12 +191,16 @@ footer .copy {
 
 }
 @media screen and (max-width: 1050px) {
-
+.saludo_img img{
+    width: 55px;
+}
     .icon-bar {
         display: inline-block;
        
     }
-
+    .icon-bar i{
+        font-size: 30px;
+    }
     .nav {
         display: flex;
         justify-content: center;
