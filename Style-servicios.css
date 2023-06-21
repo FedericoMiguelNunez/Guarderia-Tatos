@@ -13,8 +13,6 @@ body {
 
 
 }
-
-
 .cont-saludo {
     
     width: 100%;
@@ -92,78 +90,6 @@ nav ul li {
     cursor: pointer;
     display: none;
 }
-
-
-
-.contendor-img-estatico {
-
-    height: 500px;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    background-color: #ff9f1c;
-
-}
-
-.Texto-H {
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    flex: 1;
-    justify-content: space-around;
-    margin: 0px 20px;
-    align-items: center;
-    height: 60%;
-}
-
-.img-estatico {
-    width: 100%;
-    height: 100%;
-    background-image: url(imagenes/mity2.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: contain;
-    flex: 1;
-    position: relative;
-    background-position: right 80%;
-}
-
-#primer-btn-contacto {
-
-    width: 150px;
-    height: 35px;
-    background-color: #007bff;
-    border-radius: 25px;
-    margin-bottom: 5px;
-
-
-}
-
-#primer-btn-contacto:hover {
-    background-color: #00a9ee;
-    cursor: pointer;
-    transform: scale(1.1);
-    transition: 1s;
-
-}
-
-#primer-btn-contacto a {
-    text-decoration: none;
-    color: #000;
-}
-
-.onda_de_IMG-Est {
-    position: absolute;
-
-
-}
-
-.onda-movile {
-    display: none;
-    position: absolute;
-}
-
 .contenedor-beneficios {
     display: flex;
     flex-direction: column;
@@ -171,7 +97,7 @@ nav ul li {
 }
 
 .beneficios-titulo {
-    background: linear-gradient(to left, #cbf3f0 35%, #2ec4b6);
+    background: #cbf3f0;
     padding: 30px;
     margin: 0px 0px 15px 0px;
 }
@@ -183,99 +109,23 @@ nav ul li {
 
 .apuntamos {
     text-align: center;
+    font-size: 20px;
 }
 
-.beneficios-1,
-.beneficios-2,
-.beneficios-3,
-.beneficios-4 {
+.beneficios-1 {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    margin: 0px 0px 100px;
 }
 
-.beneficios-1 div,
-.beneficios-2 div,
-.beneficios-3 div,
-.beneficios-4 div {
+.beneficios-1 div{
     flex: 1;
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: 10px;
-}
-
-.fundadores {
-    text-align: center;
-
-    background: linear-gradient(to right, #cbf3f0 35%, #2ec4b6);
-    margin: 0px;
-    padding: 20px;
-    z-index: 200;
-    position: relative;
-}
-
-.contenedor-fundadores {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
-    align-items: center;
-    margin: 10px;
-}
-
-
-.contenedor-fundadores-text {
-    flex: 1;
-
+    margin: 30px;
 
 }
-
-.contenedor-fundadores-text-solo-para-flexcol h2,
-#p-recibimos {
-    margin-bottom: 10px;
-}
-
-.contenedor-fundadores-text-solo-para-flex-row-aye-fede {
-    display: flex;
-    flex-direction: row;
-}
-
-.contenedor-fundadores-text-solo-para-flex-row-apolo-galo {
-    display: flex;
-    flex-direction: row;
-
-}
-
-.ayelen,
-.federico,
-.apolo,
-.galo {
-    margin: 10px;
-    border-style: double;
-    border-radius: 25px;
-    border-color: #ff9f1c;
-    background: linear-gradient(to top, rgba(255, 183, 105, 0.8) 50%, rgba(255, 159, 28, 0.8));
-
-}
-
-.ayelen p,
-.federico p,
-.apolo p,
-.galo p {
-    text-align: center;
-    padding: 7px;
-}
-
-.apolo,
-.galo {
-    flex: 1
-}
-
-.contenedor_imagen_Fundadores {
-    flex: 1;
-}
-
 footer {
     background-color: #2ec4b6;
     color: #000;
@@ -297,7 +147,7 @@ footer {
 
 footer .copy {
     text-align: center;
-    border-top: 2px solid #000;
+    border-top: 2px solid #ffffff;
 
 }
 
@@ -337,26 +187,8 @@ footer .copy {
     border-bottom: 3px solid #ff0000;
 
 }
+@media screen and (max-width: 1050px) {
 
-
-
-
-
-
-
-
-
-
-
-
-@media screen and (min-width: 900px) {
-    .contenedor-carrusel {
-        height: 400px;
-    }
-
-}
-
-@media screen and (max-width : 1050px) {
     .icon-bar {
         display: inline-block;
        
@@ -404,55 +236,24 @@ footer .copy {
     .icon-bar {
         display: inline-block;
     }
-
-    .contendor-img-estatico {
+    .beneficios-1,
+    .beneficios-2,
+    .beneficios-3,
+    .beneficios-4 {
+        display: flex;
         flex-direction: column;
     }
 
-    .historia {
-        text-align: start;
-    }
-
-    .img-estatico {
+    .beneficios-1 div,
+    .beneficios-2 div,
+    .beneficios-3 div,
+    .beneficios-4 div {
         flex: 1;
-        background-size: cover;
-
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 20px 30px;
     }
-
-    .onda-computadora {
-        display: none;
-    }
-
-    .onda-movile {
-        display: block;
-        top: -1px;
-        width: 100%;
-    }
-
-    
-
-    .contenedor-fundadores {
-        flex-direction: column-reverse;
-    }
-
-    .contendor-img-estatico {
-        height: 700px;
-    }
-
-    .ayelen,
-    .federico,
-    .apolo,
-    .galo {
-        height: 200px;
-        overflow-y: scroll;
-        margin: 3px;
-    }
-
-    .contenedor_imagen_Fundadores img {
-        width: 300px;
-        height: 300px;
-    }
-
     .footer-ubicacion,
     .footer-contacto {
         margin: 0px;
