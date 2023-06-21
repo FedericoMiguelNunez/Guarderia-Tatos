@@ -192,14 +192,14 @@ footer .copy {
 }
 @media screen and (max-width: 1050px) {
 .saludo_img img{
-    width: 55px;
+    width: 40px;
 }
     .icon-bar {
         display: inline-block;
        
     }
     .icon-bar i{
-        font-size: 30px;
+        font-size: 20px;
     }
     .nav {
         display: flex;
