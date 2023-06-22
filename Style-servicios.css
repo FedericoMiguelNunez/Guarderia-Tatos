@@ -208,14 +208,13 @@ footer .copy {
     }
 
     .nav {
-        display: flex;
-        justify-content: center;
+        justify-content: end !important;
 
         background: linear-gradient(to right, #cbf3f0 35%, #2ec4b6);
         flex-direction: column;
         width: 100vw;
         position: absolute;
-        height: calc(80vh - 230px);
+        height: 40vh;
         top: -100vh;
         z-index: -1;
     }
@@ -232,7 +231,8 @@ footer .copy {
         display: flex;
         flex-direction: column;
         text-align: center;
-        top: 30px;
+        top: 0px;
+        height: 70%;
     }
 
     nav ul li {
