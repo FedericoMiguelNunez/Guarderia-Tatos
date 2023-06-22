@@ -214,7 +214,7 @@ footer .copy {
         flex-direction: column;
         width: 100vw;
         position: absolute;
-        height: 40vh;
+        height: 300%;
         top: -100vh;
         z-index: -1;
     }
