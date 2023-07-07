@@ -17,39 +17,45 @@
 </head>
 
 <body>
-    <header>
+    <header id="header">
         <div class="cont-saludo">
             <div class="saludo_img"><img src="imagenes/logo.ico" alt="GuarderiaTatos-Logo"></div>
             <div class="contenedor-cambiar">
-            <h1 class="cambiar" id="cambiar"> </h1>
-        </div>
+                <h1 class="cambiar" id="cambiar"> </h1>
+            </div>
             <nav class="nav">
                 <ul class="nav_ul">
-                    <li><a id="Home" href="Guarderia-Tatos.html">Home</a></li>
-                    <li><a href="#Quienes_somos">¿Quienes Somos?</a></li>
-                    <li><a href="#">Requisitos</a></li>
-                    <li><a class="icon" href="https://wa.link/j9l6wo"target="_blank"><i class="fa-brands fa-whatsapp" style="color: #000;"></i></a></li>
-                    <li> <a class="icon" href="http://bit.ly/Instagram-Guarderia-Tatos"target="_blank"><i class="fa-brands fa-instagram" style="color: #000;"></i></a></li>
-                    <li> <a class="icon" href="http://bit.ly/Facebook-Guarderia-Tatos"target="_blank"><i class="fa-brands fa-facebook-f" style="color: #000;"></i></a></li>
-                    <li><a href="https://www.tiktok.com/@tatosguarderia?lang=es" target="_blank"><i class="fa-brands fa-tiktok" style="color: #000;"></i></a></li>
-                    
+                    <li id="Home">Home</li>
+                    <li id="Nav-Quienes_somos">¿Quienes Somos?</li>
+                    <li onclick="window.location.href='#'">Requisitos</li>
+                    <li onclick="window.location.href='https://wa.link/j9l6wo'"><i class="fa-brands fa-whatsapp"></i>
+                    </li>
+                    <li onclick="window.location.href='http://bit.ly/Instagram-Guarderia-Tatos'"> <i
+                            class="fa-brands fa-instagram"></i></li>
+                    <li onclick="window.location.href='http://bit.ly/Facebook-Guarderia-Tatos'"> <i
+                            class="fa-brands fa-facebook-f"></i></li>
+                    <li onclick="window.location.href='https://www.tiktok.com/@tatosguarderia?lang=es'"> <i
+                            class="fa-brands fa-tiktok"></i></li>
+
                 </ul>
-              
+
             </nav>
             <div class="icon-bar">
                 <i class="fa-sharp fa-solid fa-bars"></i>
             </div>
-            
+
         </div>
-        
-        
+
+
     </header>
     <main>
         <section id="beneficios">
             <div class="beneficios-titulo">
-                
+
                 <p class="apuntamos">Apuntamos a ser de tu confianza, que no tengas que preocuparte por qué a tu michi
                     le falte nada. Por esto le brindamos los siguientes servicios: </p>
+                <button class="Beneficio-titulo_btn" onclick="window.location.href='https://wa.link/j9l6wo'">Hace tu
+                    reserva</button>
             </div>
             <div class="contenedor-beneficios">
 
@@ -84,7 +90,7 @@
                             también tenemos camitas, juguetes y rascadores para que puedan disfrutar de una estadía
                             cómoda y divertida.</p>
                     </div>
-            
+
 
                     <div class="premios"><img src="imagenes/6.png" alt="GuarderiaTatos-premios">
                         <h3>Premios</h3>
@@ -102,7 +108,7 @@
                         <h3>Fotos y Videos</h3>
                         <p>Hacemos seguimiento con fotos y videos para que puedas ver lo bien que la está pasando.</p>
                     </div>
-               
+
 
                     <div class="tiempo">
                         <img src="imagenes/9.png" alt="GuarderiaTatos-Tiempo_calidad">
@@ -138,30 +144,34 @@
 
             </div>
         </section>
-       
 
-    <footer>
-        <div class="container-footer">
-            <div class="footer-ubicacion">
-                <h4>¿Donde nos encontramos?</h4>
-                <p>Nos encontramos ubicados en Capital Federal, Barrio de Monte Castro</p>
-            </div>
-            <div class="footer-contacto">
-                <div>
-                    <h4>Contactanos</h4>
+
+        <footer>
+            <div class="container-footer">
+                <div class="footer-ubicacion">
+                    <h4>¿Donde nos encontramos?</h4>
+                    <p>Nos encontramos ubicados Elpidio Gonzalez 5168, Barrio de Monte Castro, Capital Federal</p>
                 </div>
-                <a href="https://wa.link/j9l6wo"target="_blank"><i class="fa-brands fa-whatsapp" style="color: #000;"></i></a>
-                <a href=" http://bit.ly/Instagram-Guarderia-Tatos"target="_blank"><i class="fa-brands fa-instagram" style="color: #000;"></i></a>
-                <a href="http://bit.ly/Facebook-Guarderia-Tatos"target="_blank"><i class="fa-brands fa-facebook-f" style="color: #000;"></i></a>
-                <a href="https://www.tiktok.com/@tatosguarderia?lang=es" target="_blank"><i class="fa-brands fa-tiktok" style="color: #000;"></i></a>
+                <div class="footer-contacto">
+                    <div>
+                        <h4>Contactanos</h4>
+                    </div>
+                    <a href="https://wa.link/j9l6wo" target="_blank"><i class="fa-brands fa-whatsapp"
+                            ></i></a>
+                    <a href=" http://bit.ly/Instagram-Guarderia-Tatos" target="_blank"><i class="fa-brands fa-instagram"
+                            ></i></a>
+                    <a href="http://bit.ly/Facebook-Guarderia-Tatos" target="_blank"><i class="fa-brands fa-facebook-f"
+                            ></i></a>
+                    <a href="https://www.tiktok.com/@tatosguarderia?lang=es" target="_blank"><i
+                            class="fa-brands fa-tiktok" ></i></a>
+                </div>
+
+
             </div>
+            <p class="copy">Guardería Tatos © 2023 . Todos los derechos reservados.</p>
+        </footer>
 
-
-        </div>
-        <p class="copy">Guardería Tatos © 2023 . Todos los derechos reservados.</p>
-    </footer>
-
-    <script src="script-servicios.js"></script>
+        <script src="script-servicios.js"></script>
 </body>
 
 </html>

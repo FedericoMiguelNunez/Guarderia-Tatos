@@ -7,26 +7,22 @@
 
 body {
     background-color: #cbf3f0;
-    
+    margin-top: 100px;
     padding: 0px;
 
 
 
 }
 
-
 .cont-saludo {
-    
     width: 100%;
-
-    top: 0px;
     display: flex;
     flex-direction: row;
     height: 100px;
     text-align: center;
-
     font-family: 'Libre Baskerville', serif;
-position: relative;
+    position: fixed;
+    top: 0px;
     justify-content: center;
     align-items: center;
     background: linear-gradient(to right, #cbf3f0 35%, #2ec4b6);
@@ -38,17 +34,74 @@ position: relative;
     flex: 1
 }
 
-.cambiar {
+.contenedor-cambiar {
     display: flex;
-    flex: 2;
-    justify-content: end;
-
+    flex: 1;
+    text-align: center;
+    justify-content: flex-start;
+    font-size: 18px;
 }
 
 .cont-saludo nav {
     display: flex;
     justify-content: center;
-    flex: 2;
+    flex: 1;
+
+}
+
+.saludo_img img {
+
+    width: 100px;
+
+
+}
+
+nav ul {
+    list-style: none;
+
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0px 5px;
+    font-size: 18px;
+    cursor: pointer;
+
+
+}
+
+.icon {
+    font-size: 20px;
+}
+
+
+.icon-bar {
+    color: #ff9f1c;
+    cursor: pointer;
+    display: none;
+}
+
+
+
+.saludo_img {
+    flex: 1
+}
+
+.contenedor-cambiar {
+    display: flex;
+    flex: 1;
+    text-align: center;
+    justify-content: flex-start;
+    font-size: 18px;
+    text-align: center;
+    cursor: default;
+}
+
+.cont-saludo nav {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+
 }
 
 .saludo_img img {
@@ -65,13 +118,14 @@ nav ul {
 nav ul li {
     display: inline-block;
     margin: 0px 5px;
-    font-size: 15px;
+    font-size: 18px;
+    cursor: pointer;
 }
 
-.nav_ul li a {
-    text-decoration: none;
-    color: #000;
-    font-size: 16px;
+nav ul li:hover,
+nav i:hover {
+    color: #ff9f1c;
+    font-size: 18px;
 }
 
 .icon {
@@ -79,15 +133,9 @@ nav ul li {
 }
 
 
-.cambiar {
-    padding: 0px;
-    margin: 0px;
 
-}
 
 .icon-bar {
-    font-size: 40px;
-    margin-right: 30px;
     color: #ff9f1c;
     cursor: pointer;
     display: none;
@@ -164,118 +212,6 @@ nav ul li {
     position: absolute;
 }
 
-.contenedor-beneficios {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-.beneficios-titulo {
-    background: linear-gradient(to left, #cbf3f0 35%, #2ec4b6);
-    padding: 30px;
-    margin: 0px 0px 15px 0px;
-}
-
-.servicios {
-    text-align: center;
-
-}
-
-.apuntamos {
-    text-align: center;
-}
-
-.beneficios-1,
-.beneficios-2,
-.beneficios-3,
-.beneficios-4 {
-    display: flex;
-    flex-direction: row;
-}
-
-.beneficios-1 div,
-.beneficios-2 div,
-.beneficios-3 div,
-.beneficios-4 div {
-    flex: 1;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: 10px;
-}
-
-.fundadores {
-    text-align: center;
-
-    background: linear-gradient(to right, #cbf3f0 35%, #2ec4b6);
-    margin: 0px;
-    padding: 20px;
-    z-index: 200;
-    position: relative;
-}
-
-.contenedor-fundadores {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
-    align-items: center;
-    margin: 10px;
-}
-
-
-.contenedor-fundadores-text {
-    flex: 1;
-
-
-}
-
-.contenedor-fundadores-text-solo-para-flexcol h2,
-#p-recibimos {
-    margin-bottom: 10px;
-}
-
-.contenedor-fundadores-text-solo-para-flex-row-aye-fede {
-    display: flex;
-    flex-direction: row;
-}
-
-.contenedor-fundadores-text-solo-para-flex-row-apolo-galo {
-    display: flex;
-    flex-direction: row;
-
-}
-
-.ayelen,
-.federico,
-.apolo,
-.galo {
-    margin: 10px;
-    border-style: double;
-    border-radius: 25px;
-    border-color: #ff9f1c;
-    background: linear-gradient(to top, rgba(255, 183, 105, 0.8) 50%, rgba(255, 159, 28, 0.8));
-
-}
-
-.ayelen p,
-.federico p,
-.apolo p,
-.galo p {
-    text-align: center;
-    padding: 7px;
-}
-
-.apolo,
-.galo {
-    flex: 1
-}
-
-.contenedor_imagen_Fundadores {
-    flex: 1;
-}
-
 footer {
     background-color: #2ec4b6;
     color: #000;
@@ -338,17 +274,6 @@ footer .copy {
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
 @media screen and (min-width: 900px) {
     .contenedor-carrusel {
         height: 400px;
@@ -356,21 +281,31 @@ footer .copy {
 
 }
 
-@media screen and (max-width : 1050px) {
-    .icon-bar {
-        display: inline-block;
-       
+@media screen and (max-width : 1475px) {
+
+    .saludo_img {
+        flex: 1;
+    }
+
+    .saludo_img img {
+        width: 55px;
+    }
+
+    .contenedor-cambiar {
+        font-size: 13px;
+        justify-content: center;
+        flex: 3;
+
     }
 
     .nav {
-        display: flex;
-        justify-content: center;
+        justify-content: end !important;
 
         background: linear-gradient(to right, #cbf3f0 35%, #2ec4b6);
         flex-direction: column;
         width: 100vw;
         position: absolute;
-        height: calc(80vh - 300px);
+        height: 300%;
         top: -100vh;
         z-index: -1;
     }
@@ -378,17 +313,17 @@ footer .copy {
     .active-nav {
         top: 0px;
     }
-    .cambiar{
-        font-size: 20px;
-        justify-content: start;
-    }
+
+
     .cont-saludo nav ul {
-        flex: 1;
+        position: relative;
         justify-content: end;
         align-items: center;
         display: flex;
         flex-direction: column;
         text-align: center;
+        top: 0px;
+        height: 70%;
     }
 
     nav ul li {
@@ -402,7 +337,19 @@ footer .copy {
     }
 
     .icon-bar {
-        display: inline-block;
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+
+    }
+
+
+    .icon-bar i {
+        text-align: center;
+
+        font-size: 30px;
     }
 
     .contendor-img-estatico {
@@ -429,7 +376,7 @@ footer .copy {
         width: 100%;
     }
 
-    
+
 
     .contenedor-fundadores {
         flex-direction: column-reverse;
