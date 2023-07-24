@@ -1,7 +1,7 @@
 const cambio = document.getElementById("cambiar");
 const DondeTuGato = document.getElementById("donde-tu-gato");
 const Recibimos = document.getElementById("p-recibimos");
-const AyelenText = document.getElementById("ayelen-Text");
+
 const params = new URLSearchParams(window.location.search);
 const nombre = params.get('nombre');
 const gato = params.get('gato');
@@ -23,7 +23,7 @@ window.location.href = QuienesSomosRedirigidos;
 if (gato != null && nombre != null && gato != "" && nombre != "") {
     cambio.innerHTML = `¡Bienvenidos  ${nombre} y ${gato}!`;
 
-   
+    const DondeTuGato = document.getElementById("donde-tu-gato");
     
 }
 else {

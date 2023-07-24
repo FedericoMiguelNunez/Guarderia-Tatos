@@ -10,6 +10,7 @@ body {
     padding: 0px;
     margin-top: 100px;
 }
+
 .cont-saludo {
     width: 100%;
     display: flex;
@@ -18,7 +19,7 @@ body {
     text-align: center;
     font-family: 'Libre Baskerville', serif;
     position: fixed;
-    top: 0px;
+    top : 0px;
     justify-content: center;
     align-items: center;
     background: linear-gradient(to right, #cbf3f0 35%, #2ec4b6);
@@ -62,7 +63,7 @@ nav ul li {
     margin: 0px 5px;
     font-size: 18px;
     cursor: pointer;
-    
+    font-family: 'Libre Baskerville', serif;
 
 }
 nav ul li:hover , nav i:hover{
@@ -86,16 +87,16 @@ nav ul li:hover , nav i:hover{
 
 .fundadores {
     text-align: center;
-    background: linear-gradient(to right, #cbf3f0 35%, #2ec4b6);
+    background: #cbf3f0;
     margin: 0px;
     padding: 20px;
-    z-index: 200;
-    position: relative;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 20px;
 }
 
 .contenedor-fundadores {
     display: flex;
- flex-direction: row;
+    flex-direction: row;
     justify-content: center;
     align-content: center;
     text-align: center;
@@ -110,32 +111,71 @@ nav ul li:hover , nav i:hover{
 
 }
 
-.contenedor-fundadores-text-solo-para-flexcol h2,
-#p-recibimos {
-    margin-bottom: 10px;
+
+#p-recibimos{
+    font-family: 'Libre Baskerville', serif;
+    font-size: 16px; 
+    margin: 20px 0px;
 }
 
 .contenedor-fundadores-text-solo-para-flex-row-aye-fede {
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
-.contenedor-fundadores-text-solo-para-flex-row-apolo-galo {
-    display: flex;
-    flex-direction: row;
 
-}
 
 .ayelen,
 .federico,
 .apolo,
 .galo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
     margin: 10px;
-    border-style: double;
+   
     border-radius: 25px;
-    border-color: #ff9f1c;
-    background: linear-gradient(to top, rgba(255, 183, 105, 0.8) 50%, rgba(255, 159, 28, 0.8));
+   
+    background: #2ec4b6;
+    height: 600px;
+    width: 300px;
 
+}
+.ayelen:hover ,
+.federico:hover ,
+.apolo:hover ,
+.galo:hover{
+transform: scale(1.1) ;
+background-color: #ff9f1c;
+}
+
+.federico .federico-contenedor-img , .ayelen .ayelen-contenedor-img ,.apolo .apolo-contenedor-img , .galo .galo-contenedor-img {
+   object-fit: cover;
+   
+}
+.federico img , .ayelen img , .galo img , .apolo img{
+    height: 290px;
+    width: 290px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 25px;
+}
+.galo img{
+  object-position: center -120px;
+}
+.apolo img{
+    object-position: center -120px;
+}
+.ayelen h3,
+.federico h3,
+.apolo h3,
+.galo h3{
+    font-family: 'Anton', sans-serif;
+    font-size: 30px;
+    font-weight: 100;
 }
 
 .ayelen p,
@@ -144,15 +184,43 @@ nav ul li:hover , nav i:hover{
 .galo p {
     text-align: center;
     padding: 7px;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 15px;
 }
 
-.apolo,
-.galo {
-    flex: 1
-}
+
 
 .contenedor_imagen_Fundadores {
     flex: 1;
+}
+
+footer {
+    background-color: #2ec4b6;
+    color: #000;
+    padding: 30px;
+}
+.contenedor-btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 20px;
+}
+.Beneficio-titulo_btn{
+    width: 300px;
+    background-color: #ff9f1c;
+    height: 50px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 600;
+    font-size: 23px;
+   
+}
+
+.Beneficio-titulo_btn:hover{
+color: #cbf3f0;
 }
 footer {
     background-color: #2ec4b6;
@@ -186,32 +254,144 @@ footer .copy {
 }
 
 .footer-ubicacion h4 {
-    font-size: 20px;
+    font-size: 25px;
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 800;
 }
 
 .footer-ubicacion p {
     font-size: 15px;
-    font-weight: 100;
+    
+    font-family: 'Libre Baskerville', serif;
 
 }
 
 .footer-contacto h4 {
     font-size: 23px;
     margin-bottom: 15px;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 25px;
 
 }
 
 .footer-contacto a {
     margin: 20px;
     font-size: 25px;
-
+    color: #000;
 
 }
 
 .footer-contacto a:hover {
-    border-top: 3px solid #ff0000;
-    transition: 1s;
+    color: #ff9f1c;
 
-    border-bottom: 3px solid #ff0000;
+}
 
+
+@media screen and (max-width : 1475px) {
+
+    .saludo_img {
+        flex: 1;
+    }
+
+    .saludo_img img {
+        width: 55px;
+    }
+
+    .contenedor-cambiar {
+        font-size: 13px;
+        justify-content: center;
+        flex: 3;
+
+    }
+
+    .nav {
+        justify-content: end !important;
+
+        background: linear-gradient(to right, #cbf3f0 35%, #2ec4b6);
+        flex-direction: column;
+        width: 100vw;
+        position: absolute;
+        height: 300%;
+        top: -100vh;
+        z-index: -1;
+    }
+
+    .active-nav {
+        top: 0px;
+    }
+
+
+    .cont-saludo nav ul {
+        position: relative;
+        justify-content: end;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        top: 0px;
+        height: 70%;
+    }
+
+    nav ul li {
+        margin: 3px;
+        font-size: 18px;
+    }
+
+    nav ul li:hover {
+        background: #cbf3f0;
+        width: 100%;
+    }
+
+    .icon-bar {
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+
+    }
+
+
+    .icon-bar i {
+        text-align: center;
+
+        font-size: 30px;
+    }
+.fundadores{
+    font-size: 18px;
+}
+    .contenedor-fundadores-text-solo-para-flex-row-aye-fede {
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+    }
+    .footer-ubicacion,
+    .footer-contacto {
+        margin: 0px;
+
+    }
+
+    .footer-ubicacion h4 {
+        font-family: 'Libre Baskerville', serif;
+        font-weight: 200;
+       
+        font-size: 15px;
+    }
+
+    .footer-ubicacion p {
+        font-size: 13px;
+    }
+
+    .footer-contacto h4 {
+        font-size: 18px;
+    }
+
+    .footer-contacto a {
+        margin: 5px;
+        font-size: 20px;
+    }
+
+    .copy {
+        font-size: 10px;
+    }
 }

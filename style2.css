@@ -274,12 +274,6 @@ footer .copy {
 
 }
 
-@media screen and (min-width: 900px) {
-    .contenedor-carrusel {
-        height: 400px;
-    }
-
-}
 
 @media screen and (max-width : 1475px) {
 
@@ -378,27 +372,13 @@ footer .copy {
 
 
 
-    .contenedor-fundadores {
-        flex-direction: column-reverse;
-    }
-
+   
     .contendor-img-estatico {
         height: 700px;
     }
 
-    .ayelen,
-    .federico,
-    .apolo,
-    .galo {
-        height: 200px;
-        overflow-y: scroll;
-        margin: 3px;
-    }
+   
 
-    .contenedor_imagen_Fundadores img {
-        width: 300px;
-        height: 300px;
-    }
 
     .footer-ubicacion,
     .footer-contacto {
