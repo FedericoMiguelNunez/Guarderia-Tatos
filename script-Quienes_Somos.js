@@ -2,7 +2,7 @@ const params = new URLSearchParams(window.location.search);
 const nombre = params.get('nombre');
 const gato = params.get('gato');
 const cambio = document.getElementById("cambiar");
-
+const requisitos = document.getElementById("requisitos")
 const Recibimos = document.getElementById("p-recibimos");
 const AyelenText = document.getElementById("ayelen-Text");
 const navBar = document.querySelector('.icon-bar');
@@ -21,6 +21,11 @@ servicios.addEventListener('click', function(){
     window.location.href = serviciosRedirigidos;
 })
 
+requisitos.addEventListener('click', () => {
+    const RequisitosRedirigido = 'requisitos.html' + '?gato=' + encodeURI(gato || '') + '&nombre=' + encodeURI(nombre || '');
+    window.location.href = RequisitosRedirigido;
+}
+)
 if (gato != null && nombre != null && gato != "" && nombre != "") {
     cambio.innerHTML = `¿Quienes cuidaran de ${gato}?`;
 
