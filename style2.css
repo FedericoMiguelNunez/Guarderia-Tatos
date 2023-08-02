@@ -83,19 +83,9 @@ nav ul li {
 
 
 
-.saludo_img {
-    flex: 1
-}
 
-.contenedor-cambiar {
-    display: flex;
-    flex: 1;
-    text-align: center;
-    justify-content: flex-start;
-    font-size: 18px;
-    text-align: center;
-    cursor: default;
-}
+
+
 
 .cont-saludo nav {
     display: flex;
@@ -141,77 +131,73 @@ nav i:hover {
     display: none;
 }
 
-
-
-.contendor-img-estatico {
-
-    height: 500px;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    background-color: #ff9f1c;
-
-}
-
-.Texto-H {
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    flex: 1;
-    justify-content: space-around;
-    margin: 0px 20px;
-    align-items: center;
-    height: 60%;
-}
-
-.img-estatico {
-    width: 100%;
-    height: 100%;
-    background-image: url(imagenes/mity2.png);
+.contenedor-deimagenprincipal{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(imagenes/base2.png);
     background-repeat: no-repeat;
+    background-size: cover;
+   
     background-attachment: fixed;
-    background-size: contain;
-    flex: 1;
-    position: relative;
-    background-position: right 80%;
-}
-
-#primer-btn-contacto {
-
-    width: 150px;
-    height: 35px;
-    background-color: #007bff;
-    border-radius: 25px;
-    margin-bottom: 5px;
-
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    text-align: center;
+    align-content: center;
+    align-items: center;
 
 }
 
-#primer-btn-contacto:hover {
-    background-color: #00a9ee;
-    cursor: pointer;
-    transform: scale(1.1);
-    transition: 1s;
+.contTitle{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    height: 100vh;
+    background-color: rgba(203, 243, 240, 0.7);
+    
+    width: 100%;
+    animation: mover 2s  1 ease-in-out;
+    
 
 }
 
-#primer-btn-contacto a {
-    text-decoration: none;
+#h2-home-prin{
+    margin: 0px 300px;
+    font-family: 'Libre Baskerville', serif;
     color: #000;
-}
-
-.onda_de_IMG-Est {
-    position: absolute;
-
+    opacity: 1;
+font-weight: 600;
 
 }
-
-.onda-movile {
-    display: none;
-    position: absolute;
+.Beneficio-titulo_btn{
+    width: 300px;
+    background-color: #ff9f1c;
+    height: 50px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 600;
+    font-size: 23px;
+   animation: bailar 2s 2 ease-in-out;
 }
 
+.Beneficio-titulo_btn:hover{
+color: #cbf3f0;
+}
+.contenedor-reseñaMaps{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    
+}
+#map {
+	height: 500px;
+	width: 100%;
+}
 footer {
     background-color: #2ec4b6;
     color: #000;
@@ -266,13 +252,42 @@ footer .copy {
 
 }
 
-.footer-contacto a:hover {
-    border-top: 3px solid #ff0000;
-    transition: 1s;
-
-    border-bottom: 3px solid #ff0000;
-
-}
+    
+@keyframes mover {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+  }
+  @keyframes bailar {
+    0% {
+      transform: rotate(10deg);
+    }
+    25% {
+      transform: rotate(-10deg);
+    }
+    50% {
+        transform: rotate(10deg);
+      }
+      100% {
+        transform: rotate(-10deg);
+      }
+  }
+ 
+  .mi-boton {
+    animation: bailar 2s infinite alternate;
+  }
+  
+  
+  
+  
+  
+  
+  
 
 
 @media screen and (max-width : 1475px) {
@@ -347,38 +362,16 @@ footer .copy {
         font-size: 30px;
     }
 
-    .contendor-img-estatico {
-        flex-direction: column;
+    .contenedor-deimagenprincipal{
+        background-image: url(imagenes/baseMovile.png);
+        background-position: -20px 0;
     }
 
-    .historia {
-        text-align: start;
+    #h2-home-prin{
+        margin: 0px 10px;
+        font-size: 24px;
+        
     }
-
-    .img-estatico {
-        flex: 1;
-        background-size: cover;
-
-    }
-
-    .onda-computadora {
-        display: none;
-    }
-
-    .onda-movile {
-        display: block;
-        top: -1px;
-        width: 100%;
-    }
-
-
-
-   
-    .contendor-img-estatico {
-        height: 700px;
-    }
-
-   
 
 
     .footer-ubicacion,

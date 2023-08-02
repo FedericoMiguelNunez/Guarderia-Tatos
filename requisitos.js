@@ -25,7 +25,7 @@ navQuienesSomos.addEventListener('click', () => {
 })
 
 if (gato != null && nombre != null && gato != "" && nombre != "") {
-    cambio.innerHTML = `¡Requisitos sanitarios que debe tener ${gato}!`;
+    cambio.innerHTML = `¡Requisitos que debe tener ${gato}!`;
 
    
 

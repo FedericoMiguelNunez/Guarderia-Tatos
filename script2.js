@@ -1,6 +1,6 @@
 const cambio = document.getElementById("cambiar");
 const DondeTuGato = document.getElementById("donde-tu-gato");
-const Recibimos = document.getElementById("p-recibimos");
+const H2HomePrincipal = document.getElementById("h2-home-prin")
 const requisitos = document.getElementById("requisitos")
 const params = new URLSearchParams(window.location.search);
 const nombre = params.get('nombre');
@@ -10,6 +10,8 @@ const nav = document.querySelector('.nav');
 const servicios = document.getElementById('servicios');
 const navQuienesSomos = document.querySelector('#Nav-Quienes_somos');
 
+
+ 
 servicios.addEventListener('click', function () {
     const serviciosRedirigidos = 'servicios.html' + '?gato=' + encodeURI(gato || '') + '&nombre=' + encodeURI(nombre || '');
     window.location.href = serviciosRedirigidos;
@@ -29,11 +31,12 @@ requisitos.addEventListener('click', () => {
 if (gato != null && nombre != null && gato != "" && nombre != "") {
     cambio.innerHTML = `¡Bienvenidos  ${nombre} y ${gato}!`;
 
-    const DondeTuGato = document.getElementById("donde-tu-gato");
+    H2HomePrincipal.innerHTML = `El hogar ideal para ${gato} .Le ofrecemos un ambiente seguro  y cariñoso, con atención personalizada y juegos divertidos . Contamos con instalaciones seguras y espacios gatificados . Goza de tu ausencia que tu michi esta en buenas manos`
 
 }
 else {
     cambio.innerHTML = `¡Bienvenidos a Guarderia Tatos!`;
+    H2HomePrincipal.innerHTML = `El hogar ideal para tu michi consentido.Le ofrecemos un ambiente seguro  y cariñoso, con atención personalizada y juegos divertidos . Contamos con instalaciones seguras y espacios gatificados . Goza de tu ausencia que tu michi esta en buenas manos`
 
 }
 navBar.addEventListener('click', () => {
@@ -47,3 +50,14 @@ window.addEventListener('scroll', () => {
         nav.classList.remove('active-nav');
     }
 });
+function iniciarMap(){
+    var coord = {lat: -34.6266254,lng: -58.5076332};
+    var map = new google.maps.Map(document.getElementById('map'),{
+      zoom: 15,
+      center: coord
+    });
+    var marker = new google.maps.Marker({
+      position: coord,
+      map: map
+    });
+}
