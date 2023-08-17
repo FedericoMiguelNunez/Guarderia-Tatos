@@ -244,6 +244,57 @@ img:hover {
     grid-row: 3 / 4;
 }
 
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 8000;
+    
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-content {
+    display: block;
+    margin: auto auto;
+    max-width: 80%;
+    max-height: 80%;
+    width: auto;
+    height: auto;
+    align-self: center; 
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    font-size: 35px;
+    color: #ff9f1c;
+    cursor: pointer;
+    user-select: none;
+}
+.prev,
+.next {
+    color: white;
+    font-size: 36px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    user-select: none;
+}
+
+.prev {
+    left: 15px;
+}
+
+.next {
+    right: 15px;
+}
 footer {
     background-color: #2ec4b6;
     color: #000;
@@ -462,6 +513,8 @@ footer .copy {
     grid-row: 3 / 4;
     grid-column: 3 / 4;
    }
+   
+
     .footer-ubicacion,
     .footer-contacto {
         margin: 0px;
