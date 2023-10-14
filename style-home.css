@@ -1,12 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Galada&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+:root{
+    --color-primario: #4e7745;
+    --color-secundario: #fdf9ef;
+    --color-terciario: #a0bf93;
+    --tamaño-letra-mediano: 3.5em;
+    --tamaño-letra-chico: 3em;
+    --tamaño-extra-chico: 2em;
+    
+    --feunte-titulo: 'Galada', cursive;
+    --fuente-texto:  'Oswald', sans-serif;;
+    --letra-fina: 300px ;
+    --letra-mediana: 500px;
+    --letra-gruesa: 600px; 
+}
 * {
     box-sizing: border-box;
     max-width: 100vw;
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
-
+html{
+    font-size: 10px;
+    color: var(--color-primario);
+}
 body {
-    background-color: #cbf3f0;
+    background-image: url(imagenes/fondo-index-horizontal.webp);
     margin-top: 100px;
     padding: 0px;
 
@@ -20,32 +39,31 @@ body {
     flex-direction: row;
     height: 100px;
     text-align: center;
-    font-family: 'Libre Baskerville', serif;
+    font-family: var(--feunte-titulo);
     position: fixed;
     top: 0px;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to right, #cbf3f0 35%, #2ec4b6);
+    background-image: url(imagenes/fondo-index-vertical.webp);
     z-index: 7000;
 
 }
 
-.saludo_img {
-    flex: 1
-}
+
 
 .contenedor-cambiar {
     display: flex;
-    flex: 1;
+    flex: 2;
     text-align: center;
-    justify-content: flex-start;
-    font-size: 18px;
+    justify-content: center;
+    font-size: var(--tamaño-letra-chico);
 }
 
 .cont-saludo nav {
     display: flex;
     justify-content: center;
     flex: 1;
+
 
 }
 
@@ -64,7 +82,7 @@ nav ul {
 nav ul li {
     display: inline-block;
     margin: 0px 5px;
-    font-size: 18px;
+    font-size: var(--tamaño-extra-chico);
     cursor: pointer;
 
 
@@ -76,7 +94,7 @@ nav ul li {
 
 
 .icon-bar {
-    color: #ff9f1c;
+    color: var(--color-primario);
     cursor: pointer;
     display: none;
 }
@@ -103,19 +121,17 @@ nav ul li {
 
 nav ul {
     list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
 }
 
-nav ul li {
-    display: inline-block;
-    margin: 0px 5px;
-    font-size: 18px;
-    cursor: pointer;
-}
 
-nav ul li:hover,
-nav i:hover {
-    color: #ff9f1c;
-    font-size: 18px;
+
+nav ul li:hover{
+    color: var(--color-terciario);
+    font-size: var(--tamaño-letra-chico);
+    
 }
 
 .icon {
@@ -126,7 +142,7 @@ nav i:hover {
 
 
 .icon-bar {
-    color: #ff9f1c;
+    color: var(--color-primario);
     cursor: pointer;
     display: none;
     user-select: none;
@@ -135,7 +151,7 @@ nav i:hover {
 .contenedor-deimagenprincipal {
     height: 100vh;
     width: 100vw;
-    background-image: url(imagenes/base2.webp);
+    background-image: url(imagenes/fondo-home.webp);
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -155,45 +171,42 @@ nav i:hover {
     justify-content: space-evenly;
     text-align: center;
     height: 100vh;
-    background-color: rgba(203, 243, 240, 0.7);
-
+    background-color: rgba(253, 249, 239, 0.5);
     width: 100%;
     animation: mover 2s 1 ease-in-out;
-
-
 }
 
 #h2-home-prin {
     margin: 0px 300px;
-    font-family: 'Libre Baskerville', serif;
-    color: #000;
-    opacity: 1;
-    font-weight: 600;
+    font-family: var(--fuente-texto);
+    font-size: var(--tamaño-letra-chico);
+    color: var(--color-primario);
+    
 
 }
 
 .Beneficio-titulo_btn {
     width: 300px;
-    background-color: #ff9f1c;
+    background-color: var(--color-terciario);
     height: 50px;
     border-radius: 25px;
     cursor: pointer;
-    font-family: 'Libre Baskerville', serif;
-    font-weight: 600;
-    font-size: 23px;
+    font-family: var(--fuente-texto);
+   color: var(--color-secundario);
+    font-size: var(--tamaño-extra-chico);
     animation: bailar 2s 2 ease-in-out;
 }
 
 .Beneficio-titulo_btn:hover {
-    color: #cbf3f0;
+    color: var(--color-primario);
+    transform: scale(1.1);
 }
 .container-video{
     display: flex;
     justify-content: center;
     margin: 50px 0px;
-    background-image: url(imagenes/gato-backgraund.webp);
-    background-repeat: repeat;
-    background-color: #2ec4b6;
+   
+   
     padding: 20px 0px;
 }
 .video{
@@ -202,9 +215,7 @@ nav i:hover {
    
     
 }
-.contain-galeria{
-   
-}
+
 .H2-Galeria{
     text-align: center;
     font-family: 'Anton', sans-serif;
@@ -321,11 +332,7 @@ img:hover {
 .next {
     right: 15px;
 }
-footer {
-    background-color: #2ec4b6;
-    color: #000;
-    padding: 30px;
-}
+
 .cont-Beneficio-titulo_btn-2{
     display: flex;
     justify-content: center;
@@ -334,17 +341,23 @@ footer {
 }
 .Beneficio-titulo_btn-2 {
     width: 300px;
-    background-color: #ff9f1c;
+    background-color: var(--color-terciario);
     height: 50px;
     border-radius: 25px;
     cursor: pointer;
-    font-family: 'Libre Baskerville', serif;
-    font-weight: 600;
-    font-size: 23px;
+    font-family: var(--fuente-texto);
+   color: var(--color-primario);
+    font-size: var(--tamaño-letra-chico);
     
 }
 .Beneficio-titulo_btn-2:hover{
-    color: #cbf3f0;
+    color: var(--color-secundario);
+}
+footer {
+    background-color: var(--color-terciario);
+    color: var(--color-secundario);
+    padding: 30px;
+    font-family: var(--fuente-texto);
 }
 .container-footer {
     display: flex;
@@ -361,7 +374,7 @@ footer {
 
 footer .copy {
     text-align: center;
-    border-top: 2px solid #000;
+    border-top: 2px solid var(--color-secundario);
 
 }
 
@@ -372,17 +385,17 @@ footer .copy {
 }
 
 .footer-ubicacion h4 {
-    font-size: 20px;
+    font-size: var(--tamaño-letra-chico);
 }
 
 .footer-ubicacion p {
-    font-size: 15px;
-    font-weight: 100;
+    font-size: var(--tamaño-extra-chico);
+   
 
 }
 
 .footer-contacto h4 {
-    font-size: 23px;
+    font-size: var(--tamaño-letra-chico);
     margin-bottom: 15px;
 
 }
@@ -390,6 +403,7 @@ footer .copy {
 .footer-contacto a {
     margin: 20px;
     font-size: 25px;
+    color: var(--color-secundario);
 
 
 }
@@ -408,25 +422,9 @@ footer .copy {
 }
 
 @keyframes bailar {
-    0% {
-        transform: rotate(10deg);
-    }
-
-    25% {
-        transform: rotate(-10deg);
-    }
-
-    50% {
-        transform: rotate(10deg);
-    }
-
-    100% {
-        transform: rotate(-10deg);
-    }
-}
-
-.mi-boton {
-    animation: bailar 2s infinite alternate;
+   0%{
+    transform: scale(1.1);
+   }
 }
 
 
@@ -437,7 +435,9 @@ footer .copy {
 
 
 
-@media screen and (max-width : 1475px) {
+
+
+@media screen and (max-width : 1300px) {
 
     .saludo_img {
         flex: 1;
@@ -457,11 +457,11 @@ footer .copy {
     .nav {
         justify-content: end !important;
 
-        background: linear-gradient(to right, #cbf3f0 35%, #2ec4b6);
+        background-image: url(imagenes/fondo-index-horizontal.webp);
         flex-direction: column;
         width: 100vw;
         position: absolute;
-        height: 300%;
+        height: 200%;
         top: -100vh;
         z-index: -1;
     }
@@ -489,7 +489,7 @@ footer .copy {
     }
 
     nav ul li:hover {
-        background: #cbf3f0;
+        background: var(--color-secundario);
         width: 100%;
     }
 
