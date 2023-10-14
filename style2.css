@@ -129,12 +129,13 @@ nav i:hover {
     color: #ff9f1c;
     cursor: pointer;
     display: none;
+    user-select: none;
 }
 
 .contenedor-deimagenprincipal {
     height: 100vh;
     width: 100vw;
-    background-image: url(imagenes/base2.png);
+    background-image: url(imagenes/base2.webp);
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -186,7 +187,31 @@ nav i:hover {
 .Beneficio-titulo_btn:hover {
     color: #cbf3f0;
 }
-
+.container-video{
+    display: flex;
+    justify-content: center;
+    margin: 50px 0px;
+    background-image: url(imagenes/gato-backgraund.webp);
+    background-repeat: repeat;
+    background-color: #2ec4b6;
+    padding: 20px 0px;
+}
+.video{
+    width: 65%;
+    height: auto;
+   
+    
+}
+.contain-galeria{
+   
+}
+.H2-Galeria{
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+    font-size: 30px;
+    margin: 30px 0px;
+    font-weight: 100;
+}
 .galeria {
     display: grid;
     width: 100vw;
@@ -204,6 +229,7 @@ img {
     height: 100%;
     object-fit: cover;
     cursor: pointer;
+    user-select: none;
 }
 
 img:hover {
@@ -214,7 +240,7 @@ img:hover {
 .img-1 {
     grid-column: 1 / 4;
     grid-row: 1 / 3;
-    object-position: 0px -400px;
+    object-position: 0px -600px;
 }
 
 .img-5 {
@@ -279,7 +305,7 @@ img:hover {
 }
 .prev,
 .next {
-    color: white;
+    color: #ff9f1c;
     font-size: 36px;
     position: absolute;
     top: 50%;
@@ -300,7 +326,26 @@ footer {
     color: #000;
     padding: 30px;
 }
-
+.cont-Beneficio-titulo_btn-2{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 20px 0px;
+}
+.Beneficio-titulo_btn-2 {
+    width: 300px;
+    background-color: #ff9f1c;
+    height: 50px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 600;
+    font-size: 23px;
+    
+}
+.Beneficio-titulo_btn-2:hover{
+    color: #cbf3f0;
+}
 .container-footer {
     display: flex;
     flex-direction: row;

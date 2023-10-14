@@ -92,18 +92,23 @@ nav i:hover {
     color: #ff9f1c;
     cursor: pointer;
     display: none;
+    user-select: none;
 }
 
 .contenedor-beneficios {
     display: flex;
     flex-direction: column;
     width: 100%;
+    
+   
 }
-
+.onda{
+    height: 100px;
+}
 .beneficios-titulo {
-    background: #cbf3f0;
-    padding: 30px;
-    margin: 0px 0px 15px 0px;
+   
+    padding: 30px ;
+    margin: 0px 0px 0px 0px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -111,6 +116,9 @@ nav i:hover {
     align-content: center;
     align-items: center;
     height: 300px;
+    background-image: url(imagenes/gato-backgraund.webp);
+    background-repeat: repeat;
+    background-color: #2ec4b6;
 }
 
 .Beneficio-titulo_btn {
@@ -140,6 +148,8 @@ nav i:hover {
     font-size: 25px;
     font-family: 'Anton', sans-serif;
     font-weight: 100;
+    
+   
 }
 
 .beneficios-1 {

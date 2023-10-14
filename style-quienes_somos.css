@@ -83,6 +83,7 @@ nav ul li:hover , nav i:hover{
     color: #ff9f1c;
     cursor: pointer;
     display: none;
+    user-select: none;
 }
 
 .fundadores {

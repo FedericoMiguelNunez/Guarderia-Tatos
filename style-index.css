@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Galada&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+:root{
+    --color-primario: #4e7745;
+    --color-secundario: #fdf9ef;
+    --color-terciario: #a0bf93;
+    --tamaño-letra-mediano: 5em;
+    --tamaño-letra-chico: 3em;
+    --tamaño-extra-chico: 2em;
+    
+    --feunte-titulo: 'Galada', cursive;
+    --fuente-texto:  'Oswald', sans-serif;;
+    --letra-fina: 300px ;
+    --letra-mediana: 500px;
+    --letra-gruesa: 600px; 
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body {
+    background-image: url(imagenes/fondo-index-horizontal.webp);
+    background-repeat: no-repeat;
+    background-size:auto ;
+    min-height: 100%;
+    height: 100vh;
+    
+    
+}
+html{
+    font-size: 10px;
+    color: var(--color-primario);
+}
+
+.contenedor-de-logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+    width: auto;
+    padding: 0px;
+   
+    
+}
+.logo{
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    animation-name: agrandar ;
+    animation-duration: 10s;
+    animation-iteration-count: infinite ;
+    animation-timing-function: ease-in-out;
+}
+.imput-recibimiento {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: solid;
+    border-color: var(--color-primario);
+    padding-bottom: 10px;
+    width: 400px;
+    border-radius: 25px;
+    margin: auto;
+    flex-wrap: nowrap;
+
+}
+.Hola{
+    font-family: var(--feunte-titulo);
+    letter-spacing: 1px;
+    font-size: var(--tamaño-letra-mediano);
+}
+#Nombre , #Michi{
+    height: 40px;
+    border-radius: 25px;
+    font-family: var(--fuente-texto);
+    font-size: var(--tamaño-letra-chico);
+    font-weight: var(--letra-gruesa);
+    text-align: center;
+    color: var(--color-primario);
+    background-color: var(--color-secundario);
+    
+}
+.label{
+    font-family:var(--fuente-texto) ;
+    font-size: var(--tamaño-letra-chico);
+    margin-bottom: 10px;
+}
+.Error-nombre p, .Error-michi p{
+    color: red;
+    font-family: var(--fuente-texto);
+    font-size: var(--tamaño-extra-chico);
+}
+#continuar{
+    background-color: var(--color-terciario);
+    margin: 10px;
+    padding: 10px 50px;
+    border-radius: 25px;
+    border: none;
+    font-family: var(--fuente-texto);
+    font-size: var(--tamaño-extra-chico);
+    
+}
+#continuar:hover{
+    background-color: var(--color-primario);
+    padding: 10px 70px;
+    transition: 1s;
+}
+.Guarderia-Tatos{
+    text-decoration: none;
+    color: #fdf9ef ;
+}
+
+@keyframes agrandar {
+    0% {
+        transform: scale(.9);
+    }
+    25% {
+        transform: scale(1);
+    }
+
+    
+    75% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(.9);
+    }
+   
+    
+}
+@media screen and (max-width: 800px){
+    .imput-recibimiento{
+        width: auto;
+        margin: 5px;
+    }
+    body{
+        background-image: url(imagenes/fondo-index-vertical.webp);
+        background-attachment: fixed; /* Para evitar desplazamiento en algunos dispositivos */
+        margin: 0; /* Elimina cualquier margen que pueda estar presente */
+        padding: 0;
+    }
+}
