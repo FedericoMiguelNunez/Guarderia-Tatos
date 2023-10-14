@@ -22,7 +22,7 @@
 body {
     background-image: url(imagenes/fondo-index-horizontal.webp);
     background-repeat: no-repeat;
-    background-size:auto ;
+    background-size:cover ;
     min-height: 100%;
     height: 100vh;
     
