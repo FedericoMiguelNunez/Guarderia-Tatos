@@ -1,399 +1,417 @@
-* {
-    box-sizing: border-box;
-    max-width: 100vw;
-    margin: 0px;
-    padding: 0px;
+@import url("https://fonts.googleapis.com/css2?family=Galada&family=Oswald:wght@200;300;400;500;600;700&display=swap");
+:root {
+  --color-primario: #4e7745;
+  --color-secundario: #fdf9ef;
+  --color-terciario: #a0bf93;
+  --tamaño-letra-mediano: 3.5em;
+  --tamaño-letra-chico: 3em;
+  --tamaño-extra-chico: 2em;
+  --feunte-titulo: "Galada", cursive;
+  --fuente-texto: "Oswald", sans-serif;
+  --letra-fina: 300px;
+  --letra-mediana: 500px;
+  --letra-gruesa: 600px;
 }
-
+* {
+  box-sizing: border-box;
+  max-width: 100vw;
+  margin: 0px;
+  padding: 0px;
+}
+html {
+  font-size: 10px;
+  color: var(--color-primario);
+}
 body {
-    background-color: #cbf3f0;
-    padding: 0px;
-    margin-top: 100px;
+  background-image: url(imagenes/fondo-index-horizontal.webp);
+  padding: 0px;
+  margin-top: 100px;
 }
 
 .cont-saludo {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    height: 100px;
-    text-align: center;
-    font-family: 'Libre Baskerville', serif;
-    position: fixed;
-    top : 0px;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(to right, #cbf3f0 35%, #2ec4b6);
-    z-index: 7000;
-
-}
-
-.saludo_img {
-    flex: 1
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  text-align: center;
+  font-family: var(--feunte-titulo);
+  position: fixed;
+  top: 0px;
+  justify-content: center;
+  align-items: center;
+  background-image: url(imagenes/fondo-index-vertical.webp);
+  z-index: 7000;
 }
 
 .contenedor-cambiar {
-    display: flex;
-    flex: 1;
-    text-align: center;
-    justify-content: flex-start;
-    font-size: 18px;
+  display: flex;
+  flex: 2;
+  text-align: center;
+  justify-content: center;
+  font-size: var(--tamaño-letra-chico);
 }
 
 .cont-saludo nav {
-    display: flex;
-    justify-content: center;
-    flex: 1;
-    
+  display: flex;
+  justify-content: center;
+  flex: 1;
 }
 
 .saludo_img img {
-
-    width: 100px;
-
-
+  width: 100px;
 }
 
 nav ul {
-    list-style: none;
-   
+  list-style: none;
 }
 
 nav ul li {
-    display: inline-block;
-    margin: 0px 5px;
-    font-size: 18px;
-    cursor: pointer;
-    font-family: 'Libre Baskerville', serif;
-  
+  display: inline-block;
+  margin: 0px 5px;
+  font-size: var(--tamaño-letra-chico);
+  cursor: pointer;
 }
-nav ul li:hover , nav i:hover{
-    color: #ff9f1c;
-    font-size: 18px;
-}
-
 
 .icon {
-    font-size: 20px;
+  font-size: 20px;
 }
 
+.icon-bar {
+  color: var(--color-primario);
+  cursor: pointer;
+  display: none;
+}
 
+.cont-saludo nav {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
 
+.saludo_img img {
+  width: 100px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+nav ul li:hover {
+  color: var(--color-terciario);
+  transform: scale(1.1);
+}
+
+.icon {
+  font-size: 20px;
+}
 
 .icon-bar {
-    color: #ff9f1c;
-    cursor: pointer;
-    display: none;
-    user-select: none;
+  color: var(--color-primario);
+  cursor: pointer;
+  display: none;
+  user-select: none;
 }
 
 .fundadores {
-    text-align: center;
-    background: #cbf3f0;
-    margin: 0px;
-    padding: 20px;
-    font-family: 'Libre Baskerville', serif;
-    font-size: 20px;
+  text-align: center;
+  background: url(imagenes/fondo-quienes-somos.webp);
+  margin: 0px;
+  padding: 20px;
+  font-family: var(--fuente-texto);
+  font-size: var(--tamaño-letra-chico);
+  font-weight: var(--letra-gruesa);
+}
+.fundadores p {
+  font-size: calc(var(--tamaño-extra-chico) + 200%);
+  font-weight: var(--letra-fina);
 }
 
 .contenedor-fundadores {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
-    align-items: center;
-    margin: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  align-items: center;
+  margin: 10px;
 }
-
 
 .contenedor-fundadores-text {
-    flex: 1;
-
-
+  flex: 1;
 }
 
-
-#p-recibimos{
-    font-family: 'Libre Baskerville', serif;
-    font-size: 16px; 
-    margin: 20px 0px;
+#p-recibimos {
+  font-family: "Libre Baskerville", serif;
+  font-size: 16px;
+  margin: 20px 0px;
 }
 
 .contenedor-fundadores-text-solo-para-flex-row-aye-fede {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
-
-
 
 .ayelen,
 .federico,
 .apolo,
 .galo {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-content: center;
-    align-items: center;
-    margin: 10px;
-   
-    border-radius: 25px;
-   
-    background: #2ec4b6;
-    height: 600px;
-    width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  margin: 10px;
 
+  border-radius: 25px;
+
+  background: var(--color-terciario);
+  height: 400px;
+  width: 300px;
 }
-.ayelen:hover ,
-.federico:hover ,
-.apolo:hover ,
-.galo:hover{
-transform: scale(1.1) ;
-background-color: #ff9f1c;
+#ver-aye {
+  font-family: var(--fuente-texto);
+  font-size: var(--tamaño-extra-chico);
+  color: var(--color-secundario);
+  font-weight: var(--letra-fina);
 }
 
-.federico .federico-contenedor-img , .ayelen .ayelen-contenedor-img ,.apolo .apolo-contenedor-img , .galo .galo-contenedor-img {
-   object-fit: cover;
-   
+.federico .federico-contenedor-img,
+.ayelen .ayelen-contenedor-img,
+.apolo .apolo-contenedor-img,
+.galo .galo-contenedor-img {
+  object-fit: cover;
 }
-.federico img , .ayelen img , .galo img , .apolo img{
-    height: 290px;
-    width: 290px;
-    object-fit: cover;
-    object-position: top;
-    border-radius: 25px;
+.federico img,
+.ayelen img,
+.galo img,
+.apolo img {
+  height: 290px;
+  width: 290px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 25px;
 }
-.galo img{
+.galo img {
   object-position: center -120px;
 }
-.apolo img{
-    object-position: center -120px;
+.apolo img {
+  object-position: center -120px;
 }
 .ayelen h3,
 .federico h3,
 .apolo h3,
-.galo h3{
-    font-family: 'Anton', sans-serif;
-    font-size: 30px;
-    font-weight: 100;
+.galo h3 {
+  font-family: var(--feunte-titulo);
+  font-size: calc( var(--tamaño-letra-mediano) + 10%) ;
+  font-weight: var(--letra-gruesa);
+  color: var(--color-secundario);
 }
 
 .ayelen p,
 .federico p,
 .apolo p,
 .galo p {
-    text-align: center;
-    padding: 7px;
-    font-family: 'Libre Baskerville', serif;
-    font-size: 15px;
+  text-align: center;
+  padding: 7px;
+  font-family: var(--fuente-texto);
+  font-size: var(--tamaño-extra-chico);
+  font-weight: var(--letra-fina);
+  display: none;
 }
-
-
 
 .contenedor_imagen_Fundadores {
-    flex: 1;
+  flex: 1;
 }
 
 footer {
-    background-color: #2ec4b6;
-    color: #000;
-    padding: 30px;
+  background-color: #2ec4b6;
+  color: #000;
+  padding: 30px;
 }
-.contenedor-btn{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    margin: 20px;
+.contenedor-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin: 20px;
 }
-.Beneficio-titulo_btn{
-    width: 300px;
-    background-color: #ff9f1c;
-    height: 50px;
-    border-radius: 25px;
-    cursor: pointer;
-    font-family: 'Libre Baskerville', serif;
-    font-weight: 600;
-    font-size: 23px;
-   
+.Beneficio-titulo_btn {
+  width: 300px;
+  background-color: #ff9f1c;
+  height: 50px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 600;
+  font-size: 23px;
 }
 
-.Beneficio-titulo_btn:hover{
-color: #cbf3f0;
+.Beneficio-titulo_btn:hover {
+  color: #cbf3f0;
 }
 footer {
-    background-color: #2ec4b6;
-    color: #000;
-    padding: 30px;
+  background-color: #2ec4b6;
+  color: #000;
+  padding: 30px;
 }
 
 .container-footer {
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    margin-bottom: 20px;
-
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .footer-ubicacion,
 .footer-contacto {
-    flex: 1;
+  flex: 1;
 }
 
 footer .copy {
-    text-align: center;
-    border-top: 2px solid #000;
-
+  text-align: center;
+  border-top: 2px solid #000;
 }
 
 .footer-ubicacion {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .footer-ubicacion h4 {
-    font-size: 25px;
-    font-family: 'Libre Baskerville', serif;
-    font-weight: 800;
+  font-size: 25px;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 800;
 }
 
 .footer-ubicacion p {
-    font-size: 15px;
-    
-    font-family: 'Libre Baskerville', serif;
+  font-size: 15px;
 
+  font-family: "Libre Baskerville", serif;
 }
 
 .footer-contacto h4 {
-    font-size: 23px;
-    margin-bottom: 15px;
-    font-family: 'Libre Baskerville', serif;
-    font-size: 25px;
-
+  font-size: 23px;
+  margin-bottom: 15px;
+  font-family: "Libre Baskerville", serif;
+  font-size: 25px;
 }
 
 .footer-contacto a {
-    margin: 20px;
-    font-size: 25px;
-    color: #000;
-
+  margin: 20px;
+  font-size: 25px;
+  color: #000;
 }
 
 .footer-contacto a:hover {
-    color: #ff9f1c;
-
+  color: #ff9f1c;
 }
 
+@media screen and (max-width: 1475px) {
+  .saludo_img {
+    flex: 1;
+  }
 
-@media screen and (max-width : 1475px) {
+  .saludo_img img {
+    width: 55px;
+  }
 
-    .saludo_img {
-        flex: 1;
-    }
+  .contenedor-cambiar {
+    font-size: 13px;
+    justify-content: center;
+    flex: 3;
+  }
 
-    .saludo_img img {
-        width: 55px;
-    }
+  .nav {
+    justify-content: end !important;
 
-    .contenedor-cambiar {
-        font-size: 13px;
-        justify-content: center;
-        flex: 3;
+    background: linear-gradient(to right, #cbf3f0 35%, #2ec4b6);
+    flex-direction: column;
+    width: 100vw;
+    position: absolute;
+    height: 300%;
+    top: -100vh;
+    z-index: -1;
+  }
 
-    }
+  .active-nav {
+    top: 0px;
+  }
 
-    .nav {
-        justify-content: end !important;
+  .cont-saludo nav ul {
+    position: relative;
+    justify-content: end;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    top: 0px;
+    height: 70%;
+  }
 
-        background: linear-gradient(to right, #cbf3f0 35%, #2ec4b6);
-        flex-direction: column;
-        width: 100vw;
-        position: absolute;
-        height: 300%;
-        top: -100vh;
-        z-index: -1;
-    }
-
-    .active-nav {
-        top: 0px;
-    }
-
-
-    .cont-saludo nav ul {
-        position: relative;
-        justify-content: end;
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        top: 0px;
-        height: 70%;
-    }
-
-    nav ul li {
-        margin: 3px;
-        font-size: 18px;
-        width: 100%;
-    }
-
-    nav ul li:hover {
-        background: #cbf3f0;
-        width: 100%;
-    }
-
-    .icon-bar {
-        display: flex;
-        flex: 1;
-        justify-content: center;
-        align-content: center;
-        text-align: center;
-
-    }
-
-
-    .icon-bar i {
-        text-align: center;
-
-        font-size: 30px;
-    }
-.fundadores{
+  nav ul li {
+    margin: 3px;
     font-size: 18px;
-}
-    .contenedor-fundadores-text-solo-para-flex-row-aye-fede {
-        flex-direction: column;
-        align-content: center;
-        align-items: center;
-    }
-    .footer-ubicacion,
-    .footer-contacto {
-        margin: 0px;
+    width: 100%;
+  }
 
-    }
+  nav ul li:hover {
+    background: #cbf3f0;
+    width: 100%;
+  }
 
-    .footer-ubicacion h4 {
-        font-family: 'Libre Baskerville', serif;
-        font-weight: 200;
-       
-        font-size: 15px;
-    }
+  .icon-bar {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+  }
 
-    .footer-ubicacion p {
-        font-size: 13px;
-    }
+  .icon-bar i {
+    text-align: center;
 
-    .footer-contacto h4 {
-        font-size: 18px;
-    }
+    font-size: 30px;
+  }
+  .fundadores {
+    font-size: 18px;
+  }
+  .contenedor-fundadores-text-solo-para-flex-row-aye-fede {
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+  }
+  .footer-ubicacion,
+  .footer-contacto {
+    margin: 0px;
+  }
 
-    .footer-contacto a {
-        margin: 5px;
-        font-size: 20px;
-    }
+  .footer-ubicacion h4 {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 200;
 
-    .copy {
-        font-size: 10px;
-    }
+    font-size: 15px;
+  }
+
+  .footer-ubicacion p {
+    font-size: 13px;
+  }
+
+  .footer-contacto h4 {
+    font-size: 18px;
+  }
+
+  .footer-contacto a {
+    margin: 5px;
+    font-size: 20px;
+  }
+
+  .copy {
+    font-size: 10px;
+  }
 }

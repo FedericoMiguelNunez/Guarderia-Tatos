@@ -1,3 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Galada&family=Oswald:wght@200;300;400;500;600;700&display=swap");
+:root {
+  --color-primario: #4e7745;
+  --color-secundario: #fdf9ef;
+  --color-terciario: #a0bf93;
+  --tamaño-letra-mediano: 3.5em;
+  --tamaño-letra-chico: 3em;
+  --tamaño-extra-chico: 2em;
+  --feunte-titulo: "Galada", cursive;
+  --fuente-texto: "Oswald", sans-serif;
+  --letra-fina: 300px;
+  --letra-mediana: 500px;
+  --letra-gruesa: 600px;
+}
 * {
     box-sizing: border-box;
     max-width: 100vw;
@@ -6,16 +20,13 @@
 }
 
 html {
-    scroll-behavior: smooth;
+    font-size: 10px;
+  color: var(--color-primario);
 }
 
 body {
-    background-color: #cbf3f0;
-
-    padding: 0px;
-
-    margin-top: 100px;
-
+   background-image: url(imagenes/fondo-index-horizontal.webp);
+   margin-top: 100px;
 }
 
 .cont-saludo {
@@ -24,76 +35,86 @@ body {
     flex-direction: row;
     height: 100px;
     text-align: center;
-    font-family: 'Libre Baskerville', serif;
+    font-family: var(--feunte-titulo);
     position: fixed;
     top: 0px;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to right, #cbf3f0 35%, #2ec4b6);
+    background-image: url(imagenes/fondo-index-vertical.webp);
     z-index: 7000;
-
-}
-
-.saludo_img {
-    flex: 1
-}
-
-.contenedor-cambiar {
+  }
+  
+  .contenedor-cambiar {
     display: flex;
-    flex: 1;
+    flex: 2;
     text-align: center;
-    justify-content: flex-start;
-    font-size: 18px;
-}
-
-.cont-saludo nav {
+    justify-content: center;
+    font-size: var(--tamaño-letra-chico);
+  }
+  
+  .cont-saludo nav {
     display: flex;
     justify-content: center;
     flex: 1;
-
-}
-
-.saludo_img img {
-
+  }
+  
+  .saludo_img img {
     width: 100px;
-
-
-}
-
-nav ul {
+  }
+  
+  nav ul {
     list-style: none;
-
-}
-
-nav ul li {
+  }
+  
+  nav ul li {
     display: inline-block;
     margin: 0px 5px;
-    font-size: 18px;
+    font-size: var(--tamaño-letra-chico);
     cursor: pointer;
-    font-family: 'Libre Baskerville', serif;
-   
-}
-
-nav ul li:hover,
-nav i:hover {
-    color: #ff9f1c;
-    font-size: 18px;
-}
-
-
-.icon {
+  }
+  
+  .icon {
     font-size: 20px;
-}
-
-
-
-
-.icon-bar {
-    color: #ff9f1c;
+  }
+  
+  .icon-bar {
+    color: var(--color-primario);
+    cursor: pointer;
+    display: none;
+  }
+  
+  .cont-saludo nav {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+  }
+  
+  .saludo_img img {
+    width: 100px;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  
+  nav ul li:hover {
+    color: var(--color-terciario);
+    transform: scale(1.1);
+  }
+  
+  .icon {
+    font-size: 20px;
+  }
+  
+  .icon-bar {
+    color: var(--color-primario);
     cursor: pointer;
     display: none;
     user-select: none;
-}
+  }
 
 .contenedor-beneficios {
     display: flex;
@@ -116,26 +137,28 @@ nav i:hover {
     align-content: center;
     align-items: center;
     height: 300px;
-    background-image: url(imagenes/gato-backgraund.webp);
-    background-repeat: repeat;
-    background-color: #2ec4b6;
+    background-image: url(imagenes/fondo-servicios.webp);
+    background-size: cover;
+    background-color: var(--color-terciario);
+    background-position-y: -100px;
 }
 
 .Beneficio-titulo_btn {
     width: 300px;
-    background-color: #ff9f1c;
+    background-color: var(--color-secundario);
     height: 50px;
     border-radius: 25px;
     cursor: pointer;
-    font-family: 'Libre Baskerville', serif;
-    font-weight: 600;
-    font-size: 23px;
+    font-family: var(--fuente-texto);
+    font-weight: var(--letra-mediana);
+    font-size: var(--tamaño-letra-chico);
+    color: #4e7745;
 }
 
 .Beneficio-titulo_btn:hover {
-    color: #cbf3f0;
+    color: var(--color-terciario);
 
-    width: 315px;
+    transform: scale(1.1);
 }
 
 .servicios {
@@ -145,12 +168,12 @@ nav i:hover {
 
 .apuntamos {
     text-align: center;
-    font-size: 25px;
-    font-family: 'Anton', sans-serif;
-    font-weight: 100;
-    
-   
-}
+    font-size: var(--tamaño-letra-mediano);
+    font-family: var(--fuente-texto);
+    font-weight: var(--letra-gruesa);
+    color: var(--color-secundario);
+    padding: 0px 100px;
+    }
 
 .beneficios-1 {
     display: flex;
@@ -176,124 +199,120 @@ nav i:hover {
 }
 
 .beneficios-1 div h3 {
-    font-family: 'Anton', sans-serif;
-    font-size: 25px;
-    font-weight: 200;
+    font-family: var(--fuente-texto);
+    font-size: var(--tamaño-letra-chico);
+    font-weight: var(--letra-gruesa);
     margin: 15px 0px;
 }
 
 .beneficios-1 div p {
     width: 500px;
     display: inline-block;
-    border-bottom: #000 3px solid;
-    font-family: 'Libre Baskerville', serif;
-    font-size: 20px;
+    border-bottom: solid var(--color-primario);
+    font-family: var(--fuente-texto);
+    font-size: var(--tamaño-extra-chico);
     padding-bottom: 20px;
     cursor: default;
+    font-weight: var(--letra-fina);
 }
 
 .amplio p {
     border: none !important;
 }
-
-footer {
-    background-color: #2ec4b6;
-    color: #000;
-    padding: 30px;
+.Beneficio-titulo_btn-fin {
+  width: 300px;
+  background-color: var(--color-secundario);
+  height: 50px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-family: var(--fuente-texto);
+  font-weight: var(--letra-mediana);
+  font-size: var(--tamaño-letra-chico);
+  color: #4e7745;
+  margin: auto;
 }
 
-.container-footer {
+footer {
+    background-color: var(--color-terciario);
+    color: var(--color-secundario);
+    padding: 30px;
+    font-family: var(--fuente-texto);
+  }
+  .container-footer {
     display: flex;
     flex-direction: row;
     text-align: center;
     margin-bottom: 20px;
-
-}
-
-.footer-ubicacion,
-.footer-contacto {
+  }
+  
+  .footer-ubicacion,
+  .footer-contacto {
     flex: 1;
-}
-
-footer .copy {
+  }
+  
+  footer .copy {
     text-align: center;
-    border-top: 2px solid #000;
-
-}
-
-.footer-ubicacion {
+    border-top: 2px solid var(--color-secundario);
+    font-size: var(--tamaño-extra-chico);
+  }
+  
+  .footer-ubicacion {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-}
-
-.footer-ubicacion h4 {
-    font-size: 25px;
-    font-family: 'Libre Baskerville', serif;
-    font-weight: 800;
-}
-
-.footer-ubicacion p {
-    font-size: 15px;
-
-    font-family: 'Libre Baskerville', serif;
-
-}
-
-.footer-contacto h4 {
-    font-size: 23px;
+  }
+  
+  .footer-ubicacion h4 {
+    font-size: var(--tamaño-letra-chico);
+  }
+  
+  .footer-ubicacion p {
+    font-size: var(--tamaño-extra-chico);
+  }
+  
+  .footer-contacto h4 {
+    font-size: var(--tamaño-letra-chico);
     margin-bottom: 15px;
-    font-family: 'Libre Baskerville', serif;
-    font-size: 25px;
-
-}
-
-.footer-contacto a {
+  }
+  
+  .footer-contacto a {
     margin: 20px;
     font-size: 25px;
-    color: #000;
-
-}
-
-.footer-contacto a:hover {
-    color: #ff9f1c;
-
-}
+    color: var(--color-secundario);
+  }
 
 @media screen and (max-width: 1475px) {
     .saludo_img {
         flex: 1;
-    }
-
-    .saludo_img img {
+      }
+    
+      .saludo_img img {
         width: 55px;
-    }
-
-    .contenedor-cambiar {
+      }
+    
+      .contenedor-cambiar {
         font-size: 13px;
         justify-content: center;
         flex: 3;
-
-    }
-
-    .nav {
+      }
+    
+      .nav {
         justify-content: end !important;
-
-        background: linear-gradient(to right, #cbf3f0 35%, #2ec4b6);
+    
+        background-image: url(imagenes/fondo-index-horizontal.webp);
         flex-direction: column;
         width: 100vw;
         position: absolute;
-        height: 300%;
+        height: 200%;
         top: -100vh;
         z-index: -1;
-    }
-
-    .active-nav {
+      }
+    
+      .active-nav {
         top: 0px;
-    }
-
-
-    .cont-saludo nav ul {
+      }
+    
+      .cont-saludo nav ul {
         position: relative;
         justify-content: end;
         align-items: center;
@@ -302,34 +321,32 @@ footer .copy {
         text-align: center;
         top: 0px;
         height: 70%;
-    }
-
-    nav ul li {
+      }
+    
+      nav ul li {
         margin: 3px;
         font-size: 18px;
         width: 100%;
-    }
-
-    nav ul li:hover {
-        background: #cbf3f0;
+      }
+    
+      nav ul li:hover {
+        background: var(--color-secundario);
         width: 100%;
-    }
-
-    .icon-bar {
+      }
+    
+      .icon-bar {
         display: flex;
         flex: 1;
         justify-content: center;
         align-content: center;
         text-align: center;
-
-    }
-
-
-    .icon-bar i {
+      }
+    
+      .icon-bar i {
         text-align: center;
-
+    
         font-size: 30px;
-    }
+      }
 
     .apuntamos {
         font-size: 20px;

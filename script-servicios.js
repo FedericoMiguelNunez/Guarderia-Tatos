@@ -7,6 +7,7 @@ const nav = document.querySelector('.nav');
 const Home = document.getElementById('Home');
 const navQuienesSomos = document.querySelector('#Nav-Quienes_somos');
 const requisitos = document.getElementById("requisitos")
+const apuntamos = document.querySelector('.apuntamos')
 
 Home.addEventListener('click', function () {
     const HomeRedirigidos = 'Guarderia-Tatos.html' + '?gato=' + encodeURI(gato || '') + '&nombre=' + encodeURI(nombre || '');
@@ -36,10 +37,10 @@ window.addEventListener('scroll', () => {
 });
 if (gato !== "" && nombre !== "" && gato !== null && nombre !== null) {
     cambio.innerHTML = `Servicios para ${gato}`;
+    apuntamos.innerHTML = `Sabemos que ${gato} merece lo mejor, por eso, ofrecemos un servicio completo para satisfacer todas sus necesidades.  Te mostramos en detalle como hacemos que su experiencia sea extraordinaria.`;
 
 }
 else {
     cambio.innerHTML = `Servicios Tatos`;
-
-
+    apuntamos.innerHTML = `Sabemos que tu Michi merece lo mejor, por eso, ofrecemos un servicio completo para satisfacer todas sus necesidades.  Te mostramos en detalle como hacemos que su experiencia sea extraordinaria.`;
 }
