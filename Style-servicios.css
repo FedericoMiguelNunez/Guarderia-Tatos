@@ -136,7 +136,7 @@ body {
     text-align: center;
     align-content: center;
     align-items: center;
-    height: 300px;
+   
     background-image: url(imagenes/fondo-servicios.webp);
     background-size: cover;
     background-color: var(--color-terciario);
@@ -153,6 +153,7 @@ body {
     font-weight: var(--letra-mediana);
     font-size: var(--tamaño-letra-chico);
     color: #4e7745;
+    margin: 50px;
 }
 
 .Beneficio-titulo_btn:hover {
@@ -347,13 +348,20 @@ footer {
     
         font-size: 30px;
       }
-
+.beneficios-titulo{
+  background-position: 0px 100px;
+  padding: 10px;
+}
     .apuntamos {
-        font-size: 20px;
+      padding: 0px;
+      font-size: var(--tamaño-extra-chico);
+
     }
 
     .Beneficio-titulo_btn {
-        width: 280px;
+        width: 200px;
+        font-size: var(--tamaño-extra-chico);
+        margin: 40px;
     }
 
     .beneficios-1 {

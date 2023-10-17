@@ -120,13 +120,18 @@ nav ul li:hover {
   background: url(imagenes/fondo-quienes-somos.webp);
   margin: 0px;
   padding: 20px;
+
+}
+.fundadores h2{
   font-family: var(--fuente-texto);
-  font-size: var(--tamaño-letra-chico);
+  font-size: var(--tamaño-letra-mediano);
   font-weight: var(--letra-gruesa);
 }
-.fundadores p {
-  font-size: calc(var(--tamaño-extra-chico) + 200%);
+#p-recibimos {
+  font-size: var(--tamaño-extra-chico) !important;
   font-weight: var(--letra-fina);
+  text-align: center;
+  margin: 10px 50px;
 }
 
 .contenedor-fundadores {
@@ -143,11 +148,7 @@ nav ul li:hover {
   flex: 1;
 }
 
-#p-recibimos {
-  font-family: "Libre Baskerville", serif;
-  font-size: 16px;
-  margin: 20px 0px;
-}
+
 
 .contenedor-fundadores-text-solo-para-flex-row-aye-fede {
   display: flex;
@@ -172,18 +173,23 @@ nav ul li:hover {
   height: 400px;
   width: 300px;
 }
-#ver-aye {
+#ver-aye , #ver-fede ,#ver-apo , #ver-galo {
   font-family: var(--fuente-texto);
   font-size: var(--tamaño-extra-chico);
   color: var(--color-secundario);
   font-weight: var(--letra-fina);
+  cursor: pointer;
 }
+#ver-aye:hover , #ver-fede:hover ,#ver-apo:hover , #ver-galo:hover{
+  color: var(--color-primario);
+  transform: scale(1.1);
+} 
 
 .federico .federico-contenedor-img,
 .ayelen .ayelen-contenedor-img,
 .apolo .apolo-contenedor-img,
 .galo .galo-contenedor-img {
-  object-fit: cover;
+ 
 }
 .federico img,
 .ayelen img,
@@ -192,12 +198,11 @@ nav ul li:hover {
   height: 290px;
   width: 290px;
   object-fit: cover;
-  object-position: top;
+ 
   border-radius: 25px;
 }
-.galo img {
-  object-position: center -120px;
-}
+
+
 .apolo img {
   object-position: center -120px;
 }
@@ -242,24 +247,27 @@ footer {
 }
 .Beneficio-titulo_btn {
   width: 300px;
-  background-color: #ff9f1c;
+  background-color: var(--color-secundario);
   height: 50px;
   border-radius: 25px;
   cursor: pointer;
-  font-family: "Libre Baskerville", serif;
-  font-weight: 600;
-  font-size: 23px;
+  font-family: var(--fuente-texto);
+  font-weight: var(--letra-gruesa);
+  font-size: var(--tamaño-letra-chico);
+  color: var(--color-primario);
+  margin: 50px 0px;
 }
 
 .Beneficio-titulo_btn:hover {
-  color: #cbf3f0;
+  color: var(--color-terciario);
+  transform: scale(1.1);
 }
 footer {
-  background-color: #2ec4b6;
-  color: #000;
+  background-color: var(--color-terciario);
+  color: var(--color-secundario);
   padding: 30px;
+  font-family: var(--fuente-texto);
 }
-
 .container-footer {
   display: flex;
   flex-direction: row;
@@ -274,7 +282,8 @@ footer {
 
 footer .copy {
   text-align: center;
-  border-top: 2px solid #000;
+  border-top: 2px solid var(--color-secundario);
+  font-size: var(--tamaño-extra-chico);
 }
 
 .footer-ubicacion {
@@ -284,33 +293,24 @@ footer .copy {
 }
 
 .footer-ubicacion h4 {
-  font-size: 25px;
-  font-family: "Libre Baskerville", serif;
-  font-weight: 800;
+  font-size: var(--tamaño-letra-chico);
 }
 
 .footer-ubicacion p {
-  font-size: 15px;
-
-  font-family: "Libre Baskerville", serif;
+  font-size: var(--tamaño-extra-chico);
 }
 
 .footer-contacto h4 {
-  font-size: 23px;
+  font-size: var(--tamaño-letra-chico);
   margin-bottom: 15px;
-  font-family: "Libre Baskerville", serif;
-  font-size: 25px;
 }
 
 .footer-contacto a {
   margin: 20px;
   font-size: 25px;
-  color: #000;
+  color: var(--color-secundario);
 }
 
-.footer-contacto a:hover {
-  color: #ff9f1c;
-}
 
 @media screen and (max-width: 1475px) {
   .saludo_img {
@@ -330,11 +330,11 @@ footer .copy {
   .nav {
     justify-content: end !important;
 
-    background: linear-gradient(to right, #cbf3f0 35%, #2ec4b6);
+    background-image: url(imagenes/fondo-index-horizontal.webp);
     flex-direction: column;
     width: 100vw;
     position: absolute;
-    height: 300%;
+    height: 200%;
     top: -100vh;
     z-index: -1;
   }
@@ -361,7 +361,7 @@ footer .copy {
   }
 
   nav ul li:hover {
-    background: #cbf3f0;
+    background: var(--color-secundario);
     width: 100%;
   }
 
@@ -378,9 +378,15 @@ footer .copy {
 
     font-size: 30px;
   }
-  .fundadores {
-    font-size: 18px;
+  .fundadores h2{
+    font-size: var(--tamaño-letra-chico);
+    margin: 0px;
   }
+  #p-recibimos{
+    margin: 10px 0px;
+  }
+
+  
   .contenedor-fundadores-text-solo-para-flex-row-aye-fede {
     flex-direction: column;
     align-content: center;
@@ -392,8 +398,7 @@ footer .copy {
   }
 
   .footer-ubicacion h4 {
-    font-family: "Libre Baskerville", serif;
-    font-weight: 200;
+  
 
     font-size: 15px;
   }
