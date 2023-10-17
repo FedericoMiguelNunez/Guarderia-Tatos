@@ -349,7 +349,8 @@ footer {
         font-size: 30px;
       }
 .beneficios-titulo{
-  background-position: 0px 100px;
+ background-image: url(imagenes/fondo-servicios-movile.webp);
+ background-position: 0px 600px;
   padding: 10px;
 }
     .apuntamos {

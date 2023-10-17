@@ -88,7 +88,7 @@ html{
     font-size: var(--tamaño-letra-chico);
     margin-bottom: 10px;
 }
-.Error-nombre p, .Error-michi p{
+.Error-nombre p, .Error-michi p ,.Error-caracter-michi p, .Error-caracter-nombre p {
     color: red;
     font-family: var(--fuente-texto);
     font-size: var(--tamaño-extra-chico);
