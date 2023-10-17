@@ -40,6 +40,8 @@ if (gato != null && nombre != null && gato != "" && nombre != "") {
 }
 else {
     cambio.innerHTML = `¡Requisitos que debe tener tu Michi!`;
+    cambiarSub.innerHTML = `En Guarderia Tatos sabemos que cuidar del bienestar de tu Michi es una prioridad tanto para ustedes cómo para nosotros. 
+    Para garantizar un ambiente sano y seguro cada pensionado debe cumplir con los siguientes requisitos sanitarios.`;
 
 }
 
