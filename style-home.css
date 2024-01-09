@@ -294,13 +294,13 @@ img:hover {
   top: 15px;
   right: 35px;
   font-size: 35px;
-  color: #ff9f1c;
+  color: var(--color-secundario);
   cursor: pointer;
   user-select: none;
 }
 .prev,
 .next {
-  color: #ff9f1c;
+  color: var(--color-secundario);
   font-size: 36px;
   position: absolute;
   top: 50%;
