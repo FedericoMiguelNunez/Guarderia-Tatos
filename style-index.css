@@ -70,7 +70,8 @@ html{
 .Hola{
     font-family: var(--feunte-titulo);
     letter-spacing: 1px;
-    font-size: var(--tamaño-letra-mediano);
+    font-size: var(--tamaño-letra-chico);
+    text-align: center;
 }
 #Nombre , #Michi{
     height: 40px;

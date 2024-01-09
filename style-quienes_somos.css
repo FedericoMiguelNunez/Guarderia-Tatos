@@ -48,7 +48,7 @@ body {
   flex: 2;
   text-align: center;
   justify-content: center;
-  font-size: var(--tamaño-letra-chico);
+  font-size: var(--tamaño-extra-chico);
 }
 
 .cont-saludo nav {
@@ -63,12 +63,13 @@ body {
 
 nav ul {
   list-style: none;
+  align-items: center;
 }
 
 nav ul li {
   display: inline-block;
   margin: 0px 5px;
-  font-size: var(--tamaño-letra-chico);
+  font-size: var(--tamaño-extra-chico);
   cursor: pointer;
 }
 
@@ -312,7 +313,7 @@ footer .copy {
 }
 
 
-@media screen and (max-width: 1475px) {
+@media screen and (max-width: 1000px) {
   .saludo_img {
     flex: 1;
   }

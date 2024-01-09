@@ -50,7 +50,7 @@ body {
   flex: 2;
   text-align: center;
   justify-content: center;
-  font-size: var(--tamaño-letra-chico);
+  font-size: var(--tamaño-extra-chico);
 }
 
 .cont-saludo nav {
@@ -65,12 +65,13 @@ body {
 
 nav ul {
   list-style: none;
+  align-items: center;
 }
 
 nav ul li {
   display: inline-block;
   margin: 0px 5px;
-  font-size: var(--tamaño-letra-chico);
+  font-size: var(--tamaño-extra-chico);
   cursor: pointer;
 }
 
@@ -143,7 +144,10 @@ nav ul li:hover {
   width: 100%;
   animation: mover 2s 1 ease-in-out;
 }
-
+.contTitle h1{
+  font-family: var(--feunte-titulo);
+font-size: calc(var(--tamaño-letra-mediano) + 30%);
+}
 #h2-home-prin {
   margin: 0px 300px;
   font-family: var(--fuente-texto);
@@ -399,7 +403,7 @@ footer .copy {
   }
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1000px) {
   .saludo_img {
     flex: 1;
   }
@@ -468,7 +472,7 @@ footer .copy {
 
   .contenedor-deimagenprincipal {
     background-image: url(imagenes/baseMovile.png);
-    background-position: -20px 0;
+   
   }
 
   #h2-home-prin {
