@@ -336,8 +336,18 @@ img:hover {
 .Beneficio-titulo_btn-2:hover {
   color: var(--color-secundario);
 }
+/*Maps*/
+.maps{
+  height: 500px;
+  width: 80%;
+  margin: 50px auto ;
+  border: #4e7745 2px solid;
+
+ 
+ 
+}
 footer {
-  background-color: var(--color-terciario);
+  background-color: var(--color-primario);
   color: var(--color-secundario);
   padding: 30px;
   font-family: var(--fuente-texto);
@@ -533,7 +543,9 @@ footer .copy {
     grid-column: 3 / 4;
     object-position: 0px -85px;
   }
-
+.maps{
+  height: 300px;
+}
   .footer-ubicacion,
   .footer-contacto {
     margin: 0px;

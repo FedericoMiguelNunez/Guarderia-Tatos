@@ -119,3 +119,16 @@ lightboxImg.addEventListener("touchend", function(event) {
 });
 nextButton.addEventListener("click", showNextImage);
 prevButton.addEventListener("click", showPrevImage);
+//maps
+function iniciarMap(){
+    var coord = {lat:-34.626639927107604 ,lng: -58.50833131757482};
+    var map = new google.maps.Map(document.getElementById('map'),{
+      zoom: 15,
+      center: coord
+    });
+    var marker = new google.maps.Marker({
+      position: coord,
+      map: map
+    });
+  }
+  

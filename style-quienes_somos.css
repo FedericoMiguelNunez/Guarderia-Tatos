@@ -234,7 +234,7 @@ nav ul li:hover {
 }
 
 footer {
-  background-color: #2ec4b6;
+  background-color: var(--color-primario);
   color: #000;
   padding: 30px;
 }
@@ -264,7 +264,7 @@ footer {
   transform: scale(1.1);
 }
 footer {
-  background-color: var(--color-terciario);
+  background-color: #4e7745;
   color: var(--color-secundario);
   padding: 30px;
   font-family: var(--fuente-texto);

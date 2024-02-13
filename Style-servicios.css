@@ -235,7 +235,7 @@ body {
 }
 
 footer {
-    background-color: var(--color-terciario);
+    background-color: var(--color-primario);
     color: var(--color-secundario);
     padding: 30px;
     font-family: var(--fuente-texto);
