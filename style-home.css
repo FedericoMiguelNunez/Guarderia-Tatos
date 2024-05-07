@@ -53,6 +53,7 @@ body {
   font-size: var(--tamaño-extra-chico);
 }
 
+
 .cont-saludo nav {
   display: flex;
   justify-content: center;
@@ -394,6 +395,8 @@ footer .copy {
   font-size: 25px;
   color: var(--color-secundario);
 }
+
+
 
 @keyframes mover {
   0% {

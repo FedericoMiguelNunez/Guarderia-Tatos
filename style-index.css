@@ -18,6 +18,7 @@
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 body {
     background-image: url(imagenes/fondo-index-horizontal.webp);

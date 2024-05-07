@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&family=Jua&display=swap');
+
+
+
+:root{
+    --fuente-titulo: "Jua", sans-serif;
+    --fuente-texto: "Hedvig Letters Serif", serif;
+
+    --Tamaño-letra-grande: 3.5em;
+    --Tamaño-letra-medio: 2.5em;
+    --Tamaño-letra-pequeño: 1.8em;
+}
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    max-width: 100vw;
+ 
+}
+
+html {
+    font-size: 10px;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--color-primario);
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+}
+.header-h1{
+    font-family: var(--fuente-titulo);
+    font-size: var(--Tamaño-letra-grande);
+    margin: 10px 0px;
+}
+.header-h3{
+    font-family: var(--fuente-titulo);
+    font-size: var(--Tamaño-letra-medio);
+    margin: 10px 0px;
+}
+.header-p{
+    font-family: var(--fuente-texto);
+    font-size: var(--Tamaño-letra-pequeño);
+    font-weight: 400;
+    margin: 10px 0px;
+}
