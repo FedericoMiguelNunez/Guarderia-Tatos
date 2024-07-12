@@ -183,11 +183,16 @@ transform: scale(1.1);
     font-family: var(--feunte-titulo);
     
     font-size: var(--tamaño-letra-mediano);
+    line-height: 30px;
+    margin:20px 0px 10px;
 }
 .contenedor-requsitos h3{
     font-family: var(--fuente-texto);
     font-weight: var(--letra-mediana);
     font-size: var(--tamaño-letra-chico);
+    line-height: 30px;
+    margin: 0px 0px 10px;
+  
 }
 .ver{
   font-family: var(--fuente-texto);
