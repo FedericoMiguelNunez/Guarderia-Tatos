@@ -47,6 +47,7 @@ html{
     
 }
 .contenedor-de-logo video{
+    margin: 10px 0px 0px;
     border-radius: 25px;
     height: 500px;
     width: 500px;
