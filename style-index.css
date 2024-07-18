@@ -41,17 +41,30 @@ html{
     flex-wrap: nowrap;
     width: auto;
     padding: 0px;
+    position: relative;
+    border-radius: 25px;
    
     
 }
-.logo{
+.contenedor-de-logo video{
+    border-radius: 25px;
+    height: 500px;
     width: 500px;
-    height: 300px;
+}
+.logo{
+    width: 100px;
+    height: auto;
     object-fit: cover;
     animation-name: agrandar ;
     animation-duration: 10s;
     animation-iteration-count: infinite ;
     animation-timing-function: ease-in-out;
+    position: absolute;
+    left:32%;
+    top: 0px;
+    -webkit-animation: rotate-in-bl 1s ;
+	        animation: rotate-in-bl 1s ;
+
 }
 .imput-recibimiento {
     display: flex;
@@ -115,6 +128,41 @@ html{
     color: #fdf9ef ;
 }
 
+
+ @-webkit-keyframes rotate-in-bl {
+    0% {
+      -webkit-transform: rotate(-360deg);
+              transform: rotate(-360deg);
+      -webkit-transform-origin: bottom left;
+              transform-origin: bottom left;
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+      -webkit-transform-origin: bottom left;
+              transform-origin: bottom left;
+      opacity: 1;
+    }
+  }
+  @keyframes rotate-in-bl {
+    0% {
+      -webkit-transform: rotate(-360deg);
+              transform: rotate(-360deg);
+      -webkit-transform-origin: bottom left;
+              transform-origin: bottom left;
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+      -webkit-transform-origin: bottom left;
+              transform-origin: bottom left;
+      opacity: 1;
+    }
+  }
+  
+
 @keyframes agrandar {
     0% {
         transform: scale(.9);
@@ -134,6 +182,13 @@ html{
     
 }
 @media screen and (max-width: 800px){
+    .contenedor-de-logo video{
+        width: 90%;
+        height: auto;
+    }
+    .logo{
+        left: 5%;
+    }
     .imput-recibimiento{
         width: auto;
         margin: 5px;
