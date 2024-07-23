@@ -127,6 +127,12 @@ header {
   height: 100%;
 }
 
+.explicacion-video h4 {
+  font-family: var(--fuente-parrafo);
+  font-size: var(--letra-no-tan-grande);
+  color: var(--color-primary);
+}
+
 .contenedor-explicacion-descripcion {
   display: flex;
   flex-direction: row;
@@ -709,6 +715,9 @@ footer{
 .contenedor-video-flash-back video{
   width: 380px;
   height: 380px;
+}
+.explicacion-video h4{
+  font-size: var(--letra-no-tan-mediana);
 }
 .contenedor-prepara{
   flex-direction: column-reverse;
