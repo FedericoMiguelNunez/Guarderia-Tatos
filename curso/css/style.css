@@ -23,6 +23,7 @@
 html {
   font-size: 10px;
   background-color: var(--color-primary);
+  overflow-x: hidden;
 }
 header {
   display: flex;
@@ -100,7 +101,7 @@ header {
 .prepara_contenedor-texto a {
   text-decoration: none;
   color: var(--color-primary);
-  font-size: var(--letra-extra-chica);
+  font-size: var(--letra-chica);
 }
 .contenedor-video-flash-back {
   flex: 1;
@@ -275,7 +276,7 @@ margin: 20px 30px;
   cursor: pointer;
   font-family: var(--fuente-parrafo);
   color: var(--color-cuarto);
-  font-size: var(--letra-chica);
+  font-size: var(--letra-mediana);
 }
 
 .acordeon-temario button:hover {
@@ -432,7 +433,7 @@ padding: 30px ;
 .btn-accede_ahora-con-regalos a{
   text-decoration: none;
   color: var(--color-primary);
-  font-size: var(--letra-chica);
+  font-size: var(--letra-no-tan-mediana);
   font-family: var(--fuente-parrafo);
 }
 .contenedor-quien-soy{
@@ -685,4 +686,88 @@ footer{
   margin-top: 50px;
   font-size: var(--letra-mediana);
   font-family: var(--fuente-titulo);
+}
+@media  (max-width: 768px) {
+  header{
+    margin: 0px 0px 5px 0px;
+  }
+.header_titulo-subtitulo h1{
+  font-size: 4em;
+}
+.header_titulo-subtitulo h2{
+  font-size: var(--letra-no-tan-mediana);
+}
+.contenedor-prepara{
+  flex-direction: column-reverse;
+}
+.prepara_contenedor-texto a{
+  font-size: var(--letra-chica);
+}
+.contenedor-explicacion-descripcion{
+  flex-direction: column;
+}
+.explicacion-texto h4{
+  margin: 0px;
+  font-size: var(--letra-chica);
+  
+}
+.explicacion-de-beneficios{
+  flex-direction: column;
+}
+.explicacion-texto h3{
+  margin:15px 0px; ;
+}
+.beneficio{
+  margin: 5px;
+  padding: 5px 10px;
+}
+.lograras-h4{
+  font-size: var(--letra-no-tan-mediana);
+}
+.lograras-beneficios{
+  flex-direction: column;
+  gap: 10px;
+  margin: 5px 30px;
+}
+.acordeon-temario h4{
+  margin: 5px 0px;
+}
+.acordeon-temario button{
+  font-size: var(--letra-no-tan-mediana);
+}
+.temario p{
+  margin: 0px 10PX;
+}
+.temario button a{
+  font-size: var(--letra-extra-chica-chica);
+}
+.contaras-h4 h4{
+  font-size: var(--letra-no-tan-mediana);
+}
+.contaras-item{
+  flex-direction: column;
+}
+.regalos-container-h4 h4{
+  font-size: var(--letra-no-tan-mediana);
+}
+.regalo{
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+.btn-accede_ahora-con-regalos a{
+  font-size: var(--letra-chica);
+}
+.quiensoy-pimg{
+  flex-direction: column;
+}
+.entonces-h4 h4{
+  font-size: var(--letra-no-tan-mediana);
+}
+.entonces-imgp{
+  flex-direction: column;
+}
+.entonces-img img{
+  width: 100%;
+}
 }
