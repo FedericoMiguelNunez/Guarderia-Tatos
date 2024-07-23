@@ -12,7 +12,7 @@ btnMostrarTemario.addEventListener('click', () => {
 
 });
 window.ityped.init(document.querySelector('.tipeado'),{
-    strings:['Seguro', 'Estimulado', 'Sano', 'respetuoso'],
+    strings:['Seguro', 'Estimulado', 'Sano', 'Respetuoso'],
         loop : true
     
     

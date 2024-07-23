@@ -739,6 +739,9 @@ footer{
 .explicacion-texto h3{
   margin:15px 0px; ;
 }
+.explicacion-header{
+  font-size: 2.4em  ;
+}
 .beneficio{
   margin: 5px;
   padding: 5px 10px;
