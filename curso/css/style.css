@@ -106,6 +106,11 @@ header {
 .contenedor-video-flash-back {
   flex: 1;
 }
+.contenedor-video-flash-back video{
+  border-radius: 25px;
+  width: 500px;
+  height: 500px;
+}
 .explicacion-header {
   width: 100%;
   text-align: center;
@@ -118,7 +123,10 @@ header {
 }
 .explicacion-video {
   flex: 1;
+  width: 100%;
+  height: 100%;
 }
+
 .contenedor-explicacion-descripcion {
   display: flex;
   flex-direction: row;
@@ -127,6 +135,7 @@ header {
   text-align: center;
   padding: 20px 10px;
   background-color: var(--color-quinto);
+  gap: 10px;
 }
 .explicacion-texto {
   display: flex;
@@ -696,6 +705,10 @@ footer{
 }
 .header_titulo-subtitulo h2{
   font-size: var(--letra-no-tan-mediana);
+}
+.contenedor-video-flash-back video{
+  width: 380px;
+  height: 380px;
 }
 .contenedor-prepara{
   flex-direction: column-reverse;
