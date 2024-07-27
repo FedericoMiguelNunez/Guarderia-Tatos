@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Belleza&family=Chau+Philomene+One:ital@0;1&display=swap");
+
+:root {
+  --fuente-titulo: "Chau Philomene One", sans-serif;
+  --fuente-parrafo: "Belleza", cursive;
+  --letra-grande: 5em;
+  --letra-no-tan-grande: 4em;
+  --letra-mediana: 3.5em;
+  --letra-no-tan-mediana: 3em;
+  --letra-chica: 2em;
+  --letra-extra-chica: 1.2em;
+  --color-primary: #edeede;
+  --color-secundario: #e9e9e9;
+  --color-terciario: #dae1d2;
+  --color-cuarto: #56694f;
+  --color-quinto: #94a269;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+  background-color: var(--color-primary);
+  overflow-x: hidden;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--color-secundario);
+    text-align: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+header h1{
+    font-family: var(--fuente-titulo);
+    font-size: var(--letra-grande);
+    width: 100%;
+    color: var(--color-cuarto);
+}
+header h2{
+    font-family: var(--fuente-parrafo);
+    font-size: var(--letra-mediana);
+    margin: 10px 0px;
+    color: var(--color-cuarto);
+}
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: var(--color-terciario);
+    width: 100%;
+}
+main .dolor{
+    text-align: left;
+    width: 100%;
+    font-family: var(--fuente-titulo);
+    font-size: var(--letra-chica);
+    margin: 15px 0px;
+    color: var(--color-cuarto);
+}
+main .invitacion{
+    text-align: center;
+    width: 100%;
+    font-family: var(--fuente-titulo);
+    font-size: 2.5em;
+    margin: 15px 0px;
+    color: var(--color-cuarto);
+    background-color: #edeede;
+    padding: 20px;
+    border:solid 1px var(--color-cuarto);
+    border-radius: 25px;
+    box-shadow: 10px 10px 15px var(--color-cuarto);
+}
+main .invitacion span{
+    color: var(--color-quinto);
+}
+.h3-me-presento{
+    font-family: var(--fuente-titulo);
+    font-size: var(--letra-no-tan-grande);
+    margin: 15px 0px;
+    color: var(--color-cuarto);
+}
+.Quien-soy{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+
+}
+.Quien-soy div{
+    flex: 1;
+    text-align: center;
+}
+
+.Quien-soy p{
+    flex: 1;
+    font-family: var(--fuente-parrafo);
+    font-size: var(--letra-chica);
+    color: var(--color-cuarto);
+}
+main h4{
+    font-family: var(--fuente-titulo);
+    font-size: var(--letra-mediana);
+    margin: 15px 0px;
+    width: 100%;
+    text-align: center;
+    color: var(--color-cuarto);
+}
+main button{
+    width: fit-content;
+    height: fit-content;
+    background-color: var(--color-quinto);
+    color: var(--color-primary);
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+    margin: 15px 0px 0px;
+}
+main button:hover{
+    background-color: #56694f;
+}
+main button a{
+    color: var(--color-terciario);
+    text-decoration: none;
+    font-family: var(--fuente-titulo);
+    font-size: var(--letra-chica);
+}
+footer{
+    background-color: var(--color-cuarto);
+    color: var(--color-primary);
+    padding: 20px;
+    text-align: center;
+    
+    font-size: var(--letra-mediana);
+    font-family: var(--fuente-titulo);
+}
+@media (max-width:700px) {
+    .Quien-soy{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+}
