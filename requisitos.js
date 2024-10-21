@@ -16,7 +16,7 @@ const aumentar = document.querySelectorAll('.aumentar')
 
 
 Home.addEventListener('click', function(){
-    const HomeRedirigidos = 'Guarderia-Tatos.html' + '?gato=' + encodeURI(gato || '') + '&nombre=' + encodeURI(nombre || '');
+    const HomeRedirigidos = 'index.html' + '?gato=' + encodeURI(gato || '') + '&nombre=' + encodeURI(nombre || '');
     window.location.href    = HomeRedirigidos
 })
 

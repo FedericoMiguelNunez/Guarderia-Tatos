@@ -26,7 +26,7 @@ const galoText = document.querySelector('.galo-text');
 
 
 Home.addEventListener('click', function(){
-    const HomeRedirigidos = 'Guarderia-Tatos.html' + '?gato=' + encodeURI(gato || '') + '&nombre=' + encodeURI(nombre || '');
+    const HomeRedirigidos = 'index.html' + '?gato=' + encodeURI(gato || '') + '&nombre=' + encodeURI(nombre || '');
     window.location.href = HomeRedirigidos
 })
 
@@ -40,18 +40,6 @@ requisitos.addEventListener('click', () => {
     window.location.href = RequisitosRedirigido;
 }
 )
-if (gato != null && nombre != null && gato != "" && nombre != "") {
-    cambio.innerHTML = `¿Quienes cuidaran de ${gato}?`;
-
-    
-    AyelenText.innerHTML = `Es la persona encargada de ser tu punto de contacto principal. Ella te mantendrá informado/a sobre cómo está pasando los días ${gato}, proporcionándote informacion detallada y actualizada. Ademas es creadora de contenido y quien se encarga de administra nuestras redes sociales, compartiendo fotos y videos adorables y divertidas de los michis pensionados.`;
-}
-else {
-    cambio.innerHTML = `¿Quienes cuidaremos de tu Michi?`;
-    
-    AyelenText.innerHTML = `Es la persona encargada de ser tu punto de contacto principal. Ella te mantendrá informado/a sobre cómo está pasando los días tu michi, proporcionándote informacion detallada y actualizada. Ademas es creadora de contenido y quien se encarga de administra nuestras redes sociales, compartiendo fotos y videos adorables y divertidas de los michis pensionados.`;
-
-}
 VerAye.addEventListener('click', () => {
     if (AyelenText.style.display === 'none' || AyelenText.style.display === '') {
       AyelenText.style.display = 'block';

@@ -10,7 +10,7 @@ const requisitos = document.getElementById("requisitos")
 const apuntamos = document.querySelector('.apuntamos')
 
 Home.addEventListener('click', function () {
-    const HomeRedirigidos = 'Guarderia-Tatos.html' + '?gato=' + encodeURI(gato || '') + '&nombre=' + encodeURI(nombre || '');
+    const HomeRedirigidos = 'index.html' + '?gato=' + encodeURI(gato || '') + '&nombre=' + encodeURI(nombre || '');
     window.location.href = HomeRedirigidos
 })
 
@@ -35,12 +35,3 @@ window.addEventListener('scroll', () => {
         nav.classList.remove('active-nav');
     }
 });
-if (gato !== "" && nombre !== "" && gato !== null && nombre !== null) {
-    cambio.innerHTML = `Servicios para ${gato}`;
-    apuntamos.innerHTML = `Sabemos que ${gato} merece lo mejor, por eso, ofrecemos un servicio completo para satisfacer todas sus necesidades.  Te mostramos en detalle como hacemos que su experiencia sea extraordinaria.`;
-
-}
-else {
-    cambio.innerHTML = `Servicios Tatos`;
-    apuntamos.innerHTML = `Sabemos que tu Michi merece lo mejor, por eso, ofrecemos un servicio completo para satisfacer todas sus necesidades.  Te mostramos en detalle como hacemos que su experiencia sea extraordinaria.`;
-}

@@ -35,19 +35,7 @@ requisitos.addEventListener('click', () => {
 }
 
 )
-if (gato != null && nombre != null && gato != "" && nombre != "") {
-    cambio.innerHTML = `¡Bienvenidos  ${nombre} y ${gato}!`;
 
-    H2HomePrincipal.innerHTML = `Guardería Tatos es el lugar perfecto si buscas dejar a ${gato} en un ambiente familiar y seguro, dónde los juegos y mimos son ilimitados, brindamos un entorno con gatificaciones, camitas y rascadores para que se divierta y descanse a gusto. 
-    Podés disfrutar tu tiempo lejos sabiendo que ${gato} la está pasando excelente y bien cuidado.`
-
-}
-else {
-    cambio.innerHTML = `¡Bienvenidos a Guarderia Tatos!`;
-    H2HomePrincipal.innerHTML = `Guardería Tatos es el lugar perfecto si buscas dejar a tu Michi en un ambiente familiar y seguro, dónde los juegos y mimos son ilimitados, brindamos un entorno con gatificaciones, camitas y rascadores para que se divierta y descanse a gusto. 
-    Podés disfrutar tu tiempo lejos sabiendo que tu Michi la está pasando excelente y bien cuidado`
-
-}
 navBar.addEventListener('click', () => {
 
     nav.classList.toggle('active-nav')
