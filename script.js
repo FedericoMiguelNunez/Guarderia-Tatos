@@ -19,22 +19,7 @@ var currentIndex = 0;
 var touchStartX = 0;
 
  
-servicios.addEventListener('click', function () {
-    const serviciosRedirigidos = 'servicios.html' + '?gato=' + encodeURI(gato || '') + '&nombre=' + encodeURI(nombre || '');
-    window.location.href = serviciosRedirigidos;
-})
 
-navQuienesSomos.addEventListener('click', () => {
-    const QuienesSomosRedirigidos = 'Quienes-somos.html' + '?gato=' + encodeURI(gato || '') + '&nombre=' + encodeURI(nombre || '');
-    window.location.href = QuienesSomosRedirigidos;
-})
-
-requisitos.addEventListener('click', () => {
-    const RequisitosRedirigido = 'requisitos.html' + '?gato=' + encodeURI(gato || '') + '&nombre=' + encodeURI(nombre || '');
-    window.location.href = RequisitosRedirigido;
-}
-
-)
 
 navBar.addEventListener('click', () => {
 

@@ -75,7 +75,11 @@ nav ul li {
   font-size: var(--tamaño-extra-chico);
   cursor: pointer;
 }
-
+nav ul li a{
+  text-decoration: none;
+  color: var(--color-primario);
+ 
+}
 .icon {
   font-size: 20px;
 }
