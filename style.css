@@ -6,6 +6,7 @@
   --tamaño-letra-mediano: 3.5em;
   --tamaño-letra-chico: 3em;
   --tamaño-extra-chico: 2em;
+  --tamaño-movile: 1.5em;
 
   --feunte-titulo: "Galada", cursive;
   --fuente-texto: "Oswald", sans-serif;
@@ -53,7 +54,6 @@ body {
   font-size: var(--tamaño-extra-chico);
 }
 
-
 .cont-saludo nav {
   display: flex;
   justify-content: center;
@@ -75,10 +75,9 @@ nav ul li {
   font-size: var(--tamaño-extra-chico);
   cursor: pointer;
 }
-nav ul li a{
+nav ul li a {
   text-decoration: none;
   color: var(--color-primario);
- 
 }
 .icon {
   font-size: 20px;
@@ -149,9 +148,9 @@ nav ul li:hover {
   width: 100%;
   animation: mover 2s 1 ease-in-out;
 }
-.contTitle h1{
+.contTitle h1 {
   font-family: var(--feunte-titulo);
-font-size: calc(var(--tamaño-letra-mediano) + 30%);
+  font-size: calc(var(--tamaño-letra-mediano) + 30%);
 }
 #h2-home-prin {
   margin: 0px 300px;
@@ -161,19 +160,19 @@ font-size: calc(var(--tamaño-letra-mediano) + 30%);
 }
 
 .Beneficio-titulo_btn {
-  width: 300px;
+  width: max-content;
+  padding: 5px 20px;
   background-color: var(--color-terciario);
-  height: 50px;
+
   border-radius: 25px;
   cursor: pointer;
   font-family: var(--fuente-texto);
-  color: var(--color-secundario);
-  font-size: var(--tamaño-extra-chico);
+  color: var(--color-primario);
+  font-size: var(--tamaño-letra-chico);
   animation: bailar 2s 2 ease-in-out;
 }
 
 .Beneficio-titulo_btn:hover {
-  color: var(--color-primario);
   transform: scale(1.1);
 }
 .container-video {
@@ -195,9 +194,9 @@ font-size: calc(var(--tamaño-letra-mediano) + 30%);
   margin: 20px 0px;
 }
 .Beneficio-titulo_btn-3 {
-  width: 500px;
+  width: fit-content;
   background-color: var(--color-terciario);
-  height: 50px;
+  padding: 5px 10px;
   border-radius: 25px;
   cursor: pointer;
   font-family: var(--fuente-texto);
@@ -329,9 +328,9 @@ img:hover {
   margin: 20px 0px;
 }
 .Beneficio-titulo_btn-2 {
-  width: 300px;
+  width: fit-content;
   background-color: var(--color-terciario);
-  height: 50px;
+ padding: 5px 10px;
   border-radius: 25px;
   cursor: pointer;
   font-family: var(--fuente-texto);
@@ -342,15 +341,76 @@ img:hover {
   color: var(--color-secundario);
 }
 /*Maps*/
-.maps{
+.maps {
   height: 500px;
   width: 80%;
-  margin: 50px auto ;
+  margin: 50px auto;
   border: #4e7745 2px solid;
-
- 
- 
 }
+.contenedor-btn-mostra_acordeon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0px;
+}
+.mostra_acordeon{
+  font-family: var(--fuente-texto);
+  font-size: var(--tamaño-letra-chico);
+  color: var(--color-secundario);
+  width: fit-content;
+  padding: 5px 10px;
+  border-radius: 25px;
+  cursor: pointer;
+  background-color: var(--color-terciario);
+  
+}
+.acordeon {
+  
+  display: none;
+  width: 90%;
+  max-width: 800px;
+  margin: 10px auto 40px;
+  font-family: Arial, sans-serif;
+  justify-content: center;
+  flex-direction: column;
+} 
+
+/* Botones del acordeón */
+.acordeon-item {
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 5px 0;
+  cursor: pointer;
+  padding: 15px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+.acordeon-item h3 {
+  font-size: var(--tamaño-extra-chico);
+}
+.acordeon-item:hover {
+  background-color: #e1e1e1;
+}
+
+/* Contenido del acordeón (oculto por defecto) */
+.acordeon-content {
+  display: none;
+  background-color: #fff;
+  padding: 15px;
+  font-size: 16px;
+  color: #333;
+  border-top: 1px solid #ccc;
+}
+
+/* Estilo para mostrar el contenido del acordeón abierto */
+.acordeon-item.active + .acordeon-content {
+  display: block;
+}
+
 footer {
   background-color: var(--color-primario);
   color: var(--color-secundario);
@@ -385,7 +445,7 @@ footer .copy {
   font-size: var(--tamaño-letra-chico);
 }
 
-.footer-ubicacion p {
+.footer-ubicacion h5 {
   font-size: var(--tamaño-extra-chico);
 }
 
@@ -399,8 +459,6 @@ footer .copy {
   font-size: 25px;
   color: var(--color-secundario);
 }
-
-
 
 @keyframes mover {
   0% {
@@ -489,12 +547,18 @@ footer .copy {
 
   .contenedor-deimagenprincipal {
     background-image: url(imagenes/baseMovile.png);
-   
+    max-height: min-content;
   }
-
+  .contTitle h1{
+    font-size: var(--tamaño-letra-chico);
+  }
   #h2-home-prin {
     margin: 0px 10px;
-    font-size: 24px;
+    font-size: var(--tamaño-extra-chico);
+  }
+  .Beneficio-titulo_btn{
+    font-size: var(--tamaño-extra-chico);
+ 
   }
   .container-video {
     padding: 40px;
@@ -503,12 +567,12 @@ footer .copy {
   .video {
     width: 90%;
   }
-  .Beneficio-titulo_btn-3{
-    font-size: calc(var(--tamaño-extra-chico) + 40% ) ;
-    width: 360px;
+  .Beneficio-titulo_btn-3 {
+    font-size: var(--tamaño-extra-chico) ;
+   
   }
-  .H2-Galeria{
-    font-size: var(--tamaño-letra-chico);
+  .H2-Galeria {
+    font-size: var(--tamaño-extra-chico);
     padding: 0px 15px;
   }
   .galeria {
@@ -550,18 +614,33 @@ footer .copy {
     grid-column: 3 / 4;
     object-position: 0px -85px;
   }
-.maps{
-  height: 300px;
-}
+  .maps {
+    height: 300px;
+  }
+  .mostra_acordeon{
+    font-size: var(--tamaño-extra-chico);
+   
+  }
+  .Beneficio-titulo_btn-2{
+    font-size: var(--tamaño-extra-chico);
+  }
+  .acordeon-item h3 {
+    font-size: var(--tamaño-movile);
+  }
+  footer{
+    padding: 10px;
+  }
   .footer-ubicacion,
   .footer-contacto {
     margin: 0px;
   }
 
   .footer-ubicacion h4 {
-    font-size: 15px;
+    font-size: 18px;
   }
-
+  .footer-ubicacion h5{
+    font-size: var(--tamaño-movile);
+  }
   .footer-ubicacion p {
     font-size: 13px;
   }

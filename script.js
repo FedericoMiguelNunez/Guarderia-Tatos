@@ -17,7 +17,9 @@ const prevButton = document.getElementById("prev");
 const nextButton = document.getElementById("next");
 var currentIndex = 0;
 var touchStartX = 0;
-
+const items = document.querySelectorAll('.acordeon-item');
+var btnmostraracordeon = document.querySelector('.mostra_acordeon');
+var acordeon = document.querySelector('.acordeon');
  
 
 
@@ -92,4 +94,29 @@ lightboxImg.addEventListener("touchend", function(event) {
 });
 nextButton.addEventListener("click", showNextImage);
 prevButton.addEventListener("click", showPrevImage);
+
+btnmostraracordeon.addEventListener("click",()=>{
+    acordeon.style.display=acordeon.style.display==="block"?"none":"block";
+    btnmostraracordeon.innerHTML=acordeon.style.display==="block"?"Ocultar preguntas frecuentes":"Ver preguntas frecuentes";
+   
+})
+items.forEach(item => {
+    item.addEventListener('click', function() {
+        // Alterna la clase 'active' para mostrar u ocultar el contenido
+        this.classList.toggle('active');
+        const content = this.nextElementSibling;
+        content.style.display = content.style.display === 'flex' ? 'none' : 'flex';
+        // Alterna el icono entre '+' y '-'
+        const icon = this.querySelector('i');
+        if (this.classList.contains('active')) {
+            
+            icon.classList.remove('fa-plus');
+            icon.classList.add('fa-minus');
+        } else {
+            
+            icon.classList.remove('fa-minus');
+            icon.classList.add('fa-plus');
+        }
+    });
+});
 //maps
