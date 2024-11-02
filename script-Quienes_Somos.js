@@ -23,23 +23,6 @@ const galoText = document.querySelector('.galo-text');
 
 
 
-
-
-Home.addEventListener('click', function(){
-    const HomeRedirigidos = 'index.html' + '?gato=' + encodeURI(gato || '') + '&nombre=' + encodeURI(nombre || '');
-    window.location.href = HomeRedirigidos
-})
-
-servicios.addEventListener('click', function(){
-    const serviciosRedirigidos = 'servicios.html' + '?gato=' + encodeURI(gato || '') + '&nombre=' + encodeURI(nombre || '');
-    window.location.href = serviciosRedirigidos;
-})
-
-requisitos.addEventListener('click', () => {
-    const RequisitosRedirigido = 'requisitos.html' + '?gato=' + encodeURI(gato || '') + '&nombre=' + encodeURI(nombre || '');
-    window.location.href = RequisitosRedirigido;
-}
-)
 VerAye.addEventListener('click', () => {
     if (AyelenText.style.display === 'none' || AyelenText.style.display === '') {
       AyelenText.style.display = 'block';

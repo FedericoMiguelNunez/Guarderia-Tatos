@@ -1,4 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Galada&family=Oswald:wght@200;300;400;500;600;700&display=swap");
+@font-face {
+  font-family: 'Oswald';
+  src: url(/fuentes/Oswald/Oswald-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: 'Caveat';
+  src: url(/fuentes/Caveat/Caveat-VariableFont_wght.ttf);
+}
+
 :root {
   --color-primario: #4e7745;
   --color-secundario: #fdf9ef;
@@ -6,7 +14,9 @@
   --tamaño-letra-mediano: 3.5em;
   --tamaño-letra-chico: 3em;
   --tamaño-extra-chico: 2em;
-  --feunte-titulo: "Galada", cursive;
+  --tamaño-movile: 1.5em;
+
+  --feunte-titulo:  "Caveat", cursive; 
   --fuente-texto: "Oswald", sans-serif;
   --letra-fina: 300px;
   --letra-mediana: 500px;
@@ -69,7 +79,7 @@ nav ul {
 nav ul li {
   display: inline-block;
   margin: 0px 5px;
-  font-size: var(--tamaño-extra-chico);
+  font-size: var(--tamaño-letra-chico);
   cursor: pointer;
 }
 
@@ -103,6 +113,10 @@ nav ul {
 nav ul li:hover {
   color: var(--color-terciario);
   transform: scale(1.1);
+}
+nav ul li a{
+  color: var(--color-primario);
+  text-decoration: none;
 }
 
 .icon {
@@ -291,19 +305,23 @@ footer .copy {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+
 }
 
 .footer-ubicacion h4 {
   font-size: var(--tamaño-letra-chico);
+  font-weight: 400;
 }
 
 .footer-ubicacion p {
   font-size: var(--tamaño-extra-chico);
+  font-weight: 400;
 }
 
 .footer-contacto h4 {
   font-size: var(--tamaño-letra-chico);
   margin-bottom: 15px;
+  font-weight: 400;
 }
 
 .footer-contacto a {
@@ -346,7 +364,8 @@ footer .copy {
 
   .cont-saludo nav ul {
     position: relative;
-    justify-content: end;
+    justify-content: space-between;
+    padding: 15px 0;
     align-items: center;
     display: flex;
     flex-direction: column;

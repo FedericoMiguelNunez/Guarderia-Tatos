@@ -15,35 +15,7 @@ const aumentar = document.querySelectorAll('.aumentar')
 
 
 
-Home.addEventListener('click', function(){
-    const HomeRedirigidos = 'index.html' + '?gato=' + encodeURI(gato || '') + '&nombre=' + encodeURI(nombre || '');
-    window.location.href    = HomeRedirigidos
-})
 
-servicios.addEventListener('click', function () {
-    const serviciosRedirigidos = 'servicios.html' + '?gato=' + encodeURI(gato || '') + '&nombre=' + encodeURI(nombre || '');
-    window.location.href = serviciosRedirigidos;
-})
-
-navQuienesSomos.addEventListener('click', () => {
-    const QuienesSomosRedirigidos = 'Quienes-somos.html' + '?gato=' + encodeURI(gato || '') + '&nombre=' + encodeURI(nombre || '');
-    window.location.href = QuienesSomosRedirigidos;
-})
-
-if (gato != null && nombre != null && gato != "" && nombre != "") {
-    cambio.innerHTML = `¡Requisitos que debe tener ${gato}!`;
-    cambiarSub.innerHTML = `En Guarderia Tatos sabemos que cuidar del bienestar de ${gato} es una prioridad tanto para ustedes cómo para nosotros. 
-    Para garantizar un ambiente sano y seguro cada pensionado debe cumplir con los siguientes requisitos sanitarios.`;
-
-   
-
-}
-else {
-    cambio.innerHTML = `¡Requisitos que debe tener tu Michi!`;
-    cambiarSub.innerHTML = `En Guarderia Tatos sabemos que cuidar del bienestar de tu Michi es una prioridad tanto para ustedes cómo para nosotros. 
-    Para garantizar un ambiente sano y seguro cada pensionado debe cumplir con los siguientes requisitos sanitarios.`;
-
-}
 
 navBar.addEventListener('click', () => {
 
