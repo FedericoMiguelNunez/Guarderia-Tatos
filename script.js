@@ -20,6 +20,7 @@ var touchStartX = 0;
 const items = document.querySelectorAll('.acordeon-item');
 var btnmostraracordeon = document.querySelector('.mostra_acordeon');
 var acordeon = document.querySelector('.acordeon');
+var acordeonSeVe = document.querySelector('.acordeon-seve')
  
 
 
@@ -97,7 +98,8 @@ prevButton.addEventListener("click", showPrevImage);
 
 btnmostraracordeon.addEventListener("click",()=>{
     acordeon.style.display=acordeon.style.display==="block"?"none":"block";
-    btnmostraracordeon.innerHTML=acordeon.style.display==="block"?"Ocultar preguntas frecuentes":"Ver preguntas frecuentes";
+    btnmostraracordeon.innerHTML=acordeon.style.display==="block"?"Ocultar ":"Ver mas ";
+    acordeonSeVe.style.margin=acordeon.style.display==='block'?'0px auto 0px':'0px auto 0px';
    
 })
 items.forEach(item => {

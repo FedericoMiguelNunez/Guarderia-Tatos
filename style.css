@@ -360,15 +360,36 @@ img:hover {
   margin: 50px auto;
   border: #4e7745 2px solid;
 }
-.contenedor-btn-mostra_acordeon{
-  display: flex;
-  justify-content: center;
+.banner-faq{
+  width: 100%;
+ 
+  
+  background-color: rgba(160, 191, 147, 0.2);
+  display: flex;  
+  text-align: center;
   align-items: center;
-  margin: 20px 0px;
+  justify-content: center;
+  
+}
+.faq-h4{
+  font-family: var(--fuente-texto);
+  font-size: var(--tamaño-letra-mediano);
+  color: var(--color-primario);
+  margin: 10px 0;
+  
+}
+.contenedor-btn-mostra_acordeon{
+  margin: auto;
+  width: 90%;
+  max-width: 800px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-bottom: 10px;
 }
 .mostra_acordeon{
   font-family: var(--fuente-texto);
-  font-size: var(--tamaño-letra-chico);
+  font-size: var(--tamaño-extra-chico);
   color: var(--color-secundario);
   width: fit-content;
   padding: 5px 10px;
@@ -377,12 +398,20 @@ img:hover {
   background-color: var(--color-terciario);
   
 }
-.acordeon {
-  
+.acordeon{
   display: none;
+  margin: 0px auto 0px;
+}
+
+.acordeon-seve{
+  margin: 0px auto 0px;
+}
+.acordeon , .acordeon-seve{
+  
+  
   width: 90%;
   max-width: 800px;
-  margin: 10px auto 40px;
+  
   font-family: Arial, sans-serif;
   justify-content: center;
   flex-direction: column;
@@ -636,6 +665,9 @@ footer .copy {
   }
   .maps {
     height: 300px;
+  }
+  .faq-h4{
+    font-size: var(--tamaño-extra-chico);
   }
   .mostra_acordeon{
     font-size: var(--tamaño-extra-chico);
