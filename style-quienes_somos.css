@@ -1,9 +1,9 @@
 @font-face {
-  font-family: 'Oswald';
+  font-family: "Oswald";
   src: url(/fuentes/Oswald/Oswald-VariableFont_wght.ttf);
 }
 @font-face {
-  font-family: 'Caveat';
+  font-family: "Caveat";
   src: url(/fuentes/Caveat/Caveat-VariableFont_wght.ttf);
 }
 
@@ -11,12 +11,13 @@
   --color-primario: #4e7745;
   --color-secundario: #fdf9ef;
   --color-terciario: #a0bf93;
+  --color-cuarto: #c9511d;
   --tamaño-letra-mediano: 3.5em;
   --tamaño-letra-chico: 3em;
   --tamaño-extra-chico: 2em;
   --tamaño-movile: 1.5em;
 
-  --feunte-titulo:  "Caveat", cursive; 
+  --feunte-titulo: "Caveat", cursive;
   --fuente-texto: "Oswald", sans-serif;
   --letra-fina: 300px;
   --letra-mediana: 500px;
@@ -53,14 +54,6 @@ body {
   z-index: 7000;
 }
 
-.contenedor-cambiar {
-  display: flex;
-  flex: 2;
-  text-align: center;
-  justify-content: center;
-  font-size: var(--tamaño-extra-chico);
-}
-
 .cont-saludo nav {
   display: flex;
   justify-content: center;
@@ -69,11 +62,6 @@ body {
 
 .saludo_img img {
   width: 100px;
-}
-
-nav ul {
-  list-style: none;
-  align-items: center;
 }
 
 nav ul li {
@@ -82,15 +70,9 @@ nav ul li {
   font-size: var(--tamaño-letra-chico);
   cursor: pointer;
 }
-
-.icon {
-  font-size: 20px;
-}
-
-.icon-bar {
-  color: var(--color-primario);
-  cursor: pointer;
-  display: none;
+nav ul li a {
+  text-decoration: none;
+  color: var(--color-cuarto);
 }
 
 .cont-saludo nav {
@@ -106,7 +88,8 @@ nav ul li {
 nav ul {
   list-style: none;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 50px;
   width: 100%;
 }
 
@@ -114,30 +97,15 @@ nav ul li:hover {
   color: var(--color-terciario);
   transform: scale(1.1);
 }
-nav ul li a{
-  color: var(--color-primario);
-  text-decoration: none;
-}
-
-.icon {
-  font-size: 20px;
-}
-
-.icon-bar {
-  color: var(--color-primario);
-  cursor: pointer;
-  display: none;
-  user-select: none;
-}
 
 .fundadores {
   text-align: center;
-  background: url(imagenes/fondo-quienes-somos.webp);
+  background: url(imagenes/fondo-quienes-somos-1.webp);
   margin: 0px;
   padding: 20px;
-
+  background-position: bottom;
 }
-.fundadores h2{
+.fundadores h2 {
   font-family: var(--fuente-texto);
   font-size: var(--tamaño-letra-mediano);
   font-weight: var(--letra-gruesa);
@@ -163,8 +131,6 @@ nav ul li a{
   flex: 1;
 }
 
-
-
 .contenedor-fundadores-text-solo-para-flex-row-aye-fede {
   display: flex;
   flex-direction: row;
@@ -188,23 +154,28 @@ nav ul li a{
   height: 400px;
   width: 300px;
 }
-#ver-aye , #ver-fede ,#ver-apo , #ver-galo {
+#ver-aye,
+#ver-fede,
+#ver-apo,
+#ver-galo {
   font-family: var(--fuente-texto);
   font-size: var(--tamaño-extra-chico);
-  color: var(--color-secundario);
+  color: var(--color-primario);
   font-weight: var(--letra-fina);
   cursor: pointer;
 }
-#ver-aye:hover , #ver-fede:hover ,#ver-apo:hover , #ver-galo:hover{
-  color: var(--color-primario);
+#ver-aye:hover,
+#ver-fede:hover,
+#ver-apo:hover,
+#ver-galo:hover {
+  
   transform: scale(1.1);
-} 
+}
 
 .federico .federico-contenedor-img,
 .ayelen .ayelen-contenedor-img,
 .apolo .apolo-contenedor-img,
 .galo .galo-contenedor-img {
- 
 }
 .federico img,
 .ayelen img,
@@ -213,10 +184,9 @@ nav ul li a{
   height: 290px;
   width: 290px;
   object-fit: cover;
- 
+
   border-radius: 25px;
 }
-
 
 .apolo img {
   object-position: center -120px;
@@ -226,9 +196,9 @@ nav ul li a{
 .apolo h3,
 .galo h3 {
   font-family: var(--feunte-titulo);
-  font-size: calc( var(--tamaño-letra-mediano) + 10%) ;
+  font-size: calc(var(--tamaño-letra-mediano) + 10%);
   font-weight: var(--letra-gruesa);
-  color: var(--color-secundario);
+  color: var(--color-primario);
 }
 
 .ayelen p,
@@ -262,14 +232,14 @@ footer {
 }
 .Beneficio-titulo_btn {
   width: 300px;
-  background-color: var(--color-secundario);
+  background-color: var(--color-cuarto);
   height: 50px;
   border-radius: 25px;
   cursor: pointer;
   font-family: var(--fuente-texto);
   font-weight: var(--letra-gruesa);
   font-size: var(--tamaño-letra-chico);
-  color: var(--color-primario);
+  color: var(--color-secundario);
   margin: 50px 0px;
 }
 
@@ -305,7 +275,6 @@ footer .copy {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-
 }
 
 .footer-ubicacion h4 {
@@ -330,12 +299,7 @@ footer .copy {
   color: var(--color-secundario);
 }
 
-
 @media screen and (max-width: 1000px) {
-  .saludo_img {
-    flex: 1;
-  }
-
   .saludo_img img {
     width: 55px;
   }
@@ -346,67 +310,27 @@ footer .copy {
     flex: 3;
   }
 
-  .nav {
-    justify-content: end !important;
-
-    background-image: url(imagenes/fondo-index-horizontal.webp);
-    flex-direction: column;
-    width: 100vw;
-    position: absolute;
-    height: 200%;
-    top: -100vh;
-    z-index: -1;
-  }
-
-  .active-nav {
-    top: 0px;
-  }
-
   .cont-saludo nav ul {
-    position: relative;
-    justify-content: space-between;
-    padding: 15px 0;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    top: 0px;
-    height: 70%;
+    gap: 5px;
   }
 
   nav ul li {
-    margin: 3px;
-    font-size: 18px;
-    width: 100%;
+    font-size: var(--tamaño-extra-chico);
+    font-weight: 700;
   }
-
-  nav ul li:hover {
-    background: var(--color-secundario);
-    width: 100%;
+  .fundadores {
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
-
-  .icon-bar {
-    display: flex;
-    flex: 1;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
-  }
-
-  .icon-bar i {
-    text-align: center;
-
-    font-size: 30px;
-  }
-  .fundadores h2{
+  .fundadores h2 {
     font-size: var(--tamaño-letra-chico);
     margin: 0px;
   }
-  #p-recibimos{
+  #p-recibimos {
     margin: 10px 0px;
   }
 
-  
   .contenedor-fundadores-text-solo-para-flex-row-aye-fede {
     flex-direction: column;
     align-content: center;
@@ -418,8 +342,6 @@ footer .copy {
   }
 
   .footer-ubicacion h4 {
-  
-
     font-size: 15px;
   }
 

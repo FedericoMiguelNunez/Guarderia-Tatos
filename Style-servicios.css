@@ -11,6 +11,8 @@
   --color-primario: #4e7745;
   --color-secundario: #fdf9ef;
   --color-terciario: #a0bf93;
+  --color-cuarto: #c9511d;
+  --tamaño-letra-grande: 4em;
   --tamaño-letra-mediano: 3.5em;
   --tamaño-letra-chico: 3em;
   --tamaño-extra-chico: 2em;
@@ -40,96 +42,70 @@ body {
 }
 
 .cont-saludo {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    height: 100px;
-    text-align: center;
-    font-family: var(--feunte-titulo);
-    position: fixed;
-    top: 0px;
-    justify-content: center;
-    align-items: center;
-    background-image: url(imagenes/fondo-index-vertical.webp);
-    z-index: 7000;
-  }
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  text-align: center;
+  font-family: var(--feunte-titulo);
+  position: fixed;
+  top: 0px;
+  justify-content: center;
+  align-items: center;
+  background-image: url(imagenes/fondo-index-vertical.webp);
+  z-index: 7000;
+}
+
+
+
+.cont-saludo nav {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+
+.saludo_img img {
+  width: 100px;
+}
+
+
+
+nav ul li {
+  display: inline-block;
+  margin: 0px 5px;
+  font-size: var(--tamaño-letra-chico);
+  cursor: pointer;
+}
+nav ul li a {
+  text-decoration: none;
+  color: var(--color-cuarto);
   
-  .contenedor-cambiar {
-    display: flex;
-    flex: 2;
-    text-align: center;
-    justify-content: center;
-    font-size: var(--tamaño-extra-chico);
-  }
-  
-  .cont-saludo nav {
-    display: flex;
-    justify-content: center;
-    flex: 1;
-  }
-  
-  .saludo_img img {
-    width: 100px;
-  }
-  
-  nav ul {
-    list-style: none;
-    align-items: center;
-  }
-  
-  nav ul li {
-    display: inline-block;
-    margin: 0px 5px;
-    font-size: var(--tamaño-letra-chico);
-    cursor: pointer;
-  }
-  
-  .icon {
-    font-size: 20px;
-  }
-  
-  .icon-bar {
-    color: var(--color-primario);
-    cursor: pointer;
-    display: none;
-  }
-  
-  .cont-saludo nav {
-    display: flex;
-    justify-content: center;
-    flex: 1;
-  }
-  
-  .saludo_img img {
-    width: 100px;
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-  }
-  
-  nav ul li:hover {
-    color: var(--color-terciario);
-    transform: scale(1.1);
-    
-  }
-  nav ul li a{
-    color: var(--color-primario);
-    text-decoration: none;
-  }
-  .icon {
-    font-size: 20px;
-  }
-  
-  .icon-bar {
-    color: var(--color-primario);
-    cursor: pointer;
-    display: none;
-    user-select: none;
-  }
+}
+
+
+
+.cont-saludo nav {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+
+.saludo_img img {
+  width: 100px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap:50px;
+  width: 100%;
+}
+
+nav ul li:hover {
+  color: var(--color-terciario);
+  transform: scale(1.1);
+}
 
 .contenedor-beneficios {
     display: flex;
@@ -167,12 +143,19 @@ body {
     font-family: var(--fuente-texto);
     font-weight: var(--letra-mediana);
     font-size: var(--tamaño-letra-chico);
-    color: #4e7745;
+    color: var(--color-cuarto);
     margin: 50px;
+}
+.beneficios-titulo h1{
+  font-size: var(--tamaño-letra-grande);
+  
+  font-family: var(--feunte-titulo);
+  color: var(--color-primario);
+  font-weight: 700;
 }
 
 .Beneficio-titulo_btn:hover {
-    color: var(--color-terciario);
+   
 
     transform: scale(1.1);
 }
@@ -224,7 +207,7 @@ body {
 .beneficios-1 div p {
     width: 500px;
     display: inline-block;
-    border-bottom: solid var(--color-primario);
+    border-bottom: solid var(--color-cuarto);
     font-family: var(--fuente-texto);
     font-size: var(--tamaño-extra-chico);
     padding-bottom: 20px;
@@ -244,8 +227,11 @@ body {
   font-family: var(--fuente-texto);
   font-weight: var(--letra-mediana);
   font-size: var(--tamaño-letra-chico);
-  color: #4e7745;
+  color: var(--color-cuarto);
   margin: auto;
+}
+.Beneficio-titulo_btn-fin:hover{
+  transform: scale(1.1);
 }
 
 footer {
@@ -298,73 +284,47 @@ footer {
   }
 
 @media screen and (max-width: 1000px) {
-    .saludo_img {
-        flex: 1;
-      }
-    
-      .saludo_img img {
-        width: 55px;
-      }
-    
-      .contenedor-cambiar {
-        font-size: 13px;
-        justify-content: center;
-        flex: 3;
-      }
-    
-      .nav {
-        justify-content: end !important;
-    
-        background-image: url(imagenes/fondo-index-horizontal.webp);
-        flex-direction: column;
-        width: 100vw;
-        position: absolute;
-        height: 200%;
-        top: -100vh;
-        z-index: -1;
-      }
-    
-      .active-nav {
-        top: 0px;
-      }
-    
-      .cont-saludo nav ul {
-        position: relative;
-        justify-content: space-between;
-        padding: 15px 0;
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        top: 0px;
-        height: 70%;
-      }
-    
-      nav ul li {
-        margin: 3px;
-        font-size: 18px;
-        width: 100%;
-        font-weight: 700;
-      }
-    
-      nav ul li:hover {
-        background: var(--color-secundario);
-        width: 100%;
-      }
-    
-      .icon-bar {
-        display: flex;
-        flex: 1;
-        justify-content: center;
-        align-content: center;
-        text-align: center;
-      }
-    
-      .icon-bar i {
-        text-align: center;
-    
-        font-size: 30px;
-      }
+  .saludo_img img {
+    width: 55px;
+  }
+
+  .contenedor-cambiar {
+    font-size: 13px;
+    justify-content: center;
+    flex: 3;
+  }
+
+  
+
+  
+
+  .cont-saludo nav ul {
+ gap: 5px;
+  }
+
+  nav ul li {
+  font-size: var(--tamaño-extra-chico);
+  font-weight: 700;
+
+  }
+
+  nav ul li:hover {
+  
+  }
+
+  .icon-bar {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+  }
+
+  .icon-bar i {
+    text-align: center;
+
+    font-size: 30px;
+  }
 .beneficios-titulo{
  background-image: url(imagenes/fondo-servicios-movile.webp);
  background-position: 0px 600px;

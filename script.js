@@ -1,14 +1,4 @@
-const cambio = document.getElementById("cambiar");
-const DondeTuGato = document.getElementById("donde-tu-gato");
-const H2HomePrincipal = document.getElementById("h2-home-prin")
-const requisitos = document.getElementById("requisitos")
-const params = new URLSearchParams(window.location.search);
-const nombre = params.get('nombre');
-const gato = params.get('gato');
-const navBar = document.querySelector('.icon-bar');
-const nav = document.querySelector('.nav');
-const servicios = document.getElementById('servicios');
-const navQuienesSomos = document.querySelector('#Nav-Quienes_somos');
+
 const images = document.querySelectorAll(".img");
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
@@ -24,17 +14,7 @@ var acordeonSeVe = document.querySelector('.acordeon-seve')
  
 
 
-navBar.addEventListener('click', () => {
 
-    nav.classList.toggle('active-nav')
-})
-window.addEventListener('scroll', () => {
-
-    if (nav.classList.contains('active-nav')) {
-
-        nav.classList.remove('active-nav');
-    }
-});
 images.forEach(function(img, index) {
     img.addEventListener("click", function() {
         openLightbox(index);
@@ -121,4 +101,4 @@ items.forEach(item => {
         }
     });
 });
-//maps
+

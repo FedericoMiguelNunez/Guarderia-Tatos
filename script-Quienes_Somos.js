@@ -1,14 +1,5 @@
-const params = new URLSearchParams(window.location.search);
-const nombre = params.get('nombre');
-const gato = params.get('gato');
-const cambio = document.getElementById("cambiar");
-const requisitos = document.getElementById("requisitos")
-const Recibimos = document.getElementById("p-recibimos");
-const AyelenText = document.getElementById("ayelen-Text");
-const navBar = document.querySelector('.icon-bar');
-const nav = document.querySelector('.nav');
-const Home = document.getElementById('Home');
-const servicios = document.getElementById('servicios');
+
+
 const VerAye = document.getElementById('ver-aye');
 const Ayelen = document.querySelector('.ayelen');
 const verFede = document.querySelector('#ver-fede');
@@ -17,6 +8,7 @@ const verApo = document.getElementById('ver-apo');
 const Apolo = document.querySelector('.apolo');
 const VerGalo = document.querySelector('#ver-galo');
 const Galo = document.querySelector('.galo');
+const AyelenText = document.querySelector('#ayelen-Text');
 const fedeText = document.querySelector('.fede-text');
 const  apoloText = document.querySelector('.apolo-text');
 const galoText = document.querySelector('.galo-text');
@@ -68,15 +60,5 @@ VerAye.addEventListener('click', () => {
     }
   });
 
-navBar.addEventListener('click', () => {
 
-    nav.classList.toggle('active-nav')
-})
-window.addEventListener('scroll', () => {
-    
-    if (nav.classList.contains('active-nav')) {
-      
-        nav.classList.remove('active-nav');
-    }
-});
 
