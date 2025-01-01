@@ -363,7 +363,8 @@ img:hover {
   display: flex;
   justify-content: end;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 .mostra_acordeon{
   font-family: var(--fuente-texto);
@@ -374,6 +375,7 @@ img:hover {
   border-radius: 25px;
   cursor: pointer;
   background-color: var(--color-cuarto);
+  
   
 }
 .acordeon{
@@ -627,16 +629,25 @@ footer .copy {
   footer{
     padding: 10px;
   }
+  .container-footer{
+    flex-direction: column;
+    align-items: initial;
+    text-align: initial;
+    gap: 10px;
+  }
   .footer-ubicacion,
   .footer-contacto {
     margin: 0px;
+    
   }
 
   .footer-ubicacion h4 {
     font-size: 18px;
+    font-weight: 900;
   }
   .footer-ubicacion h5{
     font-size: var(--tamaño-movile);
+    
   }
   .footer-ubicacion p {
     font-size: 13px;
@@ -644,6 +655,7 @@ footer .copy {
 
   .footer-contacto h4 {
     font-size: 18px;
+    font-weight: 900;
   }
 
   .footer-contacto a {

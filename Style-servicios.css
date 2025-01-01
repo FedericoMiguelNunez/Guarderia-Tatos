@@ -239,6 +239,7 @@ footer {
     color: var(--color-secundario);
     padding: 30px;
     font-family: var(--fuente-texto);
+    font-weight: 400;
   }
   .container-footer {
     display: flex;
@@ -364,7 +365,12 @@ footer {
         font-size: 18px;
         width: 300px;
     }
-
+    .container-footer{
+      flex-direction: column;
+      align-items: initial;
+      text-align: initial;
+      gap: 10px;
+    }
     .footer-ubicacion,
     .footer-contacto {
         margin: 0px;
@@ -372,20 +378,20 @@ footer {
     }
 
     .footer-ubicacion h4 {
-        font-family: 'Libre Baskerville', serif;
-        font-weight: 200;
+        
+        font-weight: 900;
 
-        font-size: 15px;
+        font-size: 18px;
     }
 
     .footer-ubicacion p {
-        font-size: 13px;
-        font-weight: 200;
+        font-size: 15px;
+        font-weight: 400;
     }
 
     .footer-contacto h4 {
         font-size: 18px;
-        font-weight: 200;
+        font-weight: 900;
     }
 
     .footer-contacto a {

@@ -109,6 +109,7 @@ nav ul li:hover {
   font-family: var(--fuente-texto);
   font-size: var(--tamaño-letra-mediano);
   font-weight: var(--letra-gruesa);
+  
 }
 #p-recibimos {
   font-size: var(--tamaño-extra-chico) !important;
@@ -198,7 +199,7 @@ nav ul li:hover {
   font-family: var(--feunte-titulo);
   font-size: calc(var(--tamaño-letra-mediano) + 10%);
   font-weight: var(--letra-gruesa);
-  color: var(--color-primario);
+  color: var(--color-secundario);
 }
 
 .ayelen p,
@@ -336,21 +337,29 @@ footer .copy {
     align-content: center;
     align-items: center;
   }
+  .container-footer{
+    flex-direction: column;
+    align-items: initial;
+    text-align: initial;
+    gap: 10px;
+  }
   .footer-ubicacion,
   .footer-contacto {
     margin: 0px;
   }
 
   .footer-ubicacion h4 {
-    font-size: 15px;
+    font-size: 18px;
+    font-weight: 900;
   }
 
   .footer-ubicacion p {
-    font-size: 13px;
+    font-size: 15px;
   }
 
   .footer-contacto h4 {
     font-size: 18px;
+    font-weight: 900;
   }
 
   .footer-contacto a {
