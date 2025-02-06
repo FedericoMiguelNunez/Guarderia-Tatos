@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración de Productos</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Agregar Firebase SDKs desde CDN -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+    <script>
+        // Inicializar Firebase
+        const firebaseConfig = {
+            apiKey: "AIzaSyB1DCHElTqMzZ2U0cb09F4gGMDTIq5bP7A",
+            authDomain: "tienda-tatos.firebaseapp.com",
+            databaseURL: "https://tienda-tatos-default-rtdb.firebaseio.com",
+            projectId: "tienda-tatos",
+            storageBucket: "tienda-tatos.firebasestorage.app",
+            messagingSenderId: "176580429922",
+            appId: "1:176580429922:web:8c8c1119213804e732a93b",
+            measurementId: "G-TBHKM3M0TS"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+</head>
+<body>
+    <h1>Administrar Productos</h1>
+    <form id="producto-form">
+        <input type="text" id="nombre" placeholder="Nombre del producto" required>
+        <input type="number" id="precio" placeholder="Precio" required>
+        <input type="number" id="stock" placeholder="Stock" required>
+        <input type="file" id="imagen" required>
+        <button type="submit">Agregar Producto</button>
+    </form>
+    <div id="productos-admin"></div>
+    <script src="script.js"></script>
+</body>
+</html>

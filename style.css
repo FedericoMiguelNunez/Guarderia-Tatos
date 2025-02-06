@@ -105,6 +105,27 @@ nav ul li:hover {
   color: var(--color-terciario);
   transform: scale(1.1);
 }
+.instagram-nav{
+  display: flex;
+  justify-content: center;
+  margin-right: 20px;
+  padding: 5px;
+  
+ 
+}
+.instagram-nav button{
+  background-image: url(imagenes/instagram-nav.png) ;
+padding: 5px;
+border-radius: 25px;
+border-color: var(--color-secundario);
+}
+.instagram-nav button a{
+  text-decoration: none;
+  color: var(--color-primario);
+  font-family: var(--fuente-texto);
+  font-size: 1em;
+  font-weight: 900;
+}
 
 .contenedor-deimagenprincipal {
   height: 100vh;
@@ -163,6 +184,16 @@ nav ul li:hover {
 .Beneficio-titulo_btn:hover {
   transform: scale(1.1);
  
+}
+.btn-visitanos-ig{
+  width: max-content;
+  padding: 5px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-family: var(--fuente-texto);
+  font-size: var(--tamaño-letra-chico);
+  background-color: var(--color-cuarto);
+  color: var(--color-secundario);
 }
 .container-video {
   display: flex;
@@ -469,14 +500,11 @@ footer .copy {
 
 .footer-ubicacion h4 {
   font-size: var(--tamaño-letra-chico);
-  font-weight: 400;
 }
 
-.footer-ubicacion h5 {
+.footer-ubicacion p {
   font-size: var(--tamaño-extra-chico);
-  font-weight: 400;
 }
-
 .footer-contacto h4 {
   font-size: var(--tamaño-letra-chico);
   margin-bottom: 15px;
