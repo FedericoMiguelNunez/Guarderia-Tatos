@@ -12,7 +12,25 @@ var btnmostraracordeon = document.querySelector('.mostra_acordeon');
 var acordeon = document.querySelector('.acordeon');
 var acordeonSeVe = document.querySelector('.acordeon-seve')
  
+document.addEventListener("DOMContentLoaded", function() {
+    const images = [
+      'imagenes/fondo-home-movile.webp',
+      'imagenes/fondo-home-movile-dos.webp',
+      'imagenes/fondo-home-movile-tres.webp',
+      'imagenes/fondo-home-movile-cuatro.webp',
+      'imagenes/fondo-home-movile-cinco.webp',
+      'imagenes/fondo-home.webp)',
+      'imagenes/fondo-home-dos.webp',
+      'imagenes/fondo-home-tres.webp',
+        'imagenes/fondo-home-cuatro.webp',
+        'imagenes/fondo-home-cinco.webp'
 
+    ];
+    images.forEach(image => {
+      const img = new Image();
+      img.src = image;
+    });
+  });
 
 
 images.forEach(function(img, index) {
