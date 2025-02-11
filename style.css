@@ -64,9 +64,6 @@ body {
   flex: 1;
 }
 
-.saludo_img img {
-  width: 100px;
-}
 
 
 
@@ -90,7 +87,7 @@ nav ul li a {
 }
 
 .saludo_img img {
-  width: 100px;
+  width: 150px;
 }
 
 nav ul {
@@ -113,51 +110,39 @@ nav ul li:hover {
   
  
 }
-.instagram-nav button{
-  background-image: url(imagenes/instagram-nav.png) ;
-padding: 5px;
-border-radius: 25px;
-border-color: var(--color-secundario);
-}
-.instagram-nav button a{
-  text-decoration: none;
-  color: var(--color-primario);
-  font-family: var(--fuente-texto);
-  font-size: 1em;
-  font-weight: 900;
-}
+
+
 
 .contenedor-deimagenprincipal {
   height: 100vh;
   width: 100vw;
-  background-image: url(imagenes/fondo-home.webp);
+  background-image: url(imagenes/fondo-home-dos.webp);
   background-repeat: no-repeat;
   background-size: cover;
-
+  animation: cambiodefoto 8s infinite steps(1);
   background-attachment: fixed;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
-  text-align: center;
-  align-content: center;
-  align-items: center;
+  text-align: end;
+  align-content: end;
+  align-items: end;
 }
 
-.contTitle {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  text-align: center;
-  height: 100vh;
-  background-color: rgba(253, 249, 239, 0.5);
-  width: 100%;
-  animation: mover 2s 1 ease-in-out;
-}
-.contTitle h1 {
+.contenedor-deimagenprincipal h1{
   font-family: var(--feunte-titulo);
-  font-size: 4.5em;
-  font-weight:700;
+  font-size: 10em;
+  color: var(--color-cuarto);
+  margin: 0px;
+  font-weight: var(--letra-gruesa);
+  margin-bottom: 150px;
+  
 }
+.contenedor-deimagenprincipal div img{
+  width: 100px;
+  margin-bottom: 160px;
+}
+
 #h2-home-prin {
   margin: 0px 300px;
   font-family: var(--fuente-texto);
@@ -534,12 +519,27 @@ footer .copy {
     transform: scale(1.1);
   }
 }
-
+@keyframes cambiodefoto {
+  0% { background-image: url(imagenes/fondo-home-cuatro.webp);
+  background-position: center -50%; }
+  20% { background-image: url(imagenes/fondo-home-tres.webp); }
+  40% { background-image: url(imagenes/fondo-home-dos.webp); }
+  60% { background-image: url(imagenes/fondo-home-quinto.webp); }
+  80% { background-image: url(imagenes/fondo-home.webp); }
+}
+@keyframes cambiofotoMovile {
+  0% { background-image: url(imagenes/fondo-home-movile.webp); }
+  20% { background-image: url(imagenes/fondo-home-movile-dos.webp); }
+  40% { background-image: url(imagenes/fondo-home-movile-tres.webp); }
+  60% { background-image: url(imagenes/fondo-home-movile-cuatro.webp); }
+  80% { background-image: url(imagenes/fondo-home-movile-cinco.webp); }
+  
+}
 @media screen and (max-width: 1000px) {
   
   
   .saludo_img img {
-    width: 55px;
+    width: 100px;
   }
 
   .contenedor-cambiar {
@@ -562,19 +562,23 @@ footer .copy {
 
   }
 
-  nav ul li:hover {
-  
-  }
+ 
 
   
 
   .contenedor-deimagenprincipal {
     background-image: url(imagenes/baseMovile.png);
-    max-height: min-content;
+    animation: cambiofotoMovile 8s infinite steps(1);
+    background-size: contain;
+    height: 50vh;
   }
-  .contTitle h1{
-    font-size: var(--tamaño-letra-chico);
-  }
+.contenedor-deimagenprincipal h1{
+  font-size: 4em;
+  margin-bottom: 50px;
+  
+}
+.contenedor-deimagenprincipal div img{
+display: none;}
   #h2-home-prin {
     margin: 0px 10px;
     font-size: var(--tamaño-extra-chico);
