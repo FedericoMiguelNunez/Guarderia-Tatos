@@ -1,10 +1,9 @@
-
 @font-face {
-  font-family: 'Oswald';
+  font-family: "Oswald";
   src: url(/fuentes/Oswald/Oswald-VariableFont_wght.ttf);
 }
 @font-face {
-  font-family: 'Caveat';
+  font-family: "Caveat";
   src: url(/fuentes/Caveat/Caveat-VariableFont_wght.ttf);
 }
 
@@ -18,7 +17,7 @@
   --tamaño-extra-chico: 2em;
   --tamaño-movile: 1.5em;
 
-  --feunte-titulo:  "Caveat", cursive; 
+  --feunte-titulo: "Caveat", cursive;
   --fuente-texto: "Oswald", sans-serif;
   --letra-fina: 300px;
   --letra-mediana: 500px;
@@ -30,6 +29,7 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 html {
   font-size: 10px;
@@ -54,18 +54,14 @@ body {
   align-items: center;
   background-image: url(imagenes/fondo-index-vertical.webp);
   z-index: 7000;
+  overflow: hidden;
 }
-
-
 
 .cont-saludo nav {
   display: flex;
   justify-content: center;
   flex: 1;
 }
-
-
-
 
 nav ul li {
   display: inline-block;
@@ -77,8 +73,6 @@ nav ul li a {
   text-decoration: none;
   color: var(--color-cuarto);
 }
-
-
 
 .cont-saludo nav {
   display: flex;
@@ -94,7 +88,7 @@ nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap:50px;
+  gap: 50px;
   width: 100%;
 }
 
@@ -102,16 +96,12 @@ nav ul li:hover {
   color: var(--color-terciario);
   transform: scale(1.1);
 }
-.instagram-nav{
+.instagram-nav {
   display: flex;
   justify-content: center;
   margin-right: 20px;
   padding: 5px;
-  
- 
 }
-
-
 
 .contenedor-deimagenprincipal {
   height: 100vh;
@@ -129,16 +119,15 @@ nav ul li:hover {
   align-items: end;
 }
 
-.contenedor-deimagenprincipal h1{
+.contenedor-deimagenprincipal h1 {
   font-family: var(--feunte-titulo);
   font-size: 10em;
   color: var(--color-cuarto);
   margin: 0px;
   font-weight: var(--letra-gruesa);
   margin-bottom: 150px;
-  
 }
-.contenedor-deimagenprincipal div img{
+.contenedor-deimagenprincipal div img {
   width: 100px;
   margin-bottom: 160px;
 }
@@ -154,12 +143,11 @@ nav ul li:hover {
 .Beneficio-titulo_btn {
   width: max-content;
   padding: 5px 20px;
- 
 
   border-radius: 25px;
   cursor: pointer;
   font-family: var(--fuente-texto);
-  
+
   font-size: var(--tamaño-letra-chico);
   animation: bailar 2s 2 ease-in-out;
   background-color: var(--color-cuarto);
@@ -168,9 +156,8 @@ nav ul li:hover {
 
 .Beneficio-titulo_btn:hover {
   transform: scale(1.1);
- 
 }
-.btn-visitanos-ig{
+.btn-visitanos-ig {
   width: max-content;
   padding: 5px 20px;
   border-radius: 25px;
@@ -183,10 +170,57 @@ nav ul li:hover {
 .container-video {
   display: flex;
   justify-content: center;
-  margin: 50px 0px;
-  background-size: cover;
-  background-image: url(imagenes/fondo-hojas1.webp);
-  padding: 20px 0px;
+  
+
+
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+ 
+}
+.container-video h2 {
+  font-family: var(--feunte-titulo);
+  font-size: 5em;
+  color: var(--color-cuarto);
+  font-weight: var(--letra-gruesa);
+  margin-bottom: 50px;
+}
+.container-video h2 span{
+font-family: var(--fuente-texto);
+  font-weight: var(--letra-gruesa);
+  color: var(--color-primario);
+  
+ 
+}
+.container-video p {
+  font-family: var(--feunte-titulo);
+  font-size: var(--tamaño-letra-chico);
+  color: var(--color-primario);
+  font-weight: 400;
+  margin: 0 100px;
+}
+.video-negrita{
+  font-weight: 900;
+  color: var(--color-cuarto);
+  margin-bottom: 50px;
+  font-family: var(--feunte-titulo);
+  font-size: var(--tamaño-letra-chico);
+  color: var(--color-cuarto);
+  margin: 25px 100px ;
+}
+.video-mayuscula{
+  text-transform: uppercase;
+  font-weight: 900;
+  
+}
+.video-negrita-2{
+  font-weight: 900;
+  color: var(--color-cuarto);
+  margin-bottom: 50px;
+  font-family: var(--feunte-titulo);
+  font-size: var(--tamaño-letra-chico);
+  color: var(--color-cuarto);
+  margin: 50px 100px ;
 }
 .video {
   width: 35%;
@@ -245,8 +279,6 @@ img:hover {
   grid-column: 1 / 4;
   grid-row: 1 / 3;
   object-position: 0px -600px;
- 
-
 }
 
 .img-5 {
@@ -337,7 +369,7 @@ img:hover {
 .Beneficio-titulo_btn-2 {
   width: fit-content;
   background-color: var(--color-cuarto);
- padding: 5px 10px;
+  padding: 5px 10px;
   border-radius: 25px;
   cursor: pointer;
   font-family: var(--fuente-texto);
@@ -354,25 +386,22 @@ img:hover {
   margin: 50px auto;
   border: #4e7745 2px solid;
 }
-.banner-faq{
+.banner-faq {
   width: 100%;
- 
-  
+
   background-color: rgba(160, 191, 147, 0.2);
-  display: flex;  
+  display: flex;
   text-align: center;
   align-items: center;
   justify-content: center;
-  
 }
-.faq-h4{
+.faq-h4 {
   font-family: var(--fuente-texto);
   font-size: var(--tamaño-letra-mediano);
   color: var(--color-primario);
   margin: 10px 0;
-  
 }
-.contenedor-btn-mostra_acordeon{
+.contenedor-btn-mostra_acordeon {
   margin: auto;
   width: 90%;
   max-width: 800px;
@@ -382,7 +411,7 @@ img:hover {
   margin-bottom: 20px;
   margin-top: 20px;
 }
-.mostra_acordeon{
+.mostra_acordeon {
   font-family: var(--fuente-texto);
   font-size: var(--tamaño-extra-chico);
   color: var(--color-secundario);
@@ -391,27 +420,24 @@ img:hover {
   border-radius: 25px;
   cursor: pointer;
   background-color: var(--color-cuarto);
-  
-  
 }
-.acordeon{
+.acordeon {
   display: none;
   margin: 0px auto 0px;
 }
 
-.acordeon-seve{
+.acordeon-seve {
   margin: 0px auto 0px;
 }
-.acordeon , .acordeon-seve{
-  
-  
+.acordeon,
+.acordeon-seve {
   width: 90%;
   max-width: 800px;
-  
+
   font-family: Arial, sans-serif;
   justify-content: center;
   flex-direction: column;
-} 
+}
 
 /* Botones del acordeón */
 .acordeon-item {
@@ -427,8 +453,8 @@ img:hover {
   align-items: center;
   transition: background-color 0.3s ease;
 }
-.acordeon-item i{
-color: var(--color-cuarto);
+.acordeon-item i {
+  color: var(--color-cuarto);
 }
 .acordeon-item h3 {
   font-size: var(--tamaño-extra-chico);
@@ -474,7 +500,6 @@ footer .copy {
   text-align: center;
   border-top: 2px solid var(--color-secundario);
   font-size: var(--tamaño-extra-chico);
-  
 }
 
 .footer-ubicacion {
@@ -520,24 +545,54 @@ footer .copy {
   }
 }
 @keyframes cambiodefoto {
-  0% { background-image: url(imagenes/fondo-home-cuatro.webp);
-  background-position: center -50%; }
-  20% { background-image: url(imagenes/fondo-home-tres.webp); }
-  40% { background-image: url(imagenes/fondo-home-dos.webp); }
-  60% { background-image: url(imagenes/fondo-home-quinto.webp); }
-  80% { background-image: url(imagenes/fondo-home.webp); }
+  0% {
+    background-image: url(imagenes/fondo-home-cuatro.webp);
+    background-position: center -50%;
+  }
+  20% {
+    background-image: url(imagenes/fondo-home-tres.webp);
+  }
+  40% {
+    background-image: url(imagenes/fondo-home-dos.webp);
+  }
+  60% {
+    background-image: url(imagenes/fondo-home-quinto.webp);
+  }
+  80% {
+    background-image: url(imagenes/fondo-home.webp);
+  }
 }
 @keyframes cambiofotoMovile {
-  0% { background-image: url(imagenes/fondo-home-movile.webp); }
-  20% { background-image: url(imagenes/fondo-home-movile-dos.webp); }
-  40% { background-image: url(imagenes/fondo-home-movile-tres.webp); }
-  60% { background-image: url(imagenes/fondo-home-movile-cuatro.webp); }
-  80% { background-image: url(imagenes/fondo-home-movile-cinco.webp); }
-  
+  0% {
+    background-image: url(imagenes/fondo-home-movile.webp);
+  }
+  20% {
+    background-image: url(imagenes/fondo-home-movile-dos.webp);
+  }
+  40% {
+    background-image: url(imagenes/fondo-home-movile-tres.webp);
+  }
+  60% {
+    background-image: url(imagenes/fondo-home-movile-cuatro.webp);
+  }
+  80% {
+    background-image: url(imagenes/fondo-home-movile-cinco.webp);
+  }
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width:850px){
   
+  .contenedor-deimagenprincipal h1{
+    font-size: 6em;
+    margin-bottom: 100px;
+  }
+  .contenedor-deimagenprincipal div img {
+    width: 60px;
+    margin-bottom: 100px;
+  }
+}
   
+
+@media screen and (max-width: 600px) {
   .saludo_img img {
     width: 100px;
   }
@@ -548,55 +603,66 @@ footer .copy {
     flex: 3;
   }
 
-  
-
-  
-
   .cont-saludo nav ul {
- gap: 5px;
+    gap: 5px;
   }
 
   nav ul li {
-  font-size: var(--tamaño-extra-chico);
-  font-weight: 700;
-
+    font-size: var(--tamaño-extra-chico);
+    font-weight: 700;
   }
-
- 
-
-  
 
   .contenedor-deimagenprincipal {
     background-image: url(imagenes/baseMovile.png);
     animation: cambiofotoMovile 8s infinite steps(1);
-    background-size: contain;
-    height: 50vh;
+    
+    width: 100%;
+    height: 60vh; 
   }
-.contenedor-deimagenprincipal h1{
-  font-size: 4em;
-  margin-bottom: 50px;
-  
-}
-.contenedor-deimagenprincipal div img{
-display: none;}
+  .contenedor-deimagenprincipal h1 {
+    font-size: 4em;
+    margin-bottom: 20%;
+  }
+  .contenedor-deimagenprincipal div img {
+    display: none;
+  }
   #h2-home-prin {
     margin: 0px 10px;
     font-size: var(--tamaño-extra-chico);
   }
-  .Beneficio-titulo_btn{
+  .Beneficio-titulo_btn {
     font-size: var(--tamaño-extra-chico);
- 
   }
   .container-video {
-    padding: 40px;
-    background-image: url(imagenes/fondo-hojas.webp);
+  width: 100%;
+  margin: 0;
+   
+  }
+  .container-video h2{
+    font-size: 3em;
+    margin: 10px 20px 35px;
+  }
+  .video-negrita {
+    margin: 0 20px  ;
+    font-size: 2.5em;
+
+  }
+  .video-negrita-2 {
+    margin: 0 20px 30px;
+    font-size: 2em;
+  }
+  .container-video p {
+    font-size: 2.5em;
+ margin: 0px 20px 30px;
+  } 
+  .video-mayuscula {
+    margin: 0 ;
   }
   .video {
-    width: 90%;
+    width: 100%;
   }
   .Beneficio-titulo_btn-3 {
-    font-size: var(--tamaño-extra-chico) ;
-   
+    font-size: var(--tamaño-extra-chico);
   }
   .H2-Galeria {
     font-size: var(--tamaño-extra-chico);
@@ -645,23 +711,22 @@ display: none;}
   .maps {
     height: 300px;
   }
-  .faq-h4{
+  .faq-h4 {
     font-size: var(--tamaño-extra-chico);
   }
-  .mostra_acordeon{
+  .mostra_acordeon {
     font-size: var(--tamaño-extra-chico);
-   
   }
-  .Beneficio-titulo_btn-2{
+  .Beneficio-titulo_btn-2 {
     font-size: var(--tamaño-extra-chico);
   }
   .acordeon-item h3 {
     font-size: var(--tamaño-movile);
   }
-  footer{
+  footer {
     padding: 10px;
   }
-  .container-footer{
+  .container-footer {
     flex-direction: column;
     align-items: initial;
     text-align: initial;
@@ -670,16 +735,14 @@ display: none;}
   .footer-ubicacion,
   .footer-contacto {
     margin: 0px;
-    
   }
 
   .footer-ubicacion h4 {
     font-size: 18px;
     font-weight: 900;
   }
-  .footer-ubicacion h5{
+  .footer-ubicacion h5 {
     font-size: var(--tamaño-movile);
-    
   }
   .footer-ubicacion p {
     font-size: 13px;
