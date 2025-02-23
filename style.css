@@ -30,6 +30,7 @@
   padding: 0px;
   box-sizing: border-box;
   overflow-x: hidden;
+  
 }
 html {
   font-size: 10px;
@@ -55,6 +56,7 @@ body {
   background-image: url(imagenes/fondo-index-vertical.webp);
   z-index: 7000;
   overflow: hidden;
+
 }
 
 .cont-saludo nav {
@@ -222,9 +224,89 @@ font-family: var(--fuente-texto);
   color: var(--color-cuarto);
   margin: 50px 100px ;
 }
+.container-tatocuota{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  gap:10px;
+ background-color: var(--color-cuarto);
+  padding: 20px ;
+  border-top: 10px double var(--color-secundario);
+  border-bottom: 10px double var(--color-secundario);
+  margin: 20px 0px 100px;
+
+}
+.container-tatocuota h3{
+  font-family: var(--fuente-texto);
+  font-size: 4.5em;
+  color: var(--color-secundario);
+  font-weight: 600;
+}
+.container-tatocuota p{
+  font-family: var(--fuente-texto);
+  font-size: var(--tamaño-letra-chico);
+  color: var(--color-secundario);
+  font-weight: 400;
+}
+.container-tatocuota button{
+  width: fit-content;
+  background-color: var(--color-secundario);
+  padding: 5px 10px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-family: var(--fuente-texto);
+  color: var(--color-cuarto);
+  font-size: var(--tamaño-letra-chico);
+}
 .video {
   width: 35%;
   height: auto;
+}
+.container-hermanos{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  gap:10px;
+ background-color: var(--color-cuarto);
+  padding: 20px ;
+  border-top: 10px double var(--color-secundario);
+  border-bottom: 10px double var(--color-secundario);
+  margin: 20px 0px ;
+
+}
+
+.container-hermanos h3{
+  font-family: var(--fuente-texto);
+  font-size: 4.5em;
+  color: var(--color-secundario);
+  font-weight: 600;
+}
+
+.container-hermanos p{
+  font-family: var(--fuente-texto);
+  font-size: var(--tamaño-letra-chico);
+  color: var(--color-secundario);
+  font-weight: 400;
+  text-align: center;
+}
+.container-hermanos p span{
+ 
+  color: var(--color-secundario);
+  font-size: 0.8em;
+}
+.container-hermanos button{
+  width: fit-content;
+  background-color: var(--color-secundario);
+  padding: 5px 10px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-family: var(--fuente-texto);
+  color: var(--color-cuarto);
+  font-size: var(--tamaño-letra-chico);
 }
 .cont-Beneficio-titulo_btn-3 {
   display: flex;
