@@ -180,6 +180,9 @@ nav ul li:hover {
   text-align: center;
  
 }
+.video{
+  border-radius: 25px;
+}
 .container-video h2 {
   font-family: var(--feunte-titulo);
   font-size: 5em;
@@ -235,7 +238,7 @@ font-family: var(--fuente-texto);
   padding: 20px ;
   border-top: 10px double var(--color-secundario);
   border-bottom: 10px double var(--color-secundario);
-  margin: 20px 0px 100px;
+  margin: 20px 0px 25px;
 
 }
 .container-tatocuota h3{
