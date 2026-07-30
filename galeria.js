@@ -1,69 +1,96 @@
-const images = document.querySelectorAll(".img");
-const lightbox = document.getElementById("lightbox");
-const lightboxImg = document.getElementById("lightbox-img");
-const closeButton = document.getElementById("close");
-const prevButton = document.getElementById("prev");
-const nextButton = document.getElementById("next");
-var currentIndex = 0;
-var touchStartX = 0;
+(function(){
+  // Lightweight defensive checks and accessibility improvements for the gallery lightbox
+  const images = document.querySelectorAll('.img');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const closeButton = document.getElementById('close');
+  const prevButton = document.getElementById('prev');
+  const nextButton = document.getElementById('next');
+  let currentIndex = 0;
+  let touchStartX = 0;
 
-images.forEach(function(img, index) {
-    img.addEventListener("click", function() {
-        openLightbox(index);
+  if (!images.length || !lightbox || !lightboxImg) return; // nothing to do
+
+  images.forEach(function(img, index) {
+    img.setAttribute('role', 'button');
+    img.setAttribute('tabindex', '0');
+    img.setAttribute('aria-label', img.alt || `Imagen ${index + 1}`);
+    img.addEventListener('click', function() {
+      openLightbox(index);
     });
-});
+    img.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openLightbox(index);
+      }
+    });
+  });
 
-function openLightbox(index) {
+  function openLightbox(index) {
     currentIndex = index;
     showImage(currentIndex);
-    lightbox.style.display = "flex";}
-    
-function showImage(index) {
-    lightboxImg.src = images[index].src;
-}
+    lightbox.style.display = 'flex';
+    lightbox.setAttribute('aria-hidden', 'false');
+    if (closeButton) closeButton.focus();
+  }
 
-function showNextImage() {
+  function showImage(index) {
+    if (!images[index]) return;
+    lightboxImg.src = images[index].src;
+    lightboxImg.alt = images[index].alt || `Imagen ${index + 1}`;
+  }
+
+  function showNextImage() {
     currentIndex = (currentIndex + 1) % images.length;
     showImage(currentIndex);
-}
+  }
 
-function showPrevImage() {
+  function showPrevImage() {
     currentIndex = (currentIndex - 1 + images.length) % images.length;
     showImage(currentIndex);
-}
+  }
 
-closeButton.addEventListener("click", function() {
-    lightbox.style.display = "none";
-});
-function closeLightbox() {
-    lightbox.style.display = "none";
-}
+  if (closeButton) {
+    closeButton.addEventListener('click', function() {
+      lightbox.style.display = 'none';
+      lightbox.setAttribute('aria-hidden', 'true');
+    });
+  }
 
-document.addEventListener("keydown", function(event) {
-    if (event.key === "Escape" || event.key === "Esc") {
-        closeLightbox();
+  function closeLightbox() {
+    if (lightbox) {
+      lightbox.style.display = 'none';
+      lightbox.setAttribute('aria-hidden', 'true');
     }
-});
-document.addEventListener("keydown", function(event) {
-    if (event.key === "ArrowLeft") {
-        showPrevImage();
-    } else if (event.key === "ArrowRight") {
+  }
+
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape' || event.key === 'Esc') {
+      closeLightbox();
+    }
+    if (event.key === 'ArrowLeft') {
+      showPrevImage();
+    } else if (event.key === 'ArrowRight') {
+      showNextImage();
+    }
+  });
+
+  if (lightboxImg) {
+    lightboxImg.addEventListener('touchstart', function(event) {
+      touchStartX = event.touches[0].clientX;
+    });
+
+    lightboxImg.addEventListener('touchend', function(event) {
+      var touchEndX = event.changedTouches[0].clientX;
+      var threshold = 50; // Ajusta este valor según sea necesario
+      if (touchStartX - touchEndX > threshold) {
         showNextImage();
-    }
-});
-
-lightboxImg.addEventListener("touchstart", function(event) {
-    touchStartX = event.touches[0].clientX;
-});
-
-lightboxImg.addEventListener("touchend", function(event) {
-    var touchEndX = event.changedTouches[0].clientX;
-    var threshold = 50; // Ajusta este valor según sea necesario
-    if (touchStartX - touchEndX > threshold) {
-        showNextImage();
-    } else if (touchEndX - touchStartX > threshold) {
+      } else if (touchEndX - touchStartX > threshold) {
         showPrevImage();
-    }
-});
-nextButton.addEventListener("click", showNextImage);
-prevButton.addEventListener("click", showPrevImage);
+      }
+    });
+  }
+
+  if (nextButton) nextButton.addEventListener('click', showNextImage);
+  if (prevButton) prevButton.addEventListener('click', showPrevImage);
+})();
