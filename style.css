@@ -206,10 +206,10 @@ margin-top: 10px;
 }
 .container-video h2 {
   font-family: var(--fuente-texto);
-  font-size: 5em;
+  font-size: 4em;
   color: var(--color-cuarto);
   font-weight: var(--letra-gruesa);
-  margin-bottom: 50px;
+  margin-bottom: 5px;
 }
 .container-video h2 span{
 font-family: var(--fuente-texto);
@@ -218,13 +218,7 @@ font-family: var(--fuente-texto);
   
  
 }
-.container-video p {
-  font-family: var(--fuente-texto);
-  font-size: var(--tamaño-letra-chico);
-  color: var(--color-primario);
-  font-weight: 400;
-  margin: 0 100px;
-}
+
 .video-negrita{
   font-weight: 900;
   color: var(--color-cuarto);
@@ -232,7 +226,110 @@ font-family: var(--fuente-texto);
   font-family: var(--fuente-texto);
   font-size: var(--tamaño-letra-chico);
   color: var(--color-cuarto);
-  margin: 25px 100px ;
+ margin: 0px 100px ;
+}
+.video-negrita span{
+  font-weight: 900;
+  color: var(--color-primario);
+  font-family: var(--fuente-texto);
+  font-size: 1em;
+}
+.google-trust{
+
+    background:#ffffff;
+
+    border-radius:18px;
+
+    padding:15px;
+
+    max-width:300px;
+
+    margin:18px auto;
+
+    box-shadow:0 6px 20px rgba(0,0,0,.10);
+
+    text-align:center;
+
+}
+
+
+.google-header{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:8px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    color:#555;
+
+}
+
+
+.google-icon{
+
+    width:25px;
+
+    height:25px;
+
+}
+
+
+.google-rating-number strong{
+
+    font-size:34px;
+
+    color:#4e7745;
+
+}
+
+
+.stars{
+
+    color:#fbbc04;
+
+    font-size:22px;
+
+    letter-spacing:3px;
+
+}
+
+
+.google-trust p{
+
+    font-size:14px;
+
+    color:#555;
+
+    margin:8px 0 12px;
+
+}
+
+
+.google-link{
+
+    display:inline-block;
+
+    background:#4e7745;
+
+    color:#fdf9ef;
+
+    padding:8px 22px;
+
+    border-radius:25px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    font-size:14px;
+
 }
 .video-mayuscula{
   text-transform: uppercase;
@@ -598,8 +695,8 @@ footer .copy {
    
   }
   .container-video h2{
-    font-size: 3em;
-    margin: 10px 20px 35px;
+    font-size: 2.5em;
+    margin: 10px 20px 5px;
   }
   .video-negrita {
     margin: 0 20px  ;
@@ -611,8 +708,8 @@ footer .copy {
     font-size: 2em;
   }
   .container-video p {
-    font-size: 2.5em;
- margin: 0px 20px 30px;
+    font-size: 2em;
+ margin: 0px 20px 5px;
   } 
   .video-mayuscula {
     margin: 0 ;
