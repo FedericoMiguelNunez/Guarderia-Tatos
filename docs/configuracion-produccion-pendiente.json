@@ -1,0 +1,24 @@
+{
+  "siteID": "80fb5b5d-a41b-48d2-8f76-26d91a6c795d",
+  "applyAutomatically": false,
+  "context": "production",
+  "scopes": ["builds", "functions", "runtime", "post_processing"],
+  "variables": {
+    "APP_ENV": "production",
+    "LEAD_STORAGE_MODE": "blobs",
+    "LEAD_BLOBS_STORE_NAME": "tatos-lead-operations",
+    "ALLOW_PRODUCTION_WRITES": "false",
+    "ALLOW_TEST_SHEET_WRITES": "false",
+    "GOOGLE_SHEETS_ID": "1_f64qlaRjbUKeFsNiQ9MAy-Zxdgozwhc73fs9_uCYyY",
+    "GOOGLE_SHEETS_TAB": "Leads Google Ads",
+    "GOOGLE_SERVICE_ACCOUNT_EMAIL": "tatos-sheets@centered-sight-383720.iam.gserviceaccount.com",
+    "GOOGLE_PRIVATE_KEY": "CARGAR_DESDE_ARCHIVO_EXTERNO_SIN_COMMIT",
+    "ALLOWED_ORIGINS": "https://guarderiatatos.com.ar"
+  },
+  "activationRequirements": [
+    "Revisar y aprobar el diff de la rama actual antes del merge.",
+    "Confirmar acceso de la cuenta de servicio y los 34 encabezados de REQUIRED_HEADERS en la planilla productiva; conservar formatos, fórmulas y validaciones.",
+    "Cargar el secreto y el origen HTTPS reales mediante configuración protegida de Netlify; no usar valores de prueba.",
+    "Con autorización para publicar, habilitar ALLOW_PRODUCTION_WRITES=true en contexto production y realizar el despliegue productivo."
+  ]
+}

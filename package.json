@@ -1,0 +1,23 @@
+{
+  "name": "guarderia-tatos-leads",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "netlify dev",
+    "build": "node scripts/build-public.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "@netlify/blobs": "10.0.10",
+    "googleapis": "160.0.0",
+    "libphonenumber-js": "1.12.24"
+  },
+  "devDependencies": {
+    "@netlify/functions": "5.1.2",
+    "@playwright/test": "1.55.1",
+    "netlify-cli": "23.7.1"
+  },
+  "engines": { "node": ">=20" }
+}
