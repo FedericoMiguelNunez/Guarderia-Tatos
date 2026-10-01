@@ -288,7 +288,7 @@ Por eso en Guardería Tatos no solo lo cuidamos <span> ¡Convivimos con el las 2
 
 </div>
 <div class="cta-hero" >
-        <a class="Beneficio-titulo_btn" href="https://wa.link/j9l6wo" target="_blank" rel="noopener noreferrer" aria-label="Reservar por WhatsApp">Consultar disponibilidad</a>
+        <a class="Beneficio-titulo_btn js-lead-cta" href="#consulta" aria-label="Ir al formulario para consultar disponibilidad">Consultar disponibilidad</a>
       </div>
         <span class="video-negrita-2"> ¡BIENVENIDO A SU HOGAR LEJOS DE CASA!</span>
         
@@ -307,8 +307,45 @@ Por eso en Guardería Tatos no solo lo cuidamos <span> ¡Convivimos con el las 2
         </div>
         <div class="cta-video" style="margin:14px 0;">
           
-          <a class="Beneficio-titulo_btn" href="https://wa.link/j9l6wo" target="_blank" rel="noopener noreferrer" aria-label="Ver disponibilidad">Ver disponibilidad</a>
+          <a class="Beneficio-titulo_btn js-lead-cta" href="#consulta" aria-label="Ir al formulario para ver disponibilidad">Ver disponibilidad</a>
         </div>
+      </div>
+
+      <div class="lead-dialog" id="consulta" role="dialog" aria-modal="true" aria-labelledby="lead-title" data-whatsapp-number="5491135942796" hidden>
+        <div class="lead-dialog-backdrop" data-lead-close aria-hidden="true"></div>
+        <section class="lead-card" tabindex="-1">
+          <button class="lead-close" type="button" data-lead-close aria-label="Cerrar formulario">&times;</button>
+          <div class="lead-intro">
+            <h2 id="lead-title">¡Contanos por quién consultás!</h2>
+            <p>Dejanos estos datos y seguimos por WhatsApp.</p>
+          </div>
+          <form id="lead-form" novalidate>
+            <div class="lead-fields">
+              <div class="lead-field">
+                <label for="lead-name">Tu nombre</label>
+                <input id="lead-name" name="name" type="text" autocomplete="name" maxlength="100" required aria-describedby="lead-name-error">
+                <span class="lead-error" id="lead-name-error" aria-live="polite"></span>
+              </div>
+              <div class="lead-field">
+                <label for="lead-cat">Nombre de tu gato</label>
+                <input id="lead-cat" name="catName" type="text" maxlength="160" required aria-describedby="lead-cat-error">
+                <span class="lead-error" id="lead-cat-error" aria-live="polite"></span>
+              </div>
+              <div class="lead-field">
+                <label for="lead-phone">Tu número de WhatsApp</label>
+                <input id="lead-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" maxlength="40" required aria-describedby="lead-phone-error">
+                <span class="lead-error" id="lead-phone-error" aria-live="polite"></span>
+              </div>
+            </div>
+            <div class="lead-honeypot" aria-hidden="true">
+              <label for="lead-website">No completar este campo</label>
+              <input id="lead-website" name="website" type="text" tabindex="-1" autocomplete="off">
+            </div>
+            <button class="Beneficio-titulo_btn lead-submit" type="submit">Continuar a WhatsApp</button>
+            <div class="lead-status" id="lead-status" role="status" aria-live="polite"></div>
+            <a class="lead-whatsapp-fallback" id="lead-whatsapp-fallback" href="#" hidden>Abrir WhatsApp</a>
+          </form>
+        </section>
       </div>
 
       <div class="girnalda-2">
@@ -325,7 +362,7 @@ Por eso en Guardería Tatos no solo lo cuidamos <span> ¡Convivimos con el las 2
           referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
       <div class="cta-map" style="text-align:center;margin:16px 0;">
-        <a class="Beneficio-titulo_btn" href="https://wa.link/j9l6wo" target="_blank" rel="noopener noreferrer" aria-label="Reservar ahora por WhatsApp">Reservar ahora por WhatsApp</a>
+        <a class="Beneficio-titulo_btn js-lead-cta" href="#consulta" aria-label="Ir al formulario para reservar">Reservar ahora por WhatsApp</a>
       </div>
 
       <div class="banner-faq">
@@ -492,7 +529,7 @@ Por eso en Guardería Tatos no solo lo cuidamos <span> ¡Convivimos con el las 2
         <button class="mostra_acordeon">
           Ver mas
         </button>
-        <a class="Beneficio-titulo_btn" href="https://wa.link/j9l6wo" target="_blank" rel="noopener noreferrer" aria-label="Reservar por WhatsApp">Reservar por WhatsApp</a>
+        <a class="Beneficio-titulo_btn js-lead-cta" href="#consulta" aria-label="Ir al formulario para reservar">Reservar por WhatsApp</a>
       </div>
   </main>
 
@@ -509,7 +546,7 @@ Por eso en Guardería Tatos no solo lo cuidamos <span> ¡Convivimos con el las 2
         <div>
           <h4>Contactanos</h4>
         </div>
-        <a href="https://wa.link/j9l6wo" target="_blank" rel="noopener noreferrer"
+        <a class="js-lead-cta" href="#consulta"
           aria-label=" Contacta por Whastapp a la Guarderia para gatos | Guarderia Tatos"
           title="Contacto por WhatsApp de la guarderia para gatos"><i class="fa-brands fa-whatsapp"></i></a>
         <a href="http://bit.ly/Instagram-Guarderia-Tatos" target="_blank" rel="noopener noreferrer"
@@ -525,7 +562,10 @@ Por eso en Guardería Tatos no solo lo cuidamos <span> ¡Convivimos con el las 2
     </p>
   </footer>
 
+  <script src="vendor/libphonenumber-js.min.js" defer></script>
   <script src="script.js" defer></script>
+  <script type="module" src="js/lead-attribution.js"></script>
+  <script type="module" src="js/lead-form.js"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",

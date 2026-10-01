@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.netlify/
+.env
+.env.*
+*.pem
+*service-account*.json
+test-results/
+playwright-report/
+blob-state/
+coverage/
+*.dpapi
+docs/integration-result.json
+*.tmp
