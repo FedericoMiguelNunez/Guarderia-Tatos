@@ -1,5 +1,6 @@
 node_modules/
 dist/
+/vendor/
 .netlify/
 .env
 .env.*

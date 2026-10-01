@@ -14,6 +14,9 @@ const publicDirs = ['imagenes', 'fuentes', 'video', 'curso', 'lanzamiento', 'bon
 for (const file of rootFiles) await copyFile(path.join(root, file), path.join(dist, file));
 for (const dir of publicDirs) await cp(path.join(root, dir), path.join(dist, dir), { recursive: true });
 await cp(path.join(root, 'js'), path.join(dist, 'js'), { recursive: true });
+// Keep the dependency available to root-based static previews as well as dist.
+await mkdir(path.join(root, 'vendor'), { recursive: true });
+await copyFile(path.join(root, 'node_modules/libphonenumber-js/bundle/libphonenumber-max.js'), path.join(root, 'vendor/libphonenumber-js.min.js'));
 await mkdir(path.join(dist, 'vendor'), { recursive: true });
-await copyFile(path.join(root, 'node_modules/libphonenumber-js/bundle/libphonenumber-max.js'), path.join(dist, 'vendor/libphonenumber-js.min.js'));
+await copyFile(path.join(root, 'vendor/libphonenumber-js.min.js'), path.join(dist, 'vendor/libphonenumber-js.min.js'));
 console.log(`Staging público creado con ${rootFiles.length} archivos raíz y ${publicDirs.length + 1} carpetas permitidas.`);

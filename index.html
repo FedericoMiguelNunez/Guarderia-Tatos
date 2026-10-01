@@ -333,7 +333,8 @@ Por eso en Guardería Tatos no solo lo cuidamos <span> ¡Convivimos con el las 2
               </div>
               <div class="lead-field">
                 <label for="lead-phone">Tu número de WhatsApp</label>
-                <input id="lead-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" maxlength="40" required aria-describedby="lead-phone-error">
+                <input id="lead-phone" name="phone" type="tel" autocomplete="tel-national" inputmode="tel" maxlength="40" required aria-describedby="lead-phone-help lead-phone-error">
+                <small id="lead-phone-help">Incluí el código de área (por ejemplo, 11): 11 2345-6789 o 011 15 2345-6789. No hace falta el código de país.</small>
                 <span class="lead-error" id="lead-phone-error" aria-live="polite"></span>
               </div>
             </div>
@@ -343,7 +344,6 @@ Por eso en Guardería Tatos no solo lo cuidamos <span> ¡Convivimos con el las 2
             </div>
             <button class="Beneficio-titulo_btn lead-submit" type="submit">Continuar a WhatsApp</button>
             <div class="lead-status" id="lead-status" role="status" aria-live="polite"></div>
-            <a class="lead-whatsapp-fallback" id="lead-whatsapp-fallback" href="#" hidden>Abrir WhatsApp</a>
           </form>
         </section>
       </div>

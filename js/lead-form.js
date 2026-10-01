@@ -1,14 +1,13 @@
 import { getFrozenAttribution, attributionConsentKnown } from './lead-attribution.js';
+import { normalizePhone, PHONE_ERROR } from './phone-normalization.js';
 
 const form = document.querySelector('#lead-form');
 const section = document.querySelector('#consulta');
 const status = document.querySelector('#lead-status');
-const fallback = document.querySelector('#lead-whatsapp-fallback');
 let attemptKey = null;
 let attempt = null;
 let submitting = false;
 let savedEventSent = false;
-let whatsappRequested = false;
 let opener = null;
 
 document.querySelectorAll('.js-lead-cta').forEach(link => link.addEventListener('click', event => {
@@ -42,10 +41,15 @@ function validate(values) {
     fieldError(name, error); if (error) ok = false;
   }
   let phoneError = '';
-  try {
-    const parsed = window.libphonenumber?.parsePhoneNumber(values.phone.trim(), 'AR');
-    if (!parsed?.isValid()) phoneError = 'Ingresá el número completo con código de área. Para otro país, incluí + y el código.';
-  } catch { phoneError = 'Revisá el número e incluí el código de área.'; }
+  const parser = window.libphonenumber?.parsePhoneNumberFromString;
+  if (!parser) {
+    fieldError('phone', '');
+    status.textContent = 'No pudimos cargar la validación del teléfono. Recargá la página e intentá nuevamente.';
+    status.dataset.state = 'error';
+    return false;
+  }
+  try { values.phone = normalizePhone(values.phone, parser); }
+  catch { phoneError = PHONE_ERROR; }
   fieldError('phone', phoneError); return ok && !phoneError;
 }
 function whatsappUrl(values) {
@@ -54,14 +58,11 @@ function whatsappUrl(values) {
   return `https://wa.me/${section.dataset.whatsappNumber}?${query.toString()}`;
 }
 const navigate = url => { location.assign(url); };
-// Manual navigation is not confirmation of a saved lead. Keep the pending
-// request's frozen payload/key for reconciliation while the document is alive.
-fallback?.addEventListener('click', () => { if (!fallback.hidden) whatsappRequested = true; });
 
 form?.addEventListener('submit', async event => {
   event.preventDefault();
   if (submitting) return;
-  fallback.hidden = true; fallback.textContent = 'Abrir WhatsApp'; status.textContent = ''; status.dataset.state = '';
+  status.textContent = ''; status.dataset.state = '';
   const values = Object.fromEntries(new FormData(form)); if (!validate(values)) { form.querySelector('[aria-invalid="true"]')?.focus(); return; }
   attemptKey ||= crypto.randomUUID().replaceAll('-', '_');
   attempt ||= { name: values.name, catName: values.catName, phone: values.phone, website: values.website,
@@ -73,31 +74,31 @@ form?.addEventListener('submit', async event => {
   const idleLabel = button.textContent; button.disabled = true; button.textContent = 'Abriendo WhatsApp…';
   status.textContent = 'Guardando tu consulta…';
   const controller = new AbortController(); const timer = setTimeout(() => controller.abort(), 8000);
-  const continueTimer = setTimeout(() => {
-    status.textContent = 'El guardado sigue pendiente. Podés continuar a WhatsApp; todavía no confirmamos que la consulta se haya guardado.';
+  const pendingTimer = setTimeout(() => {
+    status.textContent = 'El guardado sigue pendiente. Si no recibimos respuesta, te llevaremos a WhatsApp sin confirmar que la consulta se haya guardado.';
     status.dataset.state = 'pending';
-    fallback.href = url; fallback.textContent = 'Continuar a WhatsApp'; fallback.hidden = false;
   }, 3000);
+  let redirectingToWhatsApp = false;
   try {
     const response = await fetch('/.netlify/functions/create-lead', { method: 'POST', headers: { 'content-type': 'application/json' }, signal: controller.signal, body: JSON.stringify(attempt) });
     const result = await response.json().catch(() => ({}));
     if (!response.ok || result.saved !== true || typeof result.leadId !== 'string' || !result.leadId.trim()) {
-      if (response.status === 400 && result.error === 'VALIDATION_ERROR') {
-        attempt = null; attemptKey = null;
-        for (const name of ['name', 'catName', 'phone']) form.elements[name].readOnly = false;
-      }
       throw new Error(result.retryable ? 'RETRYABLE' : 'SAVE_FAILED');
     }
     window.dataLayer = window.dataLayer || [];
     if (!savedEventSent) { window.dataLayer.push({ event: 'tatos_lead_saved' }); savedEventSent = true; }
-    status.textContent = whatsappRequested ? 'Consulta guardada.' : 'Consulta guardada. Abriendo WhatsApp…'; status.dataset.state = 'success';
-    fallback.href = url; fallback.hidden = false;
-    if (!whatsappRequested) setTimeout(() => navigate(url), 100);
+    status.textContent = 'Consulta guardada. Abriendo WhatsApp…'; status.dataset.state = 'success';
+    setTimeout(() => navigate(url), 100);
   } catch (error) {
-    status.textContent = error.message === 'RETRYABLE' || error.name === 'AbortError'
-      ? 'La respuesta demoró. Podés reintentar sin duplicar la consulta o continuar a WhatsApp.'
-      : 'No pudimos guardar la consulta. Podés reintentar o continuar igualmente a WhatsApp.';
-    status.dataset.state = 'error'; fallback.href = url; fallback.hidden = false;
-    if (attempt) status.textContent += ' Conservamos los datos del envío para evitar duplicados; podés aclarar cambios por WhatsApp.';
-  } finally { clearTimeout(timer); clearTimeout(continueTimer); submitting = false; button.disabled = false; button.textContent = idleLabel; }
+    status.textContent = error.name === 'AbortError'
+      ? 'No pudimos confirmar el guardado a tiempo. Te llevamos a WhatsApp; la consulta no está confirmada.'
+      : 'No pudimos guardar la consulta. Te llevamos a WhatsApp; la consulta no está confirmada.';
+    status.dataset.state = 'error';
+    if (attempt) status.textContent += ' Conservamos los datos y la clave del envío para evitar duplicados.';
+    redirectingToWhatsApp = true;
+    setTimeout(() => navigate(url), 100);
+  } finally {
+    clearTimeout(timer); clearTimeout(pendingTimer); submitting = false;
+    if (!redirectingToWhatsApp) { button.disabled = false; button.textContent = idleLabel; }
+  }
 });

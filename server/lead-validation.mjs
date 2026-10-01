@@ -1,4 +1,5 @@
 import { parsePhoneNumberFromString } from 'libphonenumber-js/max';
+import { normalizePhone as normalizeSharedPhone, PHONE_ERROR } from '../js/phone-normalization.js';
 
 const ALLOWED_ATTRIBUTION = new Set([
   'gclid', 'gbraid', 'wbraid', 'utm_source', 'utm_medium', 'utm_campaign',
@@ -18,13 +19,8 @@ function cleanText(value, field, max) {
 }
 
 export function normalizePhone(value) {
-  const raw = cleanText(value, 'phone', 40);
-  let phone = parsePhoneNumberFromString(raw, 'AR');
-  if (!phone?.isValid() && !raw.startsWith('+')) {
-    phone = parsePhoneNumberFromString(raw.replace(/^0/, '').replace(/^(\d{2,4})15/, '$1'), 'AR');
-  }
-  if (!phone?.isValid()) throw new ValidationError('Ingresá el número completo con código de área. Para otro país, incluí + y el código.', 'phone');
-  return phone.number;
+  try { return normalizeSharedPhone(value, parsePhoneNumberFromString); }
+  catch { throw new ValidationError(PHONE_ERROR, 'phone'); }
 }
 
 export function validateLeadPayload(input) {
