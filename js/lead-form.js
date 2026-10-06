@@ -1,6 +1,10 @@
 import { getFrozenAttribution, attributionConsentKnown } from './lead-attribution.js';
 import { normalizePhone, PHONE_ERROR } from './phone-normalization.js';
 
+import { mountLeadDialog } from './lead-dialog.js';
+
+mountLeadDialog();
+
 const form = document.querySelector('#lead-form');
 const section = document.querySelector('#consulta');
 const status = document.querySelector('#lead-status');
